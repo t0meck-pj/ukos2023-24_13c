@@ -1,0 +1,43 @@
+1. Korzystajac z komend cd oraz mkdir stworz nastepujace drzewo katalogow w
+   swoim katalogu domowym (w dowolnym podkatalogu, albo bezposrednio w ~):
+   ukos
+    |\ katalog
+    |   |\ katalog2
+    |    \ katalog3
+     \ klamka
+	Wykonanie: Bedac w katalogu domowym uzylem polecen:
+		   mkdir -p ukos/katalog/katalog2 ukos/katalog/katalog3
+		   cd ukos
+		   mkdir klamka
+	Wniosek: W sumie to katalog klamka moglem tez w pierwszym poleceniu
+		 utworzyc, tak czy inaczej, polecenie zadzialalo
+
+2. W katalogu ukos/klamka stworz pliki zajecia2.txt zajecia2.log inny.txt
+   nowy.txt
+	Wykonanie: touch zajecia2.txt zajecia2.log inny.txt nowy.txt
+	Wniosek: Pliki utworzyly sie poprawnie
+
+3. Za pomoca jednego polecenia mkdir stworz w katalogu ukos nastepujacy ka-
+   talog: ukos/to/jest/dluga/nazwa
+	Wykonanie: mkdir -p ukos/to/jest/dluga/nazwa
+	Wniosek: Parametr -p oszczedza sporo czasu
+
+4. Nastepnie umiesc w katalogu ukos/to/jest/dluga/nazwa plik dane.txt
+	Wykonanie: touch ukos/to/jest/dluga/nazwa/dane.txt
+	Wniosek: Klawisz Tab tez oszczedza sporo czasu
+
+5. Usun z katalogu ukos/klamka wszystkie pliki z rozszerzeniem txt
+	Wykonanie: Po przejsciu do katalogu ukos/klamka uzylem polecenia
+		   rm *.txt
+	Wniosek: Znaki wieloznaczne rowniez oszczedzaja sporo czasu
+
+6. Usun katalog ukos/katalog/katalog2
+	Wykonanie: rmdir ~/ukos/katalog/katalog2
+	Wniosek: Polecenie zadzialalo, poniewaz katalog katalog2 byl pusty
+
+7. Usun caly katalog klamka za pomoca jednego polecenia
+	Wykonanie: rm -r ukos/klamka
+	Wniosek: 
+	Uzylem rm z parametrem -r, poniewaz rmdir kasuje tylko katalogi puste,
+	a katalog klamka zawieral w sobie jeszcze plik zajecia2.log
+
