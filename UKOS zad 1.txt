@@ -1,0 +1,86 @@
+Zadanie 1. Uruchom terminal.
+
+Uruchamiam cmd i loguje się do Szuflandi za pomocą ssh s26856@szuflandia.pjwstk.edu.pl
+Znajduje się właśnie na szuflandi.
+Spodziewałem się takiego wyniku.
+
+Zadanie 2. Wyświetl zawartość aktualnego katalogu.
+
+Wykonuje to za pomocą komendy ls.
+Pokazuje mi zawartość aktualnego katalogu, w moim przypadku PRRG oraz UKOS.
+Tutaj również spodziewałem się takiego wyniku.
+
+Zadnie 3. Sprawdz gdzie aktualnie się znajdujesz.
+
+Wpisuje komende pwd, znajduję się aktualnie w /home/PJWSTK/s26856
+Wynik spodziewany.
+
+Zadanie 4. Przejdzo do katalogu pulpit za pomocą ścieżki względnej.
+
+Znajduję się w katalogu pulpit
+Wynik spodziewany.
+
+
+Zadanie 5. Sprawdź gdzie jesteś. 
+
+Wpisuje komende pwd jestem na /home/PJWSTK/s26856
+
+wynik spodziewany
+
+Zadanie 6. Wyświetl zawartość bieżącego katalogu.
+
+Wykonuje komende ls i widze żę mam w swoim katalogu dwa foldery, PPRG i UKOS.
+Spodziewałem się tego wyniku./
+
+Zadanie 7. Wyświetl zawartość swojego katalogu domowego bez przechodzenia do niego (ls z odpowiednim parametrem).
+
+Wpisuje komendę ls -pa | grep /. Wypisuje mi zawartość moich folderów
+
+Spodziewałem się tego wyniku.
+
+Zadanie 8. Przejdź do katalogu Obrazy (lub innego katalogu, który jest dostępny - podaj wprost, że zmieniasz katalog na inny bo np. Obrazy nie są u Ciebie dostępne) w twoim katalogu domowym za pomocą ścieżki względnej.
+
+
+
+Wchodzę do folderu UKOS komendą cd UKOS.
+Widzę że jestem w folderze ukos.
+Spodziewałem się takiego wyniku.
+
+Zadanie 9. Sprawdź gdzie jesteś.
+
+Komenda pwd, jestem w /home/PJWSTK/s26856/UKOS.
+wykonuje cd żeby wrócić do folderu /home
+Jestem w folderze UKOS.
+Spodziewałem się aktualnego wyniku.
+
+Zadanie 10. Zobacz do jakiego katalogu przejdziesz za pomocą ścieżki ././././././
+
+Użyłem komendy cd ./././././././././. Użycie tej komendy sprawiło że nie przeniosłem się do żadnego folderu ponieważ linux jest skonstruowany że każdy katalog jest odznaczany ./. Czyli użycie tej komendy nie zmienia nic 
+Dodanie dodaktowych ././ - osobiście dodałem ich około 40, spowodowało że nadal jest w tym samym directory.
+
+
+Zadanie 11. 
+
+
+Zadanie 12. Zobacz co się stanie jak wpiszesz komendę 'cd/root'. Jak już to zrobisz, zastanów się co się stało. Poszukaj w internecie.
+
+Użycie komendy cd/root sprawia że przechodzimy z aktualnego directory, do directory /root. Czyli directory superusera a.k.a Admina bo ma kontrolę nad wszystkim.
+
+
+Zadanie 13. Zobacz, co się stanie, jeśli wciśniesz kombinację klawiszy: Ctrl+Alt+F3
+Sprawdź w Internecie co się dzieje kiedy używa się takiej kombinacji. W Internecie mogą pojawić się wersje z F1-F6. To de facto to samo.
+
+Użycie takiej kombinacji sprawia że otwiera się kolejna dodatkowa konsola. W przypadku GUI, otwiera się kolejny wirtualny terminal.
+
+
+Zadanie 14. A teraz co się stanie po: Alt+F1 lub ALT+F2 lub ALT+F7 (na starszych linuxach)
+
+Alt+F1 otwiera pierwszy otwarty wirtualny termianl.
+
+
+Przemyślenia:
+
+Osobiście uważam to zadanie za bardzo przyjemne do wykonania w zaciszu domowym.
+Zadnia nie sprawiły mi większego problemu.
+Wszystkie wyniki były przeze mnie oczekiwane, szczególnie zadanie 10 z wykorzystaniem ././././
+Nową wiedzę będę mógł wykorzystać do bardziej sprawnego poruszania się po naszej szuflandi.
