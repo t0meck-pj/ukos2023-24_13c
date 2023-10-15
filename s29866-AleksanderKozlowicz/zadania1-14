@@ -1,0 +1,101 @@
+1. Uruchom terminal. 
+	Wykonanie: Udalo sie
+	Uruchomilem terminal wybierajac ikone terminala z paska zadan. Przy 
+	okazji dowiedzialem sie, ze jest wiecej opcji na uruchomienie go, m.in
+	przy uzyciu skrotu CTRL+ALT+T
+	Wniosek:
+	Terminal mozna uruchomic na wiele sposobow (szczerze nie wiem co by tu
+	wiecej napisac).
+
+2. Wyswietl zawartosc aktualnego katalogu.
+	Wykonanie:
+	Wykorzystalem polecenie ls z parametrem -l, by zawartosc katalogu
+	wyswietlila sie w przejrzystej formie
+	Wniosek:
+	Oprocz nazw katalogow widac np. uprawnienia, jakie dany katalog posiada.
+	Jest to na pewno bardzo wazne polecenie, bez ktorego ciezko sobie 
+	poradzic pracujac na linuksie.
+
+3. Sprawdz gdzie aktualnie sie znajdujesz.
+	Wykonanie: Do wykonania tego zadania posluzylem sie poleceniem pwd.
+	Wynik: /home/s29986
+	Wniosek: Znajduje sie w katalogu domowym uzytkownika s29986.
+
+4. Przejdz do katalogu Pulpit za pomoca sciezki wzglednej.
+	Wykonanie: cd Desktop
+	Wniosek: Znalazlem sie w katalogu Pulpit
+
+5. Sprawdz gdzie jestes. 
+	Wykonanie: pwd
+	Wynik: /home/s29986/Desktop
+	Wniosek: Udalo mi sie poprawnie przejsc do katalogu Pulpit
+
+6. Wyswietl zawartosc biezacego katalogu
+	Wykonanie: ls -l
+	Wynik: Wyswietlilo mi sie 5 plikow w kolorze zielonym
+	Wniosek: Sa to pliki wykonywalne
+
+7. Wyswietl zawartosc katalogu domowego bez przechodzenia do niego (ls z odpo-
+   wiednim parametrem)
+	Wykonanie: ls -l ~
+	Wniosek: Polecenie to poprawnie wyswietlilo zawartosc katalogu domowego
+
+8. Przejdz do katalogu Obrazy (lub innego katalogu, ktory jest dostepny - podaj
+   wprost, ze zmieniasz katalog na inny bo np. Obrazy nie sa u Ciebie dostepne)
+   w twoim katalogu domowym za pomoca sciezki wzglednej
+	Wykonanie: cd ../Pictures
+	Wniosek: Znalazlem sie w katalogu Obrazy
+
+9. Sprawdz, gdzie jestes
+	Wykonanie: pwd
+	Wynik: /home/s29986/Pictures
+	Wniosek: Udalo mi sie poprawnie przejsc do katalogu Pulpit
+
+10. Zobacz do jakiego katalogu przejdziesz za pomoca sciezki ././././././
+    W opisie rozwiazania prosze umiescic rowniez to jak rouzmiesz co sie
+    wlasciwie stalo. Dlaczego znalazles sie w tym miejscu do ktorego przenio-
+    sla Cie ta sciezka? Czy dodanie kilku ./././././ na poczatku/srodku/koncu 
+    powoduje, ze sciezka sie zmieni? Co ta sciezka oznacza/soba reprezentuje?
+	Wykonanie: cd ././././././
+	Wynik: 
+	Po wykonaniu tego polecenia i upewnieniu sie poleceniem pwd
+	okazuje sie, ze moja lokalizacja sie nie zmienila
+	Wniosek: 
+	./ to inaczej katalog biezacy, przez co nie wazne ile razy bym wpisal
+	"./", moja pozycja sie nie zmieni.
+
+11. Przejdz do swojego katalogu domowego za pomoca sciezki bezwzglednej
+	Wykonanie: cd /home/s29986
+	Wniosek: Poprawnie przenioslem sie do swojego katalogu domowego
+
+12. Zobacz co sie stanie jak wpiszesz komende 'cd /root'. Jak juz to zrobisz, 
+    zastanow sie co sie stalo. Poszukaj w Internecie.
+	Wykonanie: cd /root
+	Wynik: Permission denied
+	Wniosek: Po sprawdzeniu w Internecie dowiedzialem sie, ze do katalogu
+		 domowego roota nie jestem w stanie wejsc z poziomu innego 
+		 konta. Aby sie tam dostac musze zalogowac sie na konto super 
+		 usera (sudo su)
+
+13. Zobacz, co sie stanie, jesli wcisniesz kombinacje klawiszy: Ctrl+Alt+F3
+    Sprawdz w Internecie co sie dzieje kiedy uzywa sie takiej kombinacji. W 
+    Internecie moga pojawic sie wersje z F1-F6. To de facto to samo. Odpowiedz 
+    "wylogowalo mnie" jest bledna. Nie. Nie wylogowalo. Szukaj dalej.
+	Wynik: Po wykonaniu tej kombinacji wyswietlilo mi sie okno terminala na
+	       pelnym ekranie z opcja zalogowania sie.
+	Wniosek: 
+	No faktycznie nie wylogowalo mnie :) Jest to okno terminala, z ktorego
+	mozna skorzystac nawet z poziomu ekranu logowania. Po zalogowaniu sie w
+	nim umozliwia ono korzystanie z systemu, ale co wazniejsze daje mozli-
+	wosc np. zamkniecia procesu w razie, gdyby normalnie nie bylo to mozli-
+	we. Tak sie zdazylo, ze musialem z tej opcji skorzystac, bo nie moglem
+	sie zalogowac, tj. po zalogowaniu pojawial mi sie pulpit, po czym cofa-
+	lo mnie znowu do ekranu logowania. Utworzenie kolejnego konta mi pomo-
+	glo, a moglem to zrobic (chyba tylko) przez to okno.
+
+14. A teraz co sie stanie po: Alt+F1 lub Alt+F2 lub Alt+F7 (na starszych lin)
+	Wynik: Otwieraja mi sie kolejne okna terminala
+	Wniosek:
+	Linux umozliwia korzystanie z 6 okien (z czego bazowo dziala na pierw-
+	szym). Skroty Alt+(F1-F6) sluza do przelaczania sie miedzy nimi, a 
+	Alt+F7 przywraca GUI.
