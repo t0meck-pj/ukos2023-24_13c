@@ -8,3 +8,4 @@ Drogi Pamiętniczku, niestety na poprzednich zajęciach nie zapisałem w Tobie z
 Drogi Pamiętniczku, dziś uczymy się o Uprawnieniach dostępu oraz Prawach systemowych.
 Prawo jest do np. Zmiany daty
 Uprawnienia są do zasobów, czyli mogę odczytać/zapisać plik
+Nauczyłem się także wysyłać Pull requesty na gicie
