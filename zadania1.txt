@@ -1,0 +1,16 @@
+1. Odpaliłem terminal
+2. ls
+3. pwd
+4. cd /Pulpit
+5. pwd
+6. ls
+7. ls /home
+8. cd /home/PJWSTK
+9. pwd ././././././ (nigdzie nie przenioslo)
+10. cd /home
+11. cd home 
+12.cd /root (root nie jest katalogiem, do ktorego dostep ma kazdy uzytkownik, co 
+	spowodowało wyrzucenie bledu o tresci "brak dostepu")
+13. Po wcisnieciu kombinacji ctrl + alt + f3 wlaczyl sie "tryb" bez GUI
+14. Zmieniaja sie wirtualne terminale
+
