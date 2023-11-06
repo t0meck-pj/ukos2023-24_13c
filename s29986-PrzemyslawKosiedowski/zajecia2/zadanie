@@ -1,0 +1,17 @@
+W opisie basha (man) przeczytac opis polecenia wewnetrznego umask i wyprobowac
+jego dzialanie sprawdzajac, a nastepnie zmieniajac swoja maske trybu pliku i
+tworzac za kazdym razem nowe pliki (przy uzyciu polecenia touch plik), a
+pozniej sprawdzajac uzyskane uprawnienia dostepu do nich (polecenie ls -l).
+Jaka operacja logiczna na bitach domyslnych uprawnien dostepu oraz maski
+jest wykonywana?
+
+Wykonanie: umask 0022; touch p1; umask 0427; touch p2; umask 0242; touch p3
+Wynik:
+-rw-r--r-- dla p1
+--w-r----- dla p2
+-r---w-r-- dla p3
+Wniosek:
+Polecenie umask ustawia maske, ktora jest uzywana podczas przypisywania upraw-
+nien do tworzonego pliku. W trakcie tworzenia pliku wykonywana jest operacja
+logiczna AND. Domyslnie pliki sa tworzone z dostepem 666, a katalogi 777.
+
