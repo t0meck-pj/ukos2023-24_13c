@@ -1,0 +1,4 @@
+25.10.2023
+Drogi Pamiętniczku.
+Nauczyłem się dzisiaj zarządzania uprawnieniami w Linuxie. Wiem jak ustawiać uprawnienia, co one oznaczają,
+do czego służą, oraz poznałem nową dla siebie komendę - umask.

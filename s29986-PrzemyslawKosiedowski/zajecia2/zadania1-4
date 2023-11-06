@@ -1,0 +1,95 @@
+1. Utworzyc we wlasnym katalogu domowym nieduza strukture podkatalogow i plikow
+   tekstowych. Przydzielic roznie uprawnienia dostepu, nastepnie sprobowac
+   wejsc do katalogow domowych innych uczestnikow zajec i sprawdzic, ktore z 
+   obiektow sa tam dla nas dostepne (i w jakim sensie). Sprobowac utworzyc wla-
+   sny plik w cudzym katalogu (kukulcze gniazdo) oraz sprobowac usunac cudzy
+   plik we wlasnym katalogu (co mozna zaobserwowac?).
+   Wyprobowac powyzsze operacje:
+	- w trybie tekstowym
+	- przy uzyciu programu Midnight Commander (mc);
+
+   Wykonanie:
+	Po wejsciu do katalogow innych studentow w niektorych moglem stworzyc
+	plik, w innych tylko edytowac obecne, najczesciej pojawial sie komuni-
+	kat z brakiem dostepu lub brakiem uprawnien.
+   Wniosek:
+	Plikom i katalogom byly nadane rozne uprawnienia, dlatego np. przy
+	probie wejscia do jednego z cudzych katalogu wyskakiwal mi blad, to
+	to samo przy probie edycji pliku czy tez jego odczytu.
+	Kukulcze jajo (wykonane z s30566) udalo mi sie usunac, co nie zmienia
+	faktu, ze takie	pliki moga wyzadzic szkode, wiec dobrze by bylo 
+	zabezpieczyc sie przed nimi. 
+
+2. W utworzonej na swoim koncie strukturze podkatalogow przep. eksperymenty:
+   - usuwajac wszelkie uprawnienia dostepu do katalogu biezacego
+   - usuwajac wszelkie uprawnienia dostepu do katalogu nadrzednego
+	- W jakich przypadkach mozemy wykonac wtedy polecenie cd?
+	- W jakich przypadkach mozemy wykonac polecenie chmod?
+	- Czy mozemy bezposrednio przeskoczyc do katalogu ABC/XYZ, jesli nie
+	  mamy uprawnienia wstepu do ABC, ale mamy do XYZ?
+	- Czy mozemy takze wrocic korzystajac z polecenia cd -?
+
+   Wykonanie:
+	cd test; cd kat1; chmod 000 ..; cd ..; cd -;
+	chmod 755 ..; chmod 000 .; cd ..; cd -; 
+   Odpowiedz:
+	Polecenie cd mozemy wykonac w momencie, w ktorym mamy uprawnienie
+	execute (x), a polecenie chmod, kiedy jestesmy wlascicielami danego
+	pliku czy tez katalogu. Bez tego uprawnienia nie mozemy przeskakiwac
+	do kat. nadrzednego mimo posiadania takowych do kat. obecnego.
+	Polecenie cd - takze nie pomoze.	
+   Wniosek:
+	To zadanie takze pokazuje, ze nadawanie uprawnien niesie ze soba spore
+	konsekwencje. Raczej nie bede stosowal polecenia chmod 777.
+	
+
+
+3. W zespolach 2- lub 3-osobowych (w opisie zadania na githubie prosze umiescic
+   login osob z zespolu) wyprobowac mozliwosc komunikacji przez wspoldzielony
+   plik: na jednym z kont w zespole utworzyc pusty plik i przydzielic odpowied-
+   nie uprawnienia dostepu (do pliku i do katalogu domowego).
+   Wpisywac i odczytywac komunikaty przy uzyciu polecen:
+   - echo tresc_komunikaty > plik
+   - cat plik
+     Sprawdzic, jaki skutek powoduje zamiana operatora > na oeprator >> w pole-
+     ceniu echo. Uruchom takze drugi terminal i wykonaj w nim komende
+     tail -f plik i powtorz powyzsze cwiczenie w pierwszym terminalu (kom. za
+     pomoca pliku)
+
+   Wykonanie:
+   	Zadanie wykonalem ponownie z s30566. Na jego koncie zostal utworzony
+	plik z upraw. do odczytu i zapisu (rw-) dla wlasciciela i grupy.
+	Uzycie operatora > nadpisywalo obecna zawartosc, a operator >> dopisy-
+	wal nowe wartosci na ostatniej linii. Polecenie tail -f plik sprawilo,
+	ze moglismy "na zywo" sledzic zmiany w tymze pliku.
+   Wniosek:
+   	Uzywanie echo wraz z operatorami moze przyspieszyc nasza prace, a pole-
+	nie tail -f daje nie tylko mozliwosc sledzenia zmian w pliku. W naszym
+	przypadku poloczenie tego polecenia i dopisywania do niego tresci za 
+	pomoca operatora >> stworzylo prosty komunikator.
+
+
+4. Znalezc w swoim katalogu domowym podkatalog public_html (jesli go nie ma, to
+   utworzyc; musi sie on nazywac DOKLADNIE tak jak podano, pisane malymi lite-
+   rami z podkresleniem zamiast spacji pomiedzy slowami). Umiescic w nim plik
+   o nazwie strona.html o nastepujacej zawartosci:
+
+   <HTML>
+   <BODY>
+   <H1>To jest moja strona domowa</H1>
+   </BODY>
+   </HTML>
+
+   Sprawdzic, jakie sa min. uprawnienia dostepu, ktore trzeba przydzielic do:
+   - katalogu domowego
+   - katalogu public_html
+   - pliku strona.html, aby zaw. pliku byla widoczna w przeg. int. pod adresem
+     http://szuflandia.pjwstk.edu.pl/~twoj_login/strona.html
+
+   Wykonanie:
+	mkdir public_html; vim public_html/strona.html;
+	chmod 755 public_html; chmod 644 public_html/strona.html;
+   Wniosek:
+	Do katalogu domowego i public_html musza byc nadane uprawnienia odczytu
+	i wejscia (r i x), a do pliku strona.html moze byc tylko odczytu. 
+
