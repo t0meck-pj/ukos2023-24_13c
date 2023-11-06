@@ -1,0 +1,2 @@
+umask powoduje zmiany w dostepach do plikow, tworzac pliki przypisuje im domyslne wartosci odczytu/zapisu/wykonania. 
+Robioperacje na systemie oktalnym za pomoca odejmowania od bitow 666 dla plikow i 777 dla repozytoriow.
