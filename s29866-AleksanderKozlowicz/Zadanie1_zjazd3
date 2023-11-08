@@ -1,0 +1,8 @@
+1. ps pokazuje procesy 
+2. ps -a pokazuje procesy z wyjatkiem procesu terminala
+3. ps x wymienia procesy ktorych włascicielem jest uzytkownik
+4. ps uxa pokazuje procesy wszytskich userow
+5. TTY to nazwa terminala, znaki zapytania znaczą ze procesy nie 
+sa powiazane z obecnym terminalem
+6. procesy roota: ps -U root -u root u.
+7. procesy basha: ps -aux
