@@ -11,7 +11,34 @@ Wynik:
 --w-r----- dla p2
 -r---w-r-- dla p3
 Wniosek:
-Polecenie umask ustawia maske, ktora jest uzywana podczas przypisywania upraw-
-nien do tworzonego pliku. W trakcie tworzenia pliku wykonywana jest operacja
-logiczna AND. Domyslnie pliki sa tworzone z dostepem 666, a katalogi 777.
+Polecenie umask sluzy do ustawiania domyslnej maski dla tworzenia plikow i 
+katalogow. Dziala tylko dla aktualnie zalogowanego uzytkownika i mozna
+zmieniac tylko swoja maske. Zakonczenie sesji sprawia, ze nastepnym razem
+po zalogowaniu maska bedzie miala ponownie przypisana wartosc domyslna
+(oktalnie 0022). Wartosc umask wyraza uprawnienia, ktore maja zostac
+wykluczone w trakcie tworzenia nowych plikow i katalogow, dla ktorych domyslne
+bity uprawnien to 0666 (pliki) i 0777 (katalogi). Podczas nadawania uprawnien
+zachodzi operacja logiczna AND pomiedzy wartosciami domyslnymi plikow lub
+katalogow i negacja wartosci umask (A&&(!B)):
+
+111 111 111	bity domyslne dla plikow (666)
+	
+ A   N   D 	operacja, ktora zachodzi
+
+111 101 101	zanegowane bity umask (dla 022)
+
+=== === ===
+
+111 101 101	wynik operacji (644) (dla plikow bity wykonania sa pomijane)
+
+Zrodla, z ktorych skorzystalem:
+1. man
+2. https://wiki.archlinux.org/title/umask
+3. https://en.wikipedia.org/wiki/Bitwise_operation
+4. https://en.wikipedia.org/wiki/Material_nonimplicatio
+
+Szczerze to bylo tego o wiele wiecej, ale dopiero na tych stronach zrozumialem
+w miare ten temat (a przynajmniej mam taka nadzieje, jak nie to zapytam sie
+Pana na nastepnym zjezdzie, bo spedzilem przy tym zadaniu dobre 3h bledzac po
+Internecie i nie wiem, czy bym cos wiecej znalazl).
 

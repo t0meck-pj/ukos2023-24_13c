@@ -63,10 +63,10 @@
 	wal nowe wartosci na ostatniej linii. Polecenie tail -f plik sprawilo,
 	ze moglismy "na zywo" sledzic zmiany w tymze pliku.
    Wniosek:
-   	Uzywanie echo wraz z operatorami moze przyspieszyc nasza prace, a pole-
-	nie tail -f daje nie tylko mozliwosc sledzenia zmian w pliku. W naszym
-	przypadku poloczenie tego polecenia i dopisywania do niego tresci za 
-	pomoca operatora >> stworzylo prosty komunikator.
+   	Uzywanie echo wraz z operatorami moze przyspieszyc nasza prace, a 
+	polecenie tail -f daje nie tylko mozliwosc sledzenia zmian w pliku. 
+	W naszym przypadku polaczenie tego polecenia i dopisywania do niego 
+	tresci za pomoca operatora >> stworzylo prosty komunikator.
 
 
 4. Znalezc w swoim katalogu domowym podkatalog public_html (jesli go nie ma, to
@@ -90,6 +90,25 @@
 	mkdir public_html; vim public_html/strona.html;
 	chmod 755 public_html; chmod 644 public_html/strona.html;
    Wniosek:
-	Do katalogu domowego i public_html musza byc nadane uprawnienia odczytu
-	i wejscia (r i x), a do pliku strona.html moze byc tylko odczytu. 
+	Podane wyzej uprawnienia nadalem sugerujac sie strona:
+	https://www.hostgator.com/help/article/public-html-folder#file-permissions
+	W sumie juz wtedy wiedzialem, ze cos jest nie tak, jak po nadaniu
+	uprawnien 750 dla public_html strona nie chciala sie wyswietlic, wiec
+	zmienilem je na 755, zobaczylem, ze dziala, i tak to zostawilem.
+
+	Teraz wiem, ze bylo to zle podejscie do tego zadania. Dlatego tez tym
+	razem uzylem metody prob i bledow po kolei sprawdzajac uprawnienia dla
+	wlasciciela, grupy, i innych (moglem tez pomyslec, ale uznalem, ze jak
+	nie zobacze, to sie nie naucze).
+	
+	No i teraz wiem, ze za przegladanie strony w Internecie odpowiadaja
+	uprawnienia innych. Tak wiec minimalne uprawnienia dostepu potrzebne
+	do przegladania tej strony w przegladarce internetowej:
+		- dla katalogu domowego i public_html to 001 (wejscie)
+		- dla pliku strona.html to 004 (odczyt)
+	
+	I jak tak teraz o tym mysle to nawet lepiej by bylo takie uprawnienia
+	zostawic chociazby ze wzgledow bezpieczenstwa (no moze warto by bylo
+	wlascicielowi przywrocic uprawnienia: 7 dla katalogow i 6 dla pliku, w
+	razie, gdyby chcial cos zmienic).
 

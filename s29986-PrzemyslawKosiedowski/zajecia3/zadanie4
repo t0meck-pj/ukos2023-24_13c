@@ -1,0 +1,84 @@
+INFO: Zadanie do wykonania na linuxie z dostepnym srodowiskiem graficznym.
+
+CTRL+Z sluzy do wstrzymania biezacego procesu i przeniesienia go do tla. To 
+znaczy, ze program jest w pamieci, ale nie wykonuje zadnych operacji. Jest
+wstrzymany. Zobacz, co sie stanie:
+
+1. Wpisz komende gimp (lub np. edytor tekstowy gedit)
+2. W terminalu, w ktorym sie to uruchomilo wcisnij CTRL+Z
+3. Sprobuj cos wyklikac w gimpie / gedicie
+4. Otworz dowolne inne okno i przesun je tak by czesciowo nachodzilo na okno
+   gimpa / gedita i potem je odsun by odslonic w pelni okno gimpa / gedita
+Co sie stalo? Wstrzymalismy program gimp/gedit. Program wstrzymany za pomoca
+kombinacji CRTL+Z jest przenoszony w tlo (background). Efekt jest taki, ze taki
+program przestaje odpowiadac na cokolwiek.
+
+   Wykonanie: gimp; CTRL+Z; klikanie; przesuwanie okna
+   
+   Wniosek:
+   Po uzyciu skrotu CTRL+Z program gimp faktycznie zostal wstrzymany i nic nie
+   moglem w nim zrobic. Odzyskalem za to kontrole nad terminalem i moglem dalej
+   wykonywac polecenia.
+
+-------------------------------------------------------------------------------
+
+Komenda bg sluzy do wznowienia w tle wstrzymanego programu. Zobacz:
+1. Wpisz komende bg
+
+Jak widac gimp/gedit ozyl (jesli nie, to zapytaj prowadzacego).
+
+Komenda fg sluzy do wznowiemia na pierwszym planie wstrzymanego wczesniej
+procesu. Zobacz, co sie stanie:
+1. Wpisz komende fg
+
+Jak widac proces wrocil i mozna wcisnac na przyklad CTRL+C aby go zakonczyc.
+
+   Wykonanie:
+   bg; fg;
+   Po uzyciu komendy bg gimp ozyl, jednak dalej moglem wykonywac polecenia w
+   terminalu. Poleceniem fg sprawilem, ze gimp byl wykonywany przez terminal i
+   
+   Wniosek:
+   Kombinacja polecen bg, fg i skrotu CTRL+Z pozwala na multitasking, i to
+   za pomoca klawiatury w termninalu. Jestem ciekaw czym jeszcze Linux mnie
+   zaskoczy, bo nie powiem, nie spodziewalem sie, ze jest taka opcja dostepna.
+
+-------------------------------------------------------------------------------
+
+W momencie uruchamiania programu, mozemy od razu nakazac wykonanie go w tle.
+Sluzy do tego znak & umieszczony na koncu instrukcji. Zobacz:
+INFO: Jesli jakiegos programu nie ma to zastap go innym, ktory znasz.
+
+1. Wykonaj komende gimp &
+2. Wykonaj komende gedit &
+3. Wykonaj komende geany &
+
+Zobacz co sie stalo (domyslam sie, ze uruchomily sie 3 programy, a na terminalu
+ciagle mozna cos pisac).
+
+   Wykonanie: gimp &; gedit &; geany &
+   Wniosek:
+   Tak jak Pan sie domyslil, uruchomily sie 3 programy, ktore dzialaja w tle,
+   dzieki czemu  na terminalu dalej mozna cos pisac i mozemy sobie wybrac,
+   z ktorego programu chcemy skorzystac na dana chwile. Bardzo wygodna opcja,
+   pozwala wprowadzic porzadek w swojej pracy.
+
+-------------------------------------------------------------------------------
+
+Kolejna komenda to jobs. Sluzy ona do wyswietlania listy zadan (jobow; nie
+mylic z procesami) przeniesionych do tla.
+
+1. Przywroc program gedit (lub gimp, w kazdym razie nie uruchomiony jako
+   ostatni program) z tla na pierwszy plan. Skorzystaj z jobs aby dowiedziec
+   sie jakie maja numery poszczegolne zadania dzialajace w tle.
+   Skladnia: fg %(numer jobu)
+
+   Wykonanie: jobs; fg %3
+   
+   Wniosek:
+   Poleceniem jobs sprawdzilem jakie programy dzialaja w tle i jaka maja
+   numeracje. Dzieki temu wybralem w moim przypadku przedostatni dzialajacy
+   program (mialem do wyboru 2, 3 i 4), byl to gedit. Jobs jest komenda, ktora
+   umozliwia nam wybor programu, w ktorym chcemy dzialac, przez co daje nam 
+   wieksza kontrole i swobode.
+
