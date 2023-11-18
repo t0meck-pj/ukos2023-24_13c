@@ -1,0 +1,107 @@
+W terminalu jest kilka przydatnych skrotow klawiszowych. Jednym z nich jest
+CTRL+C lub jak to jest czesto podawane C-c lub ^C. Niektorzy z Panstwa juz go
+mieli okazje przetestowac. Jest to sposob na wylaczenie aktywnego programu w
+terminalu. Prosze go przetestowac w taki sposob, ze:
+
+1. Uruchom komende cat bez parametrow
+2. Wcisnij CTRL+C i zobacz co sie stanie
+
+   Wykonanie: cat; CTRL+C
+
+   Wynik:
+   Po wpisaniu tego polecenia czekalo ono az zaczne wprowadzac tekst, by moc go
+   wypisac na terminalu. Skrot CTRL+C zakonczyl dzialanie tego polecenia.
+
+   Wniosek:
+   Moim zdaniem jest to skrot, ktory warto zapamietac. Pewnie nie raz bede z
+   niego korzystac w terminalu (poza tez, czasem trzeba cos skopiowac na 
+   Windowsie).
+
+-------------------------------------------------------------------------------
+
+Kolejnym fajnym (zalezy dla kogo :) ) skrotem klawiszowym jest CTRL+D. Sluzy on
+do zakonczenia strumienia wejsciowego. Dziala to troche inaczej niz poprzednie
+rozwiazanie, mimo ze na pierwszy rzut oka wyglada tak samo. Tym razem nie
+wysyla sygnalu zakonczenia, a jedynie zamyka strumien wejsciowy. Jest to bardzo
+przydatne, jesli chcemy zakonczyc dzialanie jakiegos programu korzystajacego ze
+standardowego wejscia (stdin), ale w sposob mozliwie bezpieczny.
+Zobacz co sie stanie:
+
+1. Wydaj komende cat > wynik3_1.txt
+2. Wpisz tekst witaj bez wciskania klawisza ENTER
+3. Wcisnij CTRL+C
+4. Zobacz co sie znalazlo w pliku wynik3_1.txt
+
+   Wykonanie:
+   cat > wynik3_1.txt
+   witaj
+   CTRL+C
+
+   Wynik: Do pliku wynik3_1.txt nie zapisala sie wiadomosc, plik jest pusty.
+
+   Wniosek:
+   Skrot CTRL+C wylaczyl polecenie cat, przez co wpisana wiadomosc nie trafila
+   do stdin polecenia cat. To sprawilo, ze stdout nie mialo wartosci, dlatego w
+   pliku nic sie nie znalazlo.
+
+-------------------------------------------------------------------------------
+
+1. Wydaj komende cat > wynik3_2.txt
+2. Wpisz tekst witaj bez wciskania klawisza ENTER
+3. Wcisnij CTRL+D (mozliwe, ze bedzie trzeba wcisnac go 2x)
+4. Zobacz co sie znalazlo w pliku wynik3_2.txt
+
+   Wykonanie:
+   cat > wynik3_2.txt
+   witaj
+   CTRL+D
+
+   Wynik: 
+   Do pliku wynik3_2.txt zapisala sie wiadomosc, pojawia sie w nie nad, tylko
+   w linii z kursorem
+    
+   Wniosek:
+   Tym razem wiadomosc zapisala sie, poniewaz CTRL+D nie konczy dzialania
+   programu, tylko zamyka stdin. To sprawilo, ze wszystko, co bylo zapisane
+   przed uzyciem skrotu trafilo do pliku, poniewaz cat mial juz cos w swoim
+   strumieniu wejsciowym zapisane.
+   Po sprawdzeniu zawartosci tego pliku vimem dowiedzialem sie, dlaczego tekst
+   pojawia sie na linii kursora - polecenie cat nie przekazalo znaku zalamania
+   linii, ktore wprowadza klawisz ENTER (a przynajmniej tak mi sie wydaje)
+
+-------------------------------------------------------------------------------
+
+W opisie rozwiazania zadania umiesc:
+ - jak rozumiesz co sie stalo?
+ - czym oba te przyklady sie roznia?
+ - DLACZEGO sie roznia?
+
+   Odpowiedz:
+   Moim zdaniem w pierwszym przypadku wiadomosc nie zostala zapisana, poniewaz
+   polecenie cat zostalo zamkniete zanim sie wykonalo, a w drugim przypadku
+   zostal zamkniety tylko stdin cata, a polecenie to dalej dzialalo, przez co
+   moglo sie wykonac, i dane, ktore wprowadzilem przed uzyciem skrotu trafily
+   do pliku. Przyklady te roznia sie skrotem, ktory zostal uzyty. 
+   Kazdy z nich dziala inaczej i powinno sie ich, moim zdaniem, uzywac w innym
+   celu. Skrot CTRL+D dziala tylko w przypadku wprowadzania danych do programu.
+   Jesli po tej operacji program bedzie mial w kodzie zapisanie inne polecenia,
+   to bedzie on dalej kontynuowal swoja prace. Skrot CTRL+C natomiast wysyla 
+   sygnal do programu, ktory mowi, zeby ten program sie zakonczyl. 
+   Wedlug mnie roznia sie one, poniewaz w zaleznoci od sytuacji, w ktorej
+   jestesmy, bedziemy potrzebowac roznych rozwiazan. CTRL+C przyda sie, kiedy
+   bedziemy chcieli zakonczyc proces, ktory dziala caly czas, np. polecenie
+   ping, ktore wysyla pakiety do wybranej przez nas strony internetowej. CTRL+D
+   za to wysyla sygnal o zakonczeniu wprowadzania i zadziala tylko, kiedy mamy
+   cos wprowadzic.
+   Zadanie wykonalem z pomoca strony: https://superuser.com/questions/169051/ 
+
+   Wniosek:
+   Oba skroty, sa przydatne, kazdy dziala inaczej i sluzy innym celom.
+   
+   Ciekawostka: 
+   Sprawdzilem co sie stanie jak uzyje CTRL+D w terminalu. Na maszynie wylaczyl
+   sie terminal, a w putty zakonczylem sesje. No i teraz rodzi sie pytanie:
+   Lepiej przy zamykaniu terminala uzywac tego skrotu czy pisac exit? Wole
+   zadac je tutaj, bo moge zapomniec na nastepnych zajeciach, a pamietam, jak
+   na pierwszych mowil Pan, zeby zawsze wychodzic z terminala poleceniem exit.
+

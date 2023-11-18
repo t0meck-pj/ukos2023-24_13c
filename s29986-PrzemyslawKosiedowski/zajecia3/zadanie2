@@ -1,0 +1,64 @@
+INFO: Zadanie do wykonania na linuxie z dostepnym srodowiskiem graficznym.
+
+PID jest to indentyfikator procesu ([P]rocess [ID]entificator). Za jego pomoca
+mozesz odwolac sie do danego procesu za pomoca roznych mechanizmow systemu.
+Jednym z takich mechanizmow jest wuslanie sygnalu (na przyklad zakonczenia) do
+procesu. Do tego mozna uzyc komendy kill (moze brzmi ona dosc brutalnie, ale
+coz, informatyka nie jest dla mieczakow). Komenda ta domyslnie wysyla sygnal
+zakonczenia procesu do zadanego procesu.
+
+Zadanie:
+1. Uruchom wybrany przez Ciebie graficzny edytor tekstowy, np. gedit, gvim, itd
+2. Zobacz jaki ma in PID - przyda sie do tego komenda ps
+3. Wydaj komende kill w taki sposob, aby ten edytor sie wylaczyl. Zobacz, czy
+   to dziala. UWAGA: Niektore programy przechwytuja sygnaly i moga je czesciowo
+   blokowac. Jesli program nie wylacza sie, to zobacz jaka jest jego reakcja.
+   Zobacz czy mozesz wyslac do niego SIGKILL (gdzie sprawdzisz jak to zrobic?)
+
+   Wykonanie:
+	gedit; ps aux | grep gedit; man kill; kill -l; kill -9 3371 
+   Uruchomilem edytor gedit; Poleceniem ps sprawdzilem PID dla gedit (3371); W
+   manie sprawdzilem jak dziala komenda kill; Poleceniem kill -l sprawdzilem 
+   liste wszystkich sygnalow dla kill, a ostatnim poleceniem udalo mi sie 
+   wylaczyc gedit.
+
+   Wniosek:
+   Nazwa sugerowala, ze polecenie kill sluzy do "zabijania" procesow, a tym
+   czasem prawda jest troche inna. Za jego pomoca mozemy wysylac sygnaly do
+   procesow, a do wykorzystania mamy ich az 64 (tyle mi pokazuje kill -l), z
+   czego podstawowym sygnalem jest TERM, a nie KILL. TERM mowi procesowi, zeby
+   sie wylaczyl, ale pozostawia procesowi opcje zignorowania tego sygnalu,
+   jesli proces tego wymaga. KILL natomiast ignoruje wszystko i zawsze sie
+   wykona. W razie co sprobowalem wylaczyc gedit samym kill, bez parametrow, co
+   takze zostalo pomyslnie  wykonane.
+  
+   Przy tworzeniu wniosku skorzystalem ze strony:
+   https://www.semicolonandsons.com/code_diary/unix/kill-vs-term-vs-int-vs-quit-signals		
+
+-------------------------------------------------------------------------------
+
+4. Zobacz dzialanie komendy killall bash
+
+   Wykonanie: killall bash
+
+   Wniosek:
+   Polecenie to zadzialalo i zabilo procesy basha, z wyjatkiem terminala, na
+   ktorym je wywolalem. Tutaj tak samo jak w przypadku kill domyslnie wysylany
+   jest sygnal TERM. Poleceniem killall -9 bash wylaczylem wszystkie terminale;
+   ten, na ktorym je wywolalem rowniez. 
+
+------------------------------------------------------------------------------- 
+
+5. Zobacz czy kill zadziala dla dowolnego procesu.
+
+   Odpowiedz: 
+
+   Na podstawie wczesniejszych zadan i poprzednich zajec uwazam, ze kill nie 
+   zawsze zadziala. Jest to zalezne od sygnalu, ktory wysylamy. Dany proces 
+   dostaje tylko za pomoca tego polecenia instrukcje do wykonania, co nie 
+   oznacza, ze musi ja wykonac. Wyjatkiem jest sygnal KILL, ale i on nie zawsze
+   musi zadzialac. Wynik tej komendy jest takze zalezny od procesu, do ktorego
+   dany sygnal wysylamy. Byc moze bedziemy chcieli wylaczyc program ktoregos z 
+   zalogowanych uzytkownikow. Bez odpowiednich uprawnien moze sie nam taka 
+   operacja nie udac. Wyjatkiem oczywiscie jest root, ktory moze wszystko.	
+

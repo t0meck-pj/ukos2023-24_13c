@@ -1,0 +1,106 @@
+1. Przejdz do swojego katalogu domowego
+2. Wydaj komende: ls -a
+3. Zobacz ile plikow wypisalo.
+
+   Wykonianie: ls -a
+
+   Wynik: Wyswietlily mi sie wszystkie pliki i katalogi, nawet te ukryte
+
+   Wniosek: 
+   Polecenie ls -a jest przydatne, kiedy chcemy zobaczyc pliki i katalogi,
+   ktore sa ukryte.
+
+-------------------------------------------------------------------------------
+
+4. Teraz wydaj komende: ls -a | grep D. HINT: Jesli nie masz zadnego pliku czy
+   katalogu z literka D to wybierz inna literke, ktora juz bedzie w nazwie
+   jakiegos pliku czy katalogu.
+5. Zobacz ile teraz jest wynikow. Co sie stalo? Otoz program grep sluzy do
+   wyszukiwania wierszy w pliku lub strumieniu wejsciowym, ktore pasuja do
+   wzorca. Tu podano wzorzec jako "D"
+
+   Wykonanie: ls -a | grep t
+
+   Wynik: 
+   Wyswietlily mi sie pliki i katalogi, w ktorych nazwie wystepuje litera t.
+   W moim przypadku jest to 5 pozycji, same katalogi.
+
+   Wniosek:
+   Polecenie grep moze byc potrzebne, kiedy chcemy znalezc cos, czego
+   potrzebujemy, jak np. jakies slowo w tekscie, czy tez w naszym przypadku
+   przy uzyciu polecenia ls pliki i katalogi, ktore maja w nazwie podany przez
+   nas wzorzec. Jesli chcemy to mozemy tym poleceniem zliczac wyniki z
+   parametrem -c (wyczytalem to z mana).
+
+-------------------------------------------------------------------------------
+
+6. A teraz wykonaj komende: ls -a | grep D > lista_plikow_z_literka_d.txt
+7. Zobacz czy utworzyl sie jakis plik?
+   Jaka jest jego tresc? Co znaczy | oraz co znaczy > ?
+
+   Wykonanie:
+	ls -a | grep t > lista_plikow_z_literka_t.txt
+	cat lista_plikow_z_literka_t.txt
+
+   Wynik: 
+   Po uzyciu tego polecenia zostal utworzony plik lista_plikow_z_literka_t.txt,
+   w ktorym po sprawdzeniu poleceniem cat znalazlo sie 6 pozycji; oprocz
+   wczesniejszych katalogow pojawil sie tez nowo utworzony plik.
+
+   Wniosek: 
+   Znak | oznacza (w tym przypadku) przekierowanie stdout (wyniku wyswietlanego
+   w terminalu) poleceniem ls na stdin (standardowe wejscie) polecenia grep ze
+   wzorcem t. Oznacza to, ze sposrod wszystkich plikow i katalogow wypisanych
+   poleceniem ls polecenie grep wybiera sobie tylko te pozycje, ktore maja w
+   swojej nazwie litere t, i tylko te pozycje wyswietlilyby sie nam na
+   terminalu. Wyswietlilyby sie, ale tak sie nie stalo, poniewaz uzylismy znaku
+   > , ktory przekierowal stdout (standardowe wyjscie) polecenia grep do (w tym
+   przypadku) nowo utworzonego, pustego pliku lista_plikow_z_literka_t.txt i
+   nadpisal jego zawartosc wynikiem grepa.
+   
+   Tak wiec znak | oznacza przekierowanie wyniku programu, polecenia, skryptu,
+   itp. do nowego programu, polecenia, skryptu, itp. i umozliwia prace na
+   przekazanych danych.
+   Natomiast znak > oznacza przekierowanie wyniku programu, polecenia, skryptu,
+   itp. do pliku i powoduje nadpisanie jego zawartosci, a jesli taki plik nie
+   istnieje, to go stworzy i w nim te zawartosc zawrze.
+
+   Sa to bardzo przydatne znaki, ktore moga znacznie ulatwic i przyspieszyc
+   nasza prace, dopoki sie wie jak sie z nich korzysta, poniewaz, tak dla
+   przykladu, uzycie znaku > nadpisuje plik, wiec trzeba wiedziec do jakiego
+   pliku te dane przekazujemy, bo jest ryzyko utraty wczesniejszych danych.  
+
+   Do zadania wykorzystalem informacje ze strony:
+   https://sites.google.com/pjwstk.edu.pl/t0meck-ukos/3-procesy-i-strumienie
+
+-------------------------------------------------------------------------------
+
+8. A teraz wykonaj komende: ls -a | grep D | tee lista_plikow_z_literka_d_2.txt
+9. Zobacz czy plik sie utworzyl? Jaka jest tresc wzgledem poprzedniej proby bez
+   programu tee? Co robi program tee?
+
+   Wykonanie: 
+	ls -a | grep t | tee lista_plikow_z_literka_t_2.txt
+	man tee
+
+   Wynik:
+   Po uzyciu tego polecenia utworzyl sie nowy plik, w ktorym znalazl sie wynik
+   grepa z poprzedniego zadania + nowy plik. Oprocz tego w tym przypadku
+   wyswietlila sie w terminalu zawartosc nowego pliku, w poprzednik zadaniu
+   taka sytuacja nie miala miejsca.
+   Po sprawdzeniu polecenia tee w manie okazalo sie, ze jest to program, ktory
+   czyta informacje ze swojego stdin (w tym przypadku wynik grepa) i kopiuje
+   je do pliku (jak go nie ma to go tworzy, tak tez sie w tym przypadku stalo)
+   ORAZ wpisuje je w swoje stdout, czyli wyswietla w terminalu.
+
+   Wniosek: 
+   Ten sam efekt mozna by uzystac korzystajac z polecen:
+   ls -a | grep t > lista_plikow_z_literka_t_2.txt
+   cat lista_plikow_z_literka_t_2.txt
+   Program tee znacznie skraca nam nie tylko zapis, ale takze (tak mi sie
+   wydaje) sprawia, ze ten sam efekt osiagamy przy mniejszej ilosci uzytych
+   procesow. To (o ile dobrze mi sie wydaje) oznacza, ze przy pisaniu skryptow
+   uzycie tego programu jest optymalne wzgledem uzycia dwoch wczesniej podanych
+   polecen i sprawia, ze taki skrypt wykona sie szybciej. Poza tym pozwala ono
+   w tym przypadku od razu zobaczyc efekt naszego polecenia.
+
