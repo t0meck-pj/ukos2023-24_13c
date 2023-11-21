@@ -3,23 +3,24 @@
 	Terminal uruchomiony
 
 2. Wyswietl zawartosc aktualnego katalogu.
-	Wyswietlilem zawartosc swojego katalogu za pomoca ls, dodajac -l 
-	wyswietlilem uprawienia plikow.
+	- Wyswietlilem zawartosc swojego katalogu za pomoca ls, dodajac -l 
+	- Wyswietlilo mi to pliki wraz z pokazaniem aktualnych dostepow.
 	
 
 3. Sprawdz gdzie aktualnie sie znajdujesz.
-	Znajduje sie obecnie \Users\s29866
+	-komenda pwd
+	-Znajduje sie obecnie: /home/PJWSTK/s29866
 
 4. Przejdz do katalogu Pulpit za pomoca sciezki wzglednej.
 	cd Desktop
 
 5. Sprawdz gdzie jestes. 
-	 /home/s29866/Desktop
-	 Udalo mi sie poprawnie przejsc do katalogu Pulpit
+	 /home/PJWSTK/s29866
+	 Nie udalo mi sie przejsc do katalogu Desktop poniewaz nie istnieje
 
 6. Wyswietl zawartosc biezacego katalogu
 	Wykonanie: ls -l
-	Wyswietlily mi sie 2 pliki na niebiesko
+	Wyswietlila mi sie lista 5 plikow
 
 7. Wyswietl zawartosc katalogu domowego bez przechodzenia do niego (ls z odpo-
    wiednim parametrem)
@@ -29,11 +30,11 @@
 8. Przejdz do katalogu Obrazy (lub innego katalogu, ktory jest dostepny - podaj
    wprost, ze zmieniasz katalog na inny bo np. Obrazy nie sa u Ciebie dostepne)
    w twoim katalogu domowym za pomoca sciezki wzglednej
-	cd ../Pictures
-	Znalazlem sie w katalogu Obrazy
+	- cd ../../s29866
+	- Znalazlem sie w katalogu mojego uzytkownika
 
 9. Sprawdz, gdzie jestes
-	 /home/s29986/Pictures
+	 /home/PJWSTK/s29866
 
 
 10. Zobacz do jakiego katalogu przejdziesz za pomoca sciezki ././././././
@@ -43,9 +44,11 @@
     powoduje, ze sciezka sie zmieni? Co ta sciezka oznacza/soba reprezentuje?
 	cd ././././././ 
 	Po wykonaniu tego polecenia moja lokazlizacja nie zminila sie
+	Nie zmienila sie poniewaz cd . oznacza pozostanie w danum katalogu - tzn ze caly
+	czas przenosimy sie do aktualnego katalogu
 
 11. Przejdz do swojego katalogu domowego za pomoca sciezki bezwzglednej
-	 cd /home/s29986
+	 cd /home/s29866
 	Jestem w katalogu domowym
 
 12. Zobacz co sie stanie jak wpiszesz komende 'cd /root'. Jak juz to zrobisz, 
@@ -67,3 +70,6 @@
 
 14. A teraz co sie stanie po: Alt+F1 lub Alt+F2 lub Alt+F7 (na starszych lin)
 	Pojawiaja sie kolejne okna terminala
+	Dzieki ALT + F2 mozemy otworzyc jakis program znajac jego sciezke, wyjsc 
+	"na sile" z terminala.
+	ALT + F1 zmienia terminal ktory obslugujemy na 1 z 7 dostepnych
