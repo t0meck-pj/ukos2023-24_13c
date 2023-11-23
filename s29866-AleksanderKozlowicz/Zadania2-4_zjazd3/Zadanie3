@@ -1,0 +1,30 @@
+1. W terminalu jest kilka przydatnych skrótów klawiszowych. Jednym z nich jest 
+CTRL+C lub jak to jest często podawane C-c lub ^C. Niektórzy z Państwa już go mieli 
+okazję przetestować. Jest to sposób na wyłączenie aktywnego programu w terminalu. 
+Proszę go przetestować w taki sposób, że:
+
+    1. Uruchom komendę cat be parametrów
+
+    2. Wciśnij CTRL+C i zobacz co się stanie
+
+- Ctrl + C wyszedlem z danego polecenia
+
+
+2. Wydaj komendę cat > wynik3_1.txt
+Wpisz tekst witaj bez wciskania klawisza Enter
+Wciśnij CTRL+C
+Zobacz co się znalazło w pliku wynik3_1.txt
+
+- W pliku nie znalazlo sie nic.
+
+3. Wydaj komendę cat > wynik3_2.txt
+Wpisz tekst witaj bez wciskania klawisza Enter
+Wciśnij CTRL+D (możliwe, że będzie trzeba wcisnąć go 2x)
+Zobacz co się znalazło w pliku wynik3_2.txt
+- Zostalo wypisane slowo witaj
+
+Rozumiem to tak ze CTRL + D przerwalo proces polecenia, a CTRL + D 
+zakonczylo interakcje z danym programem zapisujac to co sie dzialo. CTRL + C to 
+brutalne przerwanie, a CTRL + D to wyjscie z programu. Roznia sie ze wzgledu na 
+swoje przeznaczenie. C zamykamy program kiedy np. wyskoczy nam nieskonczona 
+petla a D konczymy np. pisanie w jakims programie.

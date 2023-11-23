@@ -1,0 +1,15 @@
+    Wykonaj komendę gimp &
+
+    Wykonaj komendę gedit &
+
+    Wykonaj komendę geany &
+
+
+ - Uruchomily sie 3 programy z podanymi jobami
+
+Przywróć program gedit (lub gimp, w każdym razie nie uruchomiony jako ostatni program) 
+z tła na pierwszy plan. Skorzystaj z jobs aby dowiedzieć się jakie mają 
+numery poszczególne zadania działające w tle.
+    składnia: fg %(numer jobu)
+
+fg %(2983093)
