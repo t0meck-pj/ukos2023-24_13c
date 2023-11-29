@@ -1,0 +1,6 @@
+7.10.2023
+Moj drogi pamietniczku na dzisiejszych zajeciach nauczylem sie ze
+Jak poprawnie wykonac git commit, git push oraz inne podstawowe
+działania gita
+Nauczylem sie rowniez czym sa sciezki wzgledne oraz bezwzgledne
+oraz jaka cudowna komenda jest man
