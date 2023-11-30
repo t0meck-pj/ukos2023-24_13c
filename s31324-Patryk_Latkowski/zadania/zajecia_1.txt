@@ -1,0 +1,149 @@
+Zadanie 1.1:
+Uruchom terminal:
+Rozpocząłem zadanie od uruchomienia terminala przy użyciu programu PuTTY,
+a następnie zalogowałem się na serwerze Szuflandia. Po podaniu swojego loginu,
+wpisałem hasło, co pozwoliło mi uzyskać dostęp do terminala na Szuflandii.
+
+Zadanie 1.2:
+Wyświetl zawartość aktualnego katalogu:
+Kolejnym krokiem było wyświetlenie zawartości aktualnego katalogu.
+Wykonałem to zadanie, wpisując komendę "ls" w otwartym terminalu.
+Dzięki tej komendzie mogłem zobaczyć, jakie pliki i foldery znajdują
+się w obecnym katalogu. Znajdował się tam folder PPRG z materiałami
+z zajęć z Podstaw Programowania.
+
+Zadanie 1.3:
+Sprawdź gdzie aktualnie się znajdujesz:
+Wprowadziłem komendę "pwd". Po jej wykonaniu, na ekranie pojawiła się
+dokładna lokalizacja, a w moim przypadku była to ścieżka
+"/home/PJWSTK/s31324". Komenda "pwd" okazała się więc bardzo pomocna
+w identyfikacji obecnej lokalizacji.
+
+Zadanie 1.4:
+Przejdź do katalogu Pulpit za pomocą ścieżki względnej:
+Wpisałem komendę "cd ../../.." i w ten sposób zmieniłem katalog na "Pulpit".
+Jednakże zauważyłem, że używanie ścieżki bezwzględnej jest łatwiejsze.
+
+Zadanie 1.5:
+Sprawdź gdzie jesteś:
+Aby potwierdzić, w którym katalogu się znajduję po zmianie, ponownie
+użyłem komendy "pwd". Wynik pokazał, że jestem w katalogu "/", czyli
+w głównym katalogu użytkownika, co było zgodne z oczekiwaniami.
+
+Zadanie 1.6:
+Wyświetl zawartość bieżącego katalogu:
+Użyłem komendy "ls". Po jej wpisaniu na ekranie pojawiła się lista
+bibliotek i plików znajdujących się w bieżącym katalogu, którym
+w moim przypadku był katalog główny, czyli root.
+
+Zadanie 1.7:
+Wyświetl zawartość swojego katalogu domowego bez przechodzenia do
+niego (ls z odpowiednim parametrem):
+Komenda "ls ~" pozwoliła mi zobaczyć, jakie pliki i foldery znajdują
+się w moim katalogu domowym.
+
+Zadanie 1.8:
+Przejdź do katalogu Obrazy (lub innego katalogu, który jest dostępny - podaj
+wprost, że zmieniasz katalog na inny bo np. Obrazy nie są u Ciebie dostępne)
+w twoim katalogu domowym za pomocą ścieżki względnej:
+Zadanie zakładało przejście do katalogu "Obrazy" za pomocą ścieżki
+względnej. Niestety, ten katalog nie był dostępny, więc zdecydowałem się
+na przejście do innego dostępnego katalogu, w moim przypadku był to katalog
+"PPRG" związany z materiałami z zajęć.
+
+Zadanie 1.9:
+Sprawdź gdzie jesteś:
+Po zmianie katalogu wpisałem komendę "pwd". Wynik pokazał mi ścieżkę
+"/home/PJWSTK/s29862/", co potwierdziło, że jestem w katalogu "PPRG".
+
+Zadanie 1.10:
+Zobacz do jakiego katalogu przejdziesz za pomocą ścieżki "././././././":
+Po wpisaniu "./././././" w celu przemieszczenia się po katalogach, okazało
+się, że nie nastąpiła żadna zmiana, pozostałem w tym samym katalogu.
+"./" oznacza aktualną lokalizację. Jeśli wpiszę więc  "././././././" to
+cały czas wybieram aktualną lokalizację. Jeśli dodam więcej kropek to się
+zacznę cofać wstecz. np.:
+./ ---> pierwsza kropka to aktualny folder
+../ ---> dwie kropki oznaczają cofnięcie o jeden folder
+../../ ---> cofnięcie się o dwa katalogi
+../../../ ---> cofnięcie się o trzy katalogi
+itd.
+Czyli jak wpiszę X "../" to cofnę się o X katalogów
+
+Zadanie 1.11:
+Przejdź do swojego katalogu domowego za pomocą ścieżki bezwzględnej:
+Następnie postanowiłem przejść do katalogu domowego za pomocą ścieżki
+bezwzględnej, używając komendy "cd ../../". Sutkiem tego byłem
+w katalogu domowym, co było zgodne z oczekiwaniami.
+
+Zadanie 1.12:
+Zobacz co się stanie jak wpiszesz komendę 'cd /root'. Jak już to
+zrobisz, zastanów się co się stało. Poszukaj w Internecie:
+Aby zrozumieć, co się stanie po wpisaniu komendy 'cd /root', dokonałem
+tego. Na konsoli pojawił się komunikat o braku dostępu. Okazało się,
+że komenda ta przenosi użytkownika do katalogu "/root", który jest
+systemowym katalogiem i wymaga specjalnej autoryzacji.
+
+Zadanie 1.13:
+Zobacz, co się stanie, jeśli wciśniesz kombinację klawiszy: Ctrl+Alt+F3:
+Następnie sprawdziłem kombinację klawiszy Ctrl+Alt+F1, Ctrl+Alt+F2
+i Ctrl+Alt+F7. Okazało się, że Ctrl+Alt+F1 otwiera dodatkowy terminal,
+a pozostałe kombinacje również powodują zmiany w dostępie do terminali.
+Nie spowodowały one wylogowania, a jedynie umożliwiły dostęp do
+innych wirtualnych terminali.
+
+Zadanie 1.14:
+A teraz co się stanie po: Alt+F1 lub ALT+F2 lub ALT+F7
+(na starszych linuxach):
+Okazało się, że Alt+F1 przywołuje pierwszy otwarty terminal,
+a Alt+F2 drugi. Te kombinacje klawiszy są przydatne do nawigacji
+między otwartymi terminalami.
+
+
+
+
+Zadanie 2.1
+Korzystając z komend cd oraz mkdir stwórz następujące drzewo katalogów
+w swoim katalogu domowym (w dowolnym podkatalogu,
+albo bezpośrednio w ~):
+Używając komend w podanej kolejności:
+-> mkdir ukos
+-> cd ukos
+-> mkdir katalog klamka
+-> cd katalog
+-> mkdir katalog2 katalog3
+utworzyłem drzewo katalogów podane w zadaniu.
+
+Zadanie 2.2
+W katalogu ukos/klamka stwórz pliki zajęcia2.txt zajęcia2.log
+inny.txt nowy.txt:
+Zrobiłem to używając komend w tej kolejności:
+-> cd ~/ukos/klamka
+-> touch zajęcia2.txt
+-> touch zajęcia.log
+-> touch inny.txt
+-> touch nowy.txt
+
+Zadanie 2.3
+Za pomocą jednego polecenia mkdir stwórz w katalogu ukos następujący
+katalog: ukos/to/jest/dluga/nazwa
+Zrobiłem to używając komend:
+-> cd ~
+-> mkdir -p ukos/to/jest/druga/nazwa
+
+Zadanie 2.4
+następnie umieść w katalogu ukos/to/jest/druga/nazwa plik dane.txt:
+Zrobiłem to komendą: touch ukos/to/jest/druga/nazwa/dane.txt
+
+Zadanie 2.5
+Usuń z katalogu ukos/klamka wszystkie pliki z rozszerzeniem txt:
+Zrobiłem to komendą: rm -i ukos/klamka/*.txt
+Następnie wpisywałem "y" i klikałem enter.
+
+Zadanie 2.6
+Usuń katalog ukos/katalog/katalog2:
+Zrobiłem to komendą: rmdir ukos/katalog/katalog2
+
+Zadanie 2.7
+Usuń cały katalog klamka za pomocą jednego polecenia:
+Zrobiłem to komendą: rm -r ukos/klamka
