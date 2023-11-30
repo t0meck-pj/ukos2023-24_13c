@@ -3,8 +3,6 @@
 - w trybie tekstowym;
 
 - przy użyciu programu Midnight Commander (mc);
-
-	=======================ODPOWIEDŹ=======================
 	
 	Poniżej struktura podkatalogów i plików tekstowych:
 
@@ -27,42 +25,34 @@
 	Mogę wylistować pliki w home directory s29986, nie mam dostępu do zajrzenia do folderu /home/PJWSTK/s29986/test/kat1, w /home/PJWSTK/s29986/test/kat2 widzę pliki z uprawnieniami -rw-r--r--, mogę je odczytywać ale są puste. Obserwuję, że mogę usunąć cudzy plik w swoim home directory.
 
 
-===================================================================================
-
 
 2. W utworzonej na swoim koncie strukturze podkatalogów przeprowadzić eksperymenty:
 
 - usuwając wszelkie uprawnienia dostępu do katalogu bieżącego
 
-	=======================ODPOWIEDŹ=======================
 
-	chmod 000 ./
+	chmod 000 ./ - usuwam wszelkie uprawnienia dla katalogu, w którym jestem.
 
 - usuwając wszelkie uprawnienia dostępu do katalogu nadrzędnego (nadkatalogu).
 
-	=======================ODPOWIEDŹ=======================
 
-	chmod 000 ../
+	chmod 000 ../ - usuwam wszystkie uprawnienia dla katalogu nadrzędnego.
 
 	- W jakich przypadkach możemy wykonać wtedy polecenie cd ? 
 	
-	=======================ODPOWIEDŹ=======================
 		Jedynie w przypadku ścieżki bezwzględnej do miejsca do którego mamy prawo (zakładając, że nie mamy dostępu do roota ani praw sudo).
 
 	- W jakich przypadkach możemy wykonać polecenie chmod ? 
 	
-	=======================ODPOWIEDŹ=======================
 		Jedynie jeżeli katalog należy do nas, bądź mamy dostęp do roota lub sudo.
 
 	- Czy możemy bezpośrednio przeskoczyć do katalogu ABC/XYZ, jeśli nie mamy uprawnienia wstępu do ABC, ale mamy do XYZ ?
 	
-	=======================ODPOWIEDŹ=======================
-		Nie możemy.
+		Nie możemy, ponieważ nie mam uprawnień do katalogu który jest "po drodze".
 
 	- Czy możemy także wrócić korzystając z polecnia cd - ?
 	
-	=======================ODPOWIEDŹ=======================
-		Nie, nie możemy
+		Nie, nie możemy, obecnie jest już za późno na powrót.
 
 3. W zespołach 2- lub 3-osobowych (w opisie zadania na githubie proszę umieścić login osób z zespołu) wypróbować możliwość komunikacji przez współdzielony plik: na jednym z kont w zespole utworzyć pusty plik i przydzielić odpowiednie uprawnienia dostępu (do pliku i do katalogu domowego). Wpisywać i odczytywać komunikaty przy użyciu poleceń:
 
@@ -71,10 +61,9 @@
 - cat plik
 	Sprawdzić, jaki skutek powoduje zamiana operatora > na operator >> w poleceniu echo. Uruchom także drugi terminal i wykonaj w nim komendę tail -f plik i powtórz powyższe ćwiczenie w pierwszym terminalu (komunikacja za pomocą pliku).
 	
-	=======================ODPOWIEDŹ=======================
 	
 	Używając operatora ">" plik jest nadpisywany, kiedy przy użyciu ">>" Nowa treść jest dopisywana do końca.
-	Polecenie tail -f pokazuje "na żywo" to co zostało dopisane. Robiłem przy pomocy s29986
+	Polecenie tail -f pokazuje "na żywo" to co zostało dopisane. Robiłem przy pomocy s29986.
 
 4. Znaleźć w swoim katalogu domowym podkatalog public_html (jeśli go nie ma, to utworzyć; musi się on nazywać DOKŁADNIE tak jak podano, pisane małymi literami z podkreśleniem zamiast spacji pomiędzy słowami). Umieścić w nim plik o nazwie strona.html o następującej zawartości:
 
@@ -96,14 +85,15 @@ katalogu public_html;
 
 pliku strona.html, aby zawartość pliku była widoczna w przeglądarce internetowej pod adresem http://szuflandia.pjwstk.edu.pl/~twój_login/strona.html
 
-	=======================ODPOWIEDŹ=======================
 
-	Wystarczą dla katalogu domowego 701 folderu public_html (pewnie wystarczyłoby 001 ale wolę nie zmieniać swoich uprawnień dla swojego home directory), dla public_html uprawnienia 001, dla pliku wystarczy już 004. (Dzięki pracy w hostingu wiem, że najlepiej dać 755 na podkatalogi w public_html i 644 na pliki, wówczas bardziej zaawansowane aplikacje mogą działać.)
+	Wystarczą dla katalogu domowego 701 folderu public_html (pewnie wystarczyłoby 001 ale wolę nie zmieniać swoich uprawnień dla swojego home directory), 
+	dla public_html uprawnienia 001, dla pliku wystarczy już 004. (Dzięki pracy w hostingu wiem, że najlepiej dać 755 na 
+	podkatalogi w public_html i 644 na pliki, wówczas bardziej zaawansowane aplikacje mogą działać.)
 	
 	
 5. W opisie bash-a (man) przeczytać opis polecenia wewnętrznego umask i wypróbować jego działanie sprawdzając, a następnie zmieniając swoją maskę trybu pliku i tworząc za każdym razem nowe pliki (przy użyciu polecenia touch plik), a później sprawdzając uzyskane uprawnienia dostępu do nich (polecenie ls -l). Jaka operacja logiczna na bitach domyślnych uprawnień dostępu oraz maski jest wykonywana ? 
 
-	=======================ODPOWIEDŹ=======================
 	(Mam nadzieję że poprawnie zrozumiałem pytanie).
 	Umask w skrócie powoduje odjęcie bitów uprawnień przy tworzeniu pliku.
-	Przy tworzeniu pliku wartość "domyślna" dla umask to 666, czyli przy ustawieniu "umask 022" zajdzie działanie 666 - 022 = 644. W przypadku katalogów wartość jest odejmowana analogicznie, tylko że od 777.
+	Przy tworzeniu pliku wartość "domyślna" dla umask to 666, czyli przy ustawieniu "umask 022" zajdzie działanie 666 - 022 = 644. 
+	W przypadku katalogów wartość jest odejmowana analogicznie, tylko że od 777.
