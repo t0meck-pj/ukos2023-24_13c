@@ -1,0 +1,32 @@
+Zadanie 1
+Zalogowałem się do szuflandii, utworzyłem drzewo katalogów poleceniem mkdir.
+Zmieniłem uprawnienia folderu "katalog3" na 777 chmod'em. Za pomocą cd
+przeniosłem się do katalogu innego użytkownika. Sprawdzając mój dostęp
+wpisałem "ls -l" i sprawdziłem, który plik/katalog ma "w" w grupie bądź
+wszystkich i w tych plikach byłem wstanie dokonać modyfikacji pliku/katalogu.
+Utworzyłem plik jajako.txt u s26856, ale plik został bestialsko usunięty.
+Próbując usunąć cudzy plik we własnym katalogu nie byłem wstanie tego zrobić.
+
+Zadanie 2
+Wszedłem do katalogu "katalog1" w "katalog 1". Zabrałem wszystkie uprawnienia
+w katalogu bieżącym używając "chmod 000 .". Wszedłem do katalogu
+"../katalog2". Zabrałem wszystkie uprawnienia w katalogu bieżącym używając
+"chmod 000 ..". Polecenie "cd" mogę użyć jeśli komenda nie będzie mnie
+prowadzić do któryś z tych katalogów. Polecenie "chmod" mogę użyć, gdy mam
+uprawnienia do pliku, aktualnie nie mająć uprawnień do tych katalogów nie
+mogę tego wykonać. Czy możemy bezpośrednio przeskoczyć do katalogu ABC/XYZ,
+jeśli nie mamy uprawnienia wstępu do ABC, ale mamy do XYZ? - tak.
+Czy możemy także wrócić korzystając z polecnia cd - tak, ale tylko do
+folderów do których mam dostęp.
+
+Zadanie 3 (Partner do zadania: s26856 - Dawid Cybuch)
+Dawid utworzył plik u siebie. Użył ">". Ja użyłem też tego. Okazało się, że
+nadpisałem "UwU" Dawida treścią "SuccubMommy jest OwO".
+Używając ">>" dopisujemy do tego co już istnieje.
+Jesteśmy w stanie się komunikować.
+
+
+
+Zadanie 4
+Stworzona stronka zgodnie z poleceniami. Znam struktury folderów stron
+internetowych, znam html'a więc nic nowego dla mnie.
