@@ -1,0 +1,5 @@
+Jak uruchomić program by nie blokował terminala. Są 2 sposoby. Jakie?
+	
+	Mogę go uruchomić dodając "&" na końcu polecenia.
+	Mogę uruchomić program i następnie nacisnąć ctrl + z, później za pomocą komendy jobs sprawdzić numer joba danego programu i wznowić jego wykonywanie
+	za pomocą bg %<numer joba>

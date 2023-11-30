@@ -1,0 +1,31 @@
+Jest dane takie drzewo katalogów:
+
+.
+
+├── ala
+
+│   ├── i
+
+│   │   └── as
+
+│   └── ma
+
+│       └── kota
+
+└── kot
+
+    └── ma
+
+        └── ale
+
+Znajdujesz się w katalogu kota. Katalog ala, jest w katalogu /tmp/ukos.
+Jak przejść do katalogu ala ale za pomocą:
+
+ścieżki względnej (relatywnej)
+
+ścieżki bezwzględnej (absolutnej)
+
+	Przejść za pomocą ścieżki relatywnej mogę wpisując:
+		cd ../..
+	Zaś aby przejść za pomocą ścieżki absolutnej, mogę wpisać:
+		cd /tmp/ukos/ala

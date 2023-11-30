@@ -1,0 +1,24 @@
+.
+
+├── ala
+
+│   ├── i
+
+│   │   └── as
+
+│   └── ma
+
+│       └── kota
+
+└── kot
+
+    └── ma
+
+        └── ale
+
+Masz taki układ katalogów, jak wyżej i ciągle jesteś w katalogu kota. Jak utworzyć poddrzewo katalogów jan/kowalski w katalogu ale za pomocą jednej komendy?
+
+Podaj rozwiązania używając ścieżek absolutnych i relatywnych.
+
+	Ścieżka abolutna: mkdir -p /tmp/ukos/kot/ma/ale/jan/kowalski
+	Ścieżka relatywna: mkdir -p ../../../kot/ma/ale/jan/kowalski
