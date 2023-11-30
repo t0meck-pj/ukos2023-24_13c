@@ -1,0 +1,36 @@
+Program ps służy do wyświetlania listy procesów. 
+Zadania:
+A: Zobacz co się stanie jeśli wpiszemy w terminalu:
+
+ps
+
+	Wyświetlona została lista procesów uruchomionych przezemnie.
+
+ps -a
+
+	Wyświetlone zostały wszystkie procesy oprócz tych odpowiadających za obecną sesję terminala.
+
+ps x
+
+	Wyświetlone zostały wszystkie procesy, które nie mają swojego terminala. Najpewniej procesy uruchomione przy włączaniu systemu i działające w tle.
+
+ps axu
+INFO: tu kolejność parametrów a, x, u nie ma znaczenie a jedynie fakt, że są podane. Dowolna kolejność powinna dać ten sam wynik.
+
+	Wyświetlona została lista wszystkich bieżących procesów uruchomionych w systemie.
+
+Jak myślisz, co oznacza znak zapytania w kolumnie 2?
+Nie wiesz? A gdzie może być wyjaśnienie?
+
+	"TTY" oznacza po prostu terminal. Procesy ze znakiem zapytania pod TTY to najpewniej procesy działające w tle, niezwiązane z żadnym terminalem. 
+	Wyjaśnienie znalazłem w manie.
+
+B: Jak wykonasz poniższe 2 zadania?
+
+Wyświetl wszystkie procesy bash
+
+	ps -ef | grep bash (Mam nadzieję że dobrze zrozumiałem zadanie, że mam wylistować wszystkie procesy basha)
+
+Wyświetl wszystkei procesy należące do użytkownika root
+
+	ps -u root - Wylistowane są wszystkie procesy należące do roota.
