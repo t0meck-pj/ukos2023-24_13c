@@ -7,4 +7,4 @@ do czego służą, oraz poznałem nową dla siebie komendę - umask.
 Drogi Pamiętniczku
 Dzisiaj dowiedziałem się jak listować procesy w linuxie, przypomniałem sobie jak korzystać ze strumieni, 
 nauczyłem się wysyłania sygnałów do procesów w celu np. ich zakończenia. Również dowiedziałem się jak korzystać
-z wielu programów na raz w jednym terminalu.
+z wielu programów na raz w jednym terminalu. Do tego wszystkiego przypomniałem sobie materiał do kolokwium.
