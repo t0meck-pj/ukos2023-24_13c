@@ -1,0 +1,58 @@
+1. Uruchom terminal
+	Uruchomiony
+
+2. Wyświetl zawartość aktualnego katalogu
+	ls
+
+3. Sprawdź gdzie aktualnie się znajdujesz
+	pwd
+
+4. Przejdź do katalogu Pulpit za pomocą ściezki względnej
+	cd Desktop/
+
+5. Sprawdź gdzie jesteś
+	pwd
+
+6. Wyświetl zawartość bieżącego katalogu
+	ls
+
+7. Wyświetl zawartość swojego katalogu domowego bez przechodzenia do niego
+	ls ~
+
+8. Przejdź do katalogu Obrazy (lub innego)
+w twoim katalogu domowym za pomocą ścieżki względnej
+	cd Pictures
+
+9. Sprawdź gdzie jesteś
+	pwd
+
+10. Zobacz do jakiego katalogu przejdziesz za pomocą ścieżki ././././././
+W opisie rozwiązania proszę umieścić również to jak rozumiesz co
+się właściwie stało.
+Dlaczego znalazła/eś się w tym miejscu do którego przeniosła Cię
+ta ścieżka?
+Czy dodanie kilku ./././././ na początku/środku/końcu powoduje,
+że ścieżka się zmieni?
+Co ta ścieżka oznacza/sobą reprezentuje?
+	Przez kropkę na początku nigdzie się nie ruszę.
+	Jak ją usunę, to przejdę do katalogu /
+
+11. Przejdź do swojego katalogu domowego za pomocą ścieżki bezwzględnej
+	cd /home/s31052
+
+12. Zobacz co się stanie jak wpiszesz komendę 'cd /root'.
+Jak już to zrobisz, zastanów się co się stało. Poszukaj w Internecie
+	Bez zmianny użytkownika na root, nie jestem w stanie wejść do
+	katalogu root
+
+13. Zadanie 13 i 14 trzeba wykonać na maszynie wirtualnej lub
+na fizycznym komputerze. Nie można go zrobić zdalnie na szuflandii.
+Zobacz, co się stanie, jeśli wciśniesz kombinację klawiszy: Ctrl+Alt+F3
+Sprawdź w Internecie co się dzieje kiedy używa się takiej kombinacji.
+W Internecie mogą pojawić się wersje z F1-F6. To de facto to samo.
+Odpowiedź "wylogowało mnie" jest błędna. Nie.
+Nie wylogowało. Szukaj dalej.
+	Okno terminalu z którego można korzystać z poziomu logowania
+
+14. A teraz co się stanie po: Alt+F1 lub ALT+F2 lub ALT+F7 (na starszych linuxach)
+	Otwiera się okno terminalu

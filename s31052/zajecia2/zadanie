@@ -1,0 +1,4 @@
+Umask - powoduje odjęcie bitów uprawnień przy tworzeniu pliku lub katalogu.
+Przy tworzeniu pliku wartość dla umask to 666
+przy umask 022 bedzię 666 - 022 = 644.
+W katalogach wartość jest odejmowana od 777.
