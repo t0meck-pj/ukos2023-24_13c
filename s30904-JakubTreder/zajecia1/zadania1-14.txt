@@ -1,0 +1,61 @@
+1.Uruchom terminal.
+wykonanie: uruchomienie terminala z paska zadań
+
+2.Wyświetl zawartość aktualnego katalogu.
+wyykonanie: ls -l 
+
+3.Sprawdź gdzie aktualnie się znajdujesz.
+wykonanie: pwd
+wynik: /home/osboxes
+4.Przejdź do katalogu Pulpit za pomocą ścieżki względnej
+wykonianie: cd Desktop
+wynik: Znalazłem sie w katalogu Desktop
+
+5.Sprawdź gdzie jesteś.
+wykonianie: pwd 
+wynik: /home/osboxes/desktop
+
+6.Wyświetl zawartość bieżącego katalogu.
+wykonianie: ls -l
+wniosek: wyswietlenie plików z katalogu desktop
+
+7.Wyświetl zawartość swojego katalogu domowego bez przechodzenia do niego (ls z odpowiednim parametrem).
+wykonanie: ls -l ~
+wynik: taki sam jak w zadaniu drugim. 
+
+8.Przejdź do katalogu Obrazy (lub innego katalogu, który jest dostępny - podaj wprost, że zmieniasz katalog na inny bo np. Obrazy nie są u Ciebie dostępne) w twoim katalogu domowym za pomocą ścieżki względnej.
+wykonanie: cd ../Pictures 
+wynik: jestem w katalogu obrazy
+
+9.Sprawdź gdzie jesteś.
+wykonanie: pwd
+wynik: /home/osboxes/Pictures
+
+10.Zobacz do jakiego katalogu przejdziesz za pomocą ścieżki ././././././
+W opisie rozwiązania proszę umieścić również to jak rozumiesz co się właściwie stało.
+Dlaczego znalazła/eś się w tym miejscu do którego przeniosła Cię ta ścieżka?
+Czy dodanie kilku ./././././ na początku/środku/końcu powoduje, że ścieżka się zmieni?
+Co ta ścieżka oznacza/sobą reprezentuje?
+wykonanie: cd ././././././
+wynik: dalej jestem w katalogu Pictures
+odpowiedz: ./ to katalog biezący 
+
+11.Przejdź do swojego katalogu domowego za pomocą ścieżki bezwzględnej.
+wykonanie: cd /home/osboxes
+wynik: jestem w katalogu domowym
+
+12.Zobacz co się stanie jak wpiszesz komendę 'cd /root'. Jak już to zrobisz, zastanów się co się stało. Poszukaj w Internecie.
+wykonanie: cd /root
+wynik: permission denied
+wniosek: aby dostac sie do katalogu roota musiałbym zalogować sie na konto super usera.
+
+13.Zobacz, co się stanie, jeśli wciśniesz kombinację klawiszy: Ctrl+Alt+F3
+Sprawdź w Internecie co się dzieje kiedy używa się takiej kombinacji. W Internecie mogą pojawić się wersje z F1-F6. To de facto to samo.
+Odpowiedź "wylogowało mnie" jest błędna. Nie. Nie wylogowało. Szukaj dalej.
+wykonanie: ctrl+alt+f3
+wynik: okno terminala z opcja zalogowania sie, wciąż jestem zalogowany
+
+
+14.A teraz co się stanie po: Alt+F1 lub ALT+F2 lub ALT+F7 (na starszych linuxach) 
+wykonanie: alt+f1, alt+f2, alt+f7
+wynik: alt+f2 owtorzyło mi nowe okno terminala, alt+f7 zamknęło wcześcniejsze okna 
