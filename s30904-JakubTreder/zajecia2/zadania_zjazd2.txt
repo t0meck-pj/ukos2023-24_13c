@@ -1,0 +1,31 @@
+1. Utworzyć we własnym katalogu domowym niedużą strukturę podkatalogów i plików tekstowych. Przydzielić różne uprawnienia dostępu, następnie spróbować wejść do katalogów domowych innych uczestników zajęć i sprawdzić, które z obiektów są tam dla nas dostępne (i w jakim sensie). Spróbować utworzyć własny plik w cudzym katalogu ("kukułcze jajko") oraz spróbować usunąć cudzy plik we własnym katalogu (co można zaobserwować ?). Wypróbować powyższe operacje:
+
+Wykonanie: 
+
+├── katalog
+│   ├── katalog1
+│   └── plik123.txt
+└── plik.txt
+
+
+2. - usuwając wszelkie uprawnienia dostępu do katalogu bieżącego
+chmod 000 ./
+- usuwając wszelkie uprawnienia dostępu do katalogu nadrzędnego (nadkatalogu)
+chmod 000 ../
+- W jakich przypadkach możemy wykonać wtedy polecenie cd 
+do miejsc do których mamy prawa
+- W jakich przypadkach możemy wykonać polecenie chmod ? 
+Kiedy katalog nalezy do nas lub jestesmy rootem badz mam prawa sudo 
+-  Czy możemy bezpośrednio przeskoczyć do katalogu ABC/XYZ, jeśli nie mamy uprawnienia wstępu do ABC, ale mamy do XYZ ?
+nie 
+- Czy możemy także wrócić korzystając z polecnia cd - ?
+nie 
+3. 
+razem z s29866 weszliśmy do naszych katalogów przez odpowiednie uprawnienia: chmod 730 zadanie_jajo_zjazd2.txt pozniej przez echo > jajo.txt wysłał treść do pliku. 
+4.
+ Znaleźć w swoim katalogu domowym podkatalog public_html (jeśli go nie ma, to utworzyć; musi się on nazywać DOKŁADNIE tak jak podano, pisane małymi literami z podkreśleniem zamiast spacji pomiędzy słowami). Umieścić w nim plik o nazwie strona.html o następującej zawartości:
+
+Rozwiązanie:
+do katalogu domowego chmod 701
+do public_html chmod 001 
+dla pliku strona.html chmod 004 
