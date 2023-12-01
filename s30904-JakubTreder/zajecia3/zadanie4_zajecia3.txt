@@ -1,0 +1,9 @@
+1. 
+-bg 
+-fg 
+
+-gimp &
+-gedit &
+-geany &
+
+fg%(3605026)

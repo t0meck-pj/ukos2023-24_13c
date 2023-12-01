@@ -1,0 +1,12 @@
+1,2. Uruchomiłem edytor vim następnie za pomocą ps -a | grep vim sprwaidzłem jego PID (3603890)
+
+3. w drugim terminalu wpisując kill 3603890 wyłączyło mi edytor vim w pierwszym oknnie terminala
+
+4. Po wpisaniu kill all bash:
+bash(3601527): Operacja niedozwolona
+bash(3602252): Operacja niedozwolona
+bash(3603276): Operacja niedozwolona
+bash(3604141): Operacja niedozwolona
+
+5. kill nie zawsze działa dla dowolnego procesu, bez uprawnien komendą kill program
+ dostaje informację której nie musi wykonać.  
