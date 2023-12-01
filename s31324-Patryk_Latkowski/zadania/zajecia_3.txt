@@ -1,0 +1,117 @@
+Zadanie 0.1
+Przejdź do swojego katalogu domowego:
+Użyłem komendy: cd ~
+
+Zadanie 0.2
+Wydaj komendę: ls -a:
+Zrobione, wypisało katalogi i pliki.
+
+Zadanie 0.3
+Zobacz ile plików wypisało:
+Zobaczyłem - 12 folderów i 5 pliki. Zawarło także "." i "..", co daje nam 14 folderów
+razem.
+
+Zadanie 0.4
+Teraz wydaj komendę: ls -a | grep D:
+Użyłem komendy: ls -a | grep l
+
+Zadanie 0.5
+Zobacz ile teraz jest wyników. Co się stało?
+Wypisało wszystkie pliki i foldery zawierające literę "l". Wypisało 6 katalogów
+i 2 pliki.
+
+Zadanie 0.6
+A teraz wykonaj komendę: ls -a | grep D > lista_plikow_z_literka_d.txt
+Użyłem komendy: ls -a | grep l > lista_plikow_z_literka_l.txt
+
+Zadanie 0.7
+Zobacz czy utworzył sie jakiś plik?
+Jaka jest jego treść?
+Co znaczy | oraz co znaczy > ?:
+Utworzył się plik "lista_plikow_z_literka_l.txt". Jego treść to:
+".bash_logout
+katalog1
+katalog2
+katalog3
+lista_plikow_z_literka_l.txt
+.local
+.profile
+public_html
+ukos2023-24_13c.fileupload"
+"|" oznacza oddzielenie następnego polecenia/argumentu powiązanego z pierwszym
+poleceniem, a ">" zapisanie wyników w pliku.
+
+Zadanie 0.8
+A teraz wykonaj komendę: ls -a | grep D | tee lista_plikow_z_literka_d_2.txt:
+Wykonałem podminejąc "d" na "l".
+
+Zadanie 0.9 
+Zobacz czy plik się utworzył?
+Jaka jest treść względem poprzedniej próby bez programu tee?
+Co robi program tee?
+Sprawdziłem czy utworzył się plik komendą "ls".  Treść jest identyczna. Program tee
+zapisze wynik w pliku jednocześnie wypisując jego zawartość.
+
+
+
+
+Zadanie 1A.1
+Zobacz co się stanie jeśli wpiszemy w terminalu ps:
+Wypisze listę procesów użytkownika.
+
+Zadanie 1A.2
+Zobacz co się stanie jeśli wpiszemy w terminalu ps -a:
+Wypisze listę wszystkich procesów.
+
+Zadanie 1A.3
+Zobacz co się stanie jeśli wpiszemy w terminalu ps x:
+Wypiszę wszsystkie procesy uwzględniając procesy ukryte.
+
+Zadanie 1A.4
+Zobacz co się stanie jeśli wpiszemu w terminalu ps axu:
+Wypisze wszystkie procesy w systemie. Nie mam pojęcia co oznacza "?" w kolumnie 2.
+
+Zadanie 1B.1
+Wyświetl wszystkei procesy bash:
+Zrobiłem to komendą: ps axu | grep bash
+
+Zadanie 1B.2
+Wyświetl wszystkei procesy należące do użytkownika root:
+Zrobiłem to komendą: ps axu | grep ^root
+
+
+Zadanie 2
+ZOSTANIE ZROBIONE JAK ODZYSKAM SWÓJ DYSK Z LINUXEM :))
+
+
+
+
+Zadanie 3
+
+Uruchom komendę cat be parametrów. Wciśnij CTRL+C i zobacz co się stanie:
+-> Wyłączyłem program "cat".
+
+Wydaj komendę cat > wynik3_1.txt. Wpisz tekst witaj bez wciskania klawisza Enter.
+Wciśnij CTRL+C. Zobacz co się znalazło w pliku wynik3_1.txt:
+-> Nic się nie znalazło w pliku wynik3_1.txt.
+
+Wydaj komendę cat > wynik3_2.txt. Wpisz tekst witaj bez wciskania klawisza Enter.
+Wciśnij CTRL+D (możliwe, że będzie trzeba wcisnąć go 2x). Zobacz co się znalazło
+w pliku wynik3_2.txt:
+-> Nic się nie znalazło w tym pliku.
+
+jak rozumiesz co się stało?:
+-> ctrl + c służy do wyjścia bez potwierdzenia, natomiast ctrl + d słyży to wyjścia
+z potwierdzeniem.
+
+czym oba te przykłady się różnią?:
+-> tym że trzeba ctrl + d wcisnąć dwa razy a ctrl + c raz.
+
+DLACZEGO się różnią?
+-> żeby przez przypadek nie wyjść i nie utracić niezapisanych zmian.
+
+
+
+
+Zadanie 4
+ZOSTANIE ZROBIONE JAK ODZYSKAM SWÓJ DYSK Z LINUXEM :))
