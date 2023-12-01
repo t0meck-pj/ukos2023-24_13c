@@ -1,0 +1,4 @@
+30.09.2023
+Mój drogi pamiętniczku na dzisiejszych zajęciach nauczyłem się:
+poleceń w systemach linuxowych, poruszania sie po katalogach unixowych,
+
