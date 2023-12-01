@@ -1,0 +1,11 @@
+1. ps pokazuje procesy 
+2. ps -a pokazuje procesy z wyjatkiem procesu terminala
+3. ps x wymienia wszystkie procesy
+4. ps uxa pokazuje wszystkie procsy wraz z ich PID, PPID z wykorzystaniem 
+   CPU oraz RAM i statusami prcesow
+5. TTY to nazwa terminala, znaki zapytania znaczą ze procesy nie 
+   sa powiazane z obecnym terminalem
+6. Procesy roota: ps -U root -u root u. Pokazalo mi wszystkie procesy 
+   roota wraz z PID, CPU, RAM oraz kiedy zostaly wystartowane, 
+   jak rowniez polecenia ktore wykonuje.
+7. procesy basha: ps aux | grep bash

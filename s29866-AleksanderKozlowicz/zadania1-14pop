@@ -1,0 +1,75 @@
+  
+1. Uruchom terminal. 
+	Terminal uruchomiony
+
+2. Wyswietl zawartosc aktualnego katalogu.
+	- Wyswietlilem zawartosc swojego katalogu za pomoca ls, dodajac -l 
+	- Wyswietlilo mi to pliki wraz z pokazaniem aktualnych dostepow.
+	
+
+3. Sprawdz gdzie aktualnie sie znajdujesz.
+	-komenda pwd
+	-Znajduje sie obecnie: /home/PJWSTK/s29866
+
+4. Przejdz do katalogu Pulpit za pomoca sciezki wzglednej.
+	cd Desktop
+
+5. Sprawdz gdzie jestes. 
+	 /home/PJWSTK/s29866
+	 Nie udalo mi sie przejsc do katalogu Desktop poniewaz nie istnieje
+
+6. Wyswietl zawartosc biezacego katalogu
+	Wykonanie: ls -l
+	Wyswietlila mi sie lista 5 plikow
+
+7. Wyswietl zawartosc katalogu domowego bez przechodzenia do niego (ls z odpo-
+   wiednim parametrem)
+	ls -l ~
+
+
+8. Przejdz do katalogu Obrazy (lub innego katalogu, ktory jest dostepny - podaj
+   wprost, ze zmieniasz katalog na inny bo np. Obrazy nie sa u Ciebie dostepne)
+   w twoim katalogu domowym za pomoca sciezki wzglednej
+	- cd ../../s29866
+	- Znalazlem sie w katalogu mojego uzytkownika
+
+9. Sprawdz, gdzie jestes
+	 /home/PJWSTK/s29866
+
+
+10. Zobacz do jakiego katalogu przejdziesz za pomoca sciezki ././././././
+    W opisie rozwiazania prosze umiescic rowniez to jak rouzmiesz co sie
+    wlasciwie stalo. Dlaczego znalazles sie w tym miejscu do ktorego przenio-
+    sla Cie ta sciezka? Czy dodanie kilku ./././././ na poczatku/srodku/koncu 
+    powoduje, ze sciezka sie zmieni? Co ta sciezka oznacza/soba reprezentuje?
+	cd ././././././ 
+	Po wykonaniu tego polecenia moja lokazlizacja nie zminila sie
+	Nie zmienila sie poniewaz cd . oznacza pozostanie w danum katalogu - tzn ze caly
+	czas przenosimy sie do aktualnego katalogu
+
+11. Przejdz do swojego katalogu domowego za pomoca sciezki bezwzglednej
+	 cd /home/s29866
+	Jestem w katalogu domowym
+
+12. Zobacz co sie stanie jak wpiszesz komende 'cd /root'. Jak juz to zrobisz, 
+    zastanow sie co sie stalo. Poszukaj w Internecie.
+	 cd /root
+	 Permission denied
+	 dowiedzialem sie, ze do katalogu
+	 domowego roota nie jestem w stanie wejsc z poziomu innego 
+	 konta.
+
+13. Zobacz, co sie stanie, jesli wcisniesz kombinacje klawiszy: Ctrl+Alt+F3
+    Sprawdz w Internecie co sie dzieje kiedy uzywa sie takiej kombinacji. W 
+    Internecie moga pojawic sie wersje z F1-F6. To de facto to samo. Odpowiedz 
+    "wylogowalo mnie" jest bledna. Nie. Nie wylogowalo. Szukaj dalej.
+	 Wyswietlone zostalo okno logowania  
+	Jest to okno terminala, z ktorego
+	mozna skorzystac nawet z poziomu ekranu logowania. Po zalogowaniu sie w
+	nim umozliwia ono korzystanie z systemu.
+
+14. A teraz co sie stanie po: Alt+F1 lub Alt+F2 lub Alt+F7 (na starszych lin)
+	Pojawiaja sie kolejne okna terminala
+	Dzieki ALT + F2 mozemy otworzyc jakis program znajac jego sciezke, wyjsc 
+	"na sile" z terminala.
+	ALT + F1 zmienia terminal ktory obslugujemy na 1 z 7 dostepnych
