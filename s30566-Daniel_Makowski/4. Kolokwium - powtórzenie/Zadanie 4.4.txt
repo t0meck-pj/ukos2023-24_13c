@@ -1,0 +1,5 @@
+Jak zamknąć program, który nie reaguje na ctrl+c ?
+
+	Mogę zamknąć sesję terminala (powinien się wtedy wyłączyć)
+	Mogę spróbować schować go do tła za pomocą ctrl + z i wykonać polecenie kill -9 %<numer joba>,
+	lub w osobnym terminalu wyszukać jego pid i zabić przy użyciu kill -9 <PID>

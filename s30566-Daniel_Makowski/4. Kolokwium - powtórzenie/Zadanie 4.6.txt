@@ -1,0 +1,30 @@
+Nadaj uprawnienia do katalogu ala tak aby:
+
+każdy mógł do niego wejść
+
+tylko grupa mogła wyświetlić co w nim jest
+
+właściciel ma pełne uprawnienia
+
+HINT: Jakie są uprawnienia początkowe?
+
+Podpowiedź: powyższe 3 punkty opisu to jedno zadanie. Nie 3 osobne.
+Przygotuj 3 wariacje rozwiązania tego zadania używając różnych notacji: 
+
+oktalnej/ósemkowej/cyfrowej
+
+literowej ze znakiem równości
+
+literowej z plusami i minusami
+
+Wszystkie wersje powinny być zapisane w jednym poleceniu (bez używania && czy | )
+
+	Oktalna: chmod 751 /tmp/ukos/ala
+
+	Literowa ze znakiem równości: chmod u=rwx,g=rx,o=x /tmp/ukos/ala
+
+	Literowa z plusami i minusami: chmod a+rwx,g-w,o-rw /tmp/ukos/ala
+
+Jak korzystając z notacji ze znakiem równości odebrać wszystkie uprawnienia do danego zasobu?
+
+	Można w taki sposób: chmod a=- /tmp/ukos/ala

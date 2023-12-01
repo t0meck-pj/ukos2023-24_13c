@@ -1,0 +1,24 @@
+Uruchom wybrany przez Ciebie graficzny edytor tekstowy (np. gedit, gvim, Visual Studio Code, atom, itd...)
+
+	Uruchomiłem Mousepad
+
+Zobacz jaki ma on PID - przyda się do tego komenda ps
+
+	Sprawdziłem, w moich przypadku Mousepad ma pid 2458
+
+Wydaj komendę kill w taki sposób, aby ten edytor się wyłączył. Zobacz czy to działa.
+UWAGA: Niektóre programy przechwytują sygnały i mogą je częściowo blokować.
+Jeśli program nie wyłącza się, to zobacz jaka jest jego reakcja.
+Zobacz czy możesz wysłać do niego SIGKILL (gdzie sprawdzisz jak to zrobić?)
+
+	Program wyłączył się po wydaniu komendy kill i podaniu PID.
+	Jeśli by tak się nie stało, sprawdziłbym mana komendy kill i wykonał ją z argumentem -9.
+
+Zobacz działanie komendy killall bash
+
+	Polecenie powoduje zakończenie wszystkich procesów powłoki bash.
+
+Zobacz czy kill zadziała dla dowolnego procesu.
+
+	Samo w sobie kill nie zadziała dla każdego procesu (a przynajmniej nie tak jakbym chciał, nie zawsze domyślnie zabije proces).
+	Dlatego czasami muszę wydać sygnał nr. 9.
