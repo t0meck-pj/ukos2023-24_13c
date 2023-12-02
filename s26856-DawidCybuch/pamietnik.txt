@@ -4,3 +4,11 @@ Jak poprawnie wykonac git commit, git push oraz inne podstawowe
 działania gita
 Nauczylem sie rowniez czym sa sciezki wzgledne oraz bezwzgledne
 oraz jaka cudowna komenda jest man
+
+Tutaj uzupełnić!
+
+
+02.12.2023
+Moj drogi pamietniczku na dzisiejszych zajeciach mielismy kolokwium
+pomimo swojej pewnosci siebie niestety uzyskalem 10 punktow, takze
+musze jeszcze popracowac nad swoja wiedza
