@@ -1,0 +1,109 @@
+Zadanie 0
+Przypuśćmy, że nie możesz utworzyć żadnego pliku na swoim koncie uczelnianym
+np. na szuflandii. Co się mogło stać? (wymień co najmniej 3 opcje).
+Zakładamy, że możesz zalogować się w konsoli i nie masz zaległości
+w opłatach.:
+-> uszkodzony dysk na serwerze
+-> koniec przydzielonego miejsca na serwerze dla mojego konta
+-> brak uprawnień
+
+
+
+
+Zadanie 1
+Jest dane takie drzewo katalogów:
+
+.
+
+├── ala
+
+│   ├── i
+
+│   │   └── as
+
+│   └── ma
+
+│       └── kota
+
+└── kot
+
+    └── ma
+
+        └── ale
+
+Znajdujesz się w katalogu kota. Katalog ala, jest w katalogu /tmp/ukos. 
+Jak przejść do katalogu ala za pomocą:
+ścieżki względnej (relatywnej): cd ../../
+ścieżki bezwzględnej (absolutnej): cd /tmp/ukos/ala
+
+
+
+
+Zadanie 2
+Masz taki układ katalogów, jak wyżej i ciągle jesteś w katalogu kota. Jak
+utworzyć poddrzewo katalogów jan/kowalski w katalogu ale za pomocą jednej
+komendy? Podaj rozwiązania używając ścieżek absolutnych i relatywnych.
+Odpowiedź:
+-> Relatywna: mkdir -p jan/kowalski
+-> Absolutna: mkdir -p /tmp/ukos/adla/ma/kota/jan/kowalski
+
+
+
+
+Zadanie 3
+Masz taki układ katalogów, jak wyżej i ciągle jesteś w katalogu kota.
+Jak przenieść katalog ale do katalogu i używając:
+źródło (ścieżka względna), miejsce docelowe (ścieżka absolutna):
+-> komenda: mv ../../../kot/ma/ale /tmp/ukos/ala/i
+źródło (ścieżka absolutna), miejsce docelowe (ścieżka względna)
+-> komenda: mv /tmp/ukos/kot/ma/ale ../../i
+
+
+
+
+Zadanie 4
+Jak zamknąć program, który nie reaguje na ctrl+c?
+Odpowiedź: Menadżerem zadań.
+
+
+
+
+Zadanie 5
+Jak wypisać wszystkie pliki (i tylko pliki bez katalogów) w bieżącym katalogu,
+których nazwa zaczyna się od al?
+Tu będzie trochę opisu ode mnie na temat wyrażeń regularnych.
+Komenda: find al* -type f 
+
+
+
+
+Zadanie 6a
+Używając konsoli linuxa
+Nadaj uprawnienia do katalogu ala tak aby:
+-> każdy mógł do niego wejść
+-> tylko grupa mogła wyświetlić co w nim jest
+-> właściciel ma pełne uprawnienia
+HINT: Jakie są uprawnienia początkowe?
+Podpowiedź: powyższe 3 punkty opisu to jedno zadanie. Nie 3 osobne.
+Przygotuj 3 wariacje rozwiązania tego zadania używając różnych notacji: 
+-> oktalnej/ósemkowej/cyfrowej
+-> literowej ze znakiem równości
+-> literowej z plusami i minusami
+Wszystkie wersje powinny być zapisane w jednym poleceniu
+(bez używania && czy | ):
+Odpowiedzi:
+-> chmod 751 ala
+-> chmod u=rwx,g=rx,o= ala
+-> chmod u+rwx,g+rx,o= ala
+
+
+
+
+Zadanie 6b
+Jak korzystając z notacji ze znakiem równości odebrać wszystkie uprawnienia
+dla danego zasobu?
+Odpowiedź: chmod u=,g=,o= nazwa_zasobu
+
+
+
+
