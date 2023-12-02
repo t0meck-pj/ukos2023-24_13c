@@ -1,0 +1,72 @@
+1.Utworzyć we własnym katalogu domowym niedużą strukturę podkatalogów i plików tekstowych. Przydzielić różne uprawnienia dostępu,
+ następnie spróbować wejść do katalogów domowych innych uczestników zajęć i sprawdzić, które z obiektów są tam dla nas dostępne 
+(i w jakim sensie). Spróbować utworzyć własny plik w cudzym katalogu ("kukułcze jajko") oraz spróbować usunąć cudzy plik we
+ własnym katalogu (co można zaobserwować ?). Wypróbować powyższe operacje:
+
+w trybie tekstowym;
+
+przy użyciu programu Midnight Commander (mc);
+
+Rozwiązanie: Udalo mi się dostać do katalogu studenta s31052, nadał specjalne uprawnienia do zapisu w swoim katalogu.
+(chmod g+w .) Utworzyłem jajo w jego katalogu (mkdir jajo) i usunąłem uprawnienia do katalogu (chmod u=rwx,go=- jajo)
+Student zrobił to samo u mnie, nie mieliśmy dostępu aby wejść do swoich katalogów, jednakże wlaściciel swojego głównego
+katalogu mógl ten plik bez problemu usunąć.
+Wnioski i przemyślenia: Trzeba uważać jakie uprawnienia nadaje się poszczególnym grupom i użytkownikom. Małe niedopatrzenie
+mogłoby doprowadzić do utrudnionego dostępu swoich plików, lub nadać wgląd osobom nieupoważnionym :)
+
+2. W utworzonej na swoim koncie strukturze podkatalogów przeprowadzić eksperymenty:
+usuwając wszelkie uprawnienia dostępu do katalogu bieżącego
+Rozwiązanie: chmod 000 .
+
+usuwając wszelkie uprawnienia dostępu do katalogu nadrzędnego (nadkatalogu).
+Rozwiązanie: chmod 000 ..
+
+W jakich przypadkach możemy wykonać wtedy polecenie cd ? 
+Rozwiązanie: polecenie cd możemy wykonać wtedy, gdy mamy uprawnienia do odczytu danego katalogu i zapisu dla
+katalogu nadrzędnego
+
+W jakich przypadkach możemy wykonać polecenie chmod ? 
+Rozwiązanie: polecenie chmod możemy wykonać wtedy, gdy mam uprawnienia do zapisu w danym katalogu.
+
+Czy możemy bezpośrednio przeskoczyć do katalogu ABC/XYZ, jeśli nie mamy uprawnienia wstępu do ABC, ale mamy do XYZ ?
+Rozwiązanie: Niestety nie możemy, aby wykonać polecenie cd, musimy mieć uprawnienia (x) do wszystkich 
+katalogów nadrzędnych katalogu do którego mamy dostęp.
+
+Czy możemy także wrócić korzystając z polecenia cd - ?
+Rozwiązanie: Nie możemy.
+
+3. W zespolach 2- lub 3-osobowych (w opisie zadania na githubie prosze umiescic login osob z zespolu) wyprobowac 
+mozliwosc komunikacji przez wspoldzielony plik: na jednym z kont w zespole utworzyc pusty plik i przydzielic 
+odpowiednie uprawnienia dostepu (do pliku i do katalogu domowego).Wpisywac i odczytywac komunikaty przy uzyciu 
+polecen: - echo tresc_komunikaty > plik
+   	 - cat plik
+Sprawdzic, jaki skutek powoduje zamiana operatora > na oeprator >> w poleceniu echo. Uruchom takze drugi terminal
+i wykonaj w nim komende tail -f plik i powtorz powyzsze cwiczenie w pierwszym terminalu (kom. za pomoca pliku)
+Rozwiązanie: Wykonałem zadanie wspólnie z s31052. W moim katalogu został utworzony plik tekstowy, nadałem 
+odpowiednie uprawnienia. Zastosowanie polecenia echo z jednym operatorem > nadpisywało cały plik. 
+Zastosowanie polecenia echo z dwoma operatorami >>, dodawało nową linię z wpisanym tekstem.
+Tail -f plik.txt w drugim terminalu pokazywało na bieżąco aktualizowaną zawartość pliku, mogliśmy w ten sposób
+się komunikować, na bieżąco widząc co wpisujemy do tego pliku. 
+
+4. Znalezc w swoim katalogu domowym podkatalog public_html (jesli go nie ma, to utworzyc; musi sie on nazywac
+ DOKLADNIE tak jak podano, pisane malymi literami z podkresleniem zamiast spacji pomiedzy slowami). 
+ Umiescic w nim plik o nazwie strona.html o nastepujacej zawartosci:
+<HTML>
+<BODY>
+<H1>To jest moja strona domowa</H1>
+</BODY>
+</HTML>
+Sprawdzić, jakie są minimalne uprawnienia dostępu, które trzeba przydzielić do:
+
+katalogu domowego;
+
+katalogu public_html;
+
+pliku strona.html, aby zawartość pliku była widoczna w przeglądarce internetowej pod adresem http://szuflandia.pjwstk.edu.pl/~twój_login/strona.html
+Rozwiązanie: Utworzyłem stronę w podanym katalogu, jest widoczna z poziomu linku http://szuflandia.pjwstk.edu.pl/~s31052/strona.html
+Minimalne uprawnienia: 001 katalog public_html, 004 plik strona.html
+
+
+
+
+

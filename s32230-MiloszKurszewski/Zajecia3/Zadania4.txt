@@ -1,0 +1,29 @@
+1. Program ps służy do wyświetlania listy procesów. 
+
+Zadania:
+
+A: Zobacz co się stanie jeśli wpiszemy w terminalu:
+
+ps
+Wniosek: polecenie wyswietla liczbe procesów dla aktualnego terminala
+
+ps -a
+Wniosek: polecenie wyswietla procesy we wszystkich terminalach
+ps x
+Wniosek: polecenie wyswietla wszystkie procesy z aktualnego terminala bez naglowka kolumn
+ps axu
+Wniosek: polecenie wyswietla wszystkiie procesy na wszystkch terminalach podajac pelny zakres informacji.
+INFO: tu kolejność parametrów a, x, u nie ma znaczenie a jedynie fakt, że są podane. Dowolna kolejność powinna dać ten sam wynik.
+
+Jak myślisz, co oznacza znak zapytania w kolumnie 2?
+Nie wiesz? A gdzie może być wyjaśnienie?
+Wniosek: Znak zapytania w drugiej kolumnie, czyli kolumnie uzytkownika oznacza że użytkownik nie został zidentyfikowany
+dla danego procesu. Proces działa bez przypisanego do niego użytkownika.
+
+B: Jak wykonasz poniższe 2 zadania?
+
+Wyświetl wszystkie procesy bash
+Rozwiązanie: ps aux | grep bash
+
+Wyświetl wszystkie procesy należące do użytkownika root
+Rozwiązanie: ps -u root
