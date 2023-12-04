@@ -1,0 +1,38 @@
+Przejdź do swojego katalogu domowego
+
+cd ~
+
+Wydaj komendę: ls -a
+Zobacz ile plików wypisało.
+
+	Wypisane zostały wszystkie pliki (25 w moim przypadku), razem z plikami ukrytymi (zaczynającymi się od ".").
+
+Teraz wydaj komendę: ls -a | grep D
+HINT: Jeśli nie masz żadnego pliku czy katalogu z literką D to wybierz inną literkę, która już będzie w nazwie jakiegoś pliku czy katalogu.
+Zobacz ile teraz jest wyników. Co się stało?
+
+	Wypisane zostały wszystkie pliki w obecnym katalogu, które zawierają literę "D" w nazwie.
+
+Otóż program grep służy do wyszukiwania wierszy w pliku lub strumieniu wejściowym, które pasują do wzorca. Tu podano wzorzec jako "D".
+
+	Lepiej bym tego nie ujął
+
+A teraz wykonaj komendę: ls -a | grep D > lista_plikow_z_literka_d.txt
+Zobacz czy utworzył sie jakiś plik?
+Jaka jest jego treść?
+
+	Utworzył się plik o nazwie "lista_plikow_z_literka_d.txt", który zawiera listę plików w moim katalogu domowym zawierających literę "D" w nazwie.
+
+Co znaczy | oraz co znaczy > ?
+
+	| Oznacza przekierowanie wyjścia pierwszej komendy do wejścia drugiej. Dzięki temu komenda grep miała pulę, z której mogła szukać fraz zawierających "D".
+	> Oznacza przekierowanie strumienia wyjścia polecenia z nadpisaniem poprzedniej zawartości pliku. 
+	W tym przypadku wyjście zostało przekierowane do pliku i tam zapisane "lista_plikow_z_literka_d.txt".
+
+A teraz wykonaj komendę: ls -a | grep D | tee lista_plikow_z_literka_d_2.txt
+Zobacz czy plik się utworzył?
+Jaka jest treść względem poprzedniej próby bez programu tee?
+Co robi program tee?
+
+	Plik "lista_plikow_z_literka_d_2.txt" został utworzony. Różnica jest w tym, że treść została również wyświetlona na terminalu.
+	Program tee czyta ze standardowego wejścia i zapisuje na standardowe wyjście oraz do pliku.

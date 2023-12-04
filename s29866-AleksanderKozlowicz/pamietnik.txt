@@ -1,0 +1,9 @@
+2023-09-30
+Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem sie:
+- Co to jest git/github
+- Podstawowych komend git
+
+2023-10-14
+Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem sie:
+- Jak zmieniac dostepy do roznych katalogow/plikow
+- Jak operowac dostepami

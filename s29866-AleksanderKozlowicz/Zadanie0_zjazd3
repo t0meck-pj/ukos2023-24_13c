@@ -1,0 +1,8 @@
+1. Wypisało 9 plików. 
+2. ls -a | grep s, mamy 6 plikow
+3. Utorzyl sie plik lista_plikow_z_literka_d.txt i jest pusty poniewaz 
+nie posiadam pliku z D. Znak "|" przekierowuje wyjście jednego polecenia do wejscia
+innego polecenia. Znak ">" natomiast, 
+przekierowuje wyjście polecenia do - w tym wypadku - pliku txt. 
+To co chcemy zobaczyć za pomocą ls -a zostaje zapisane w pliku txt.
+4. Rowniez nic mi nie pokazalo, "tee" znaczy tyle samo co ls + > plik.txt.

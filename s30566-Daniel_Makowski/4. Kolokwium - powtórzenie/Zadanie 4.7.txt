@@ -1,0 +1,7 @@
+Jak utworzyć plik z listą plików w bieżącym katalogu?
+
+Podaj rozwiązania używające różne techniki. Np nie używając dedykowanego polecenia do listowania zawartości katalogów
+
+	find ./ -maxdepth 1 > plik.txt
+	dir -a > plik.txt
+	tree -L 1 > plik.txt

@@ -1,0 +1,22 @@
+1. Uruchom wybrany przez Ciebie graficzny edytor tekstowy (np. gedit, gvim, Visual Studio Code, atom, itd...)
+	- Polecenie vim uruchomilem edytor, nastepnie w nowym 
+	terminalu sprawdzilem jego PID za pomoca ps -A | grep vim
+
+2. Zobacz jaki ma on PID - przyda się do tego komenda ps
+	- Uzylem komendy ps -A | grep vim i pojawil sie PID 2981759
+
+3. Wydaj komendę kill w taki sposób, aby ten edytor się wyłączył. Zobacz czy to działa.
+   UWAGA: Niektóre programy przechwytują sygnały i mogą je częściowo blokować.
+   Jeśli program nie wyłącza się, to zobacz jaka jest jego reakcja.
+   Zobacz czy możesz wysłać do niego SIGKILL (gdzie sprawdzisz jak to zrobić?) 
+	- Uzylem komendy kill 2981759 i faktycznie wylaczylo mi edytor. 
+	Znalazlem SIGKILL sprawdzajac najpierw man kill - 
+	nastepnie wpisujac kill -l; wyszlo mi ze SIGKILL ma nr 9 
+	wiec prawidlowa komenda to: kill -9 2981759.
+
+4. Zobacz działanie komendy killall bash
+	- Dostalem 3 monity o tym ze operacja jest niedozwolona. 
+
+5. Zobacz czy kill zadziała dla dowolnego procesu.
+	- kill nie zadziala dla procesow dla ktorych user nie ma uprawnien, nie zadziala rowniez dla procesow ktore 	zakonczyly swoje dzialanie ale pomimo 
+	to sa wpisane w tablicy procesow

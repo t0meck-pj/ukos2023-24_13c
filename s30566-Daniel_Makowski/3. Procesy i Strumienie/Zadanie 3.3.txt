@@ -1,0 +1,45 @@
+W terminalu jest kilka przydatnych skrótów klawiszowych. Jednym z nich jest CTRL+C lub jak to jest często podawane C-c lub ^C. Niektórzy z Państwa już go mieli okazję przetestować. Jest to sposób na wyłączenie aktywnego programu w terminalu. Proszę go przetestować w taki sposób, że:
+
+Uruchom komendę cat be parametrów
+
+Wciśnij CTRL+C i zobacz co się stanie
+
+	Zakończył się proces cat, już nie prosi o wpisanie czegoś.
+
+Kolejnym fajnym (zależy dla kogo :) ) skrótem klawiszowym jest CTRL+D. Służy on do zakończenia strumienia wejściowego. Działa to trochę inaczej niż poprzednie rozwiązanie, mimo że na pierwszy rzut oknawygląda tak samo. Tym razem nie wysyła sygnału zakończenia, a jedynia zamyka strumień wejściowy. Jest to bardzo przydatne, jeśli chcemy zakończyć działanie jakiegoś programu korzystającego ze standardowego wejścia (stdin), ale w sposób możliwie bezpieczny.
+
+Zobacz co się stanie:
+
+Wydaj komendę cat > wynik3_1.txt
+
+Wpisz tekst witaj bez wciskania klawisza Enter
+
+Wciśnij CTRL+C
+
+Zobacz co się znalazło w pliku wynik3_1.txt
+
+	Plik ma pustą zawartość. Nic w nim się nie znalazło.
+
+Wydaj komendę cat > wynik3_2.txt
+
+Wpisz tekst witaj bez wciskania klawisza Enter
+
+Wciśnij CTRL+D (możliwe, że będzie trzeba wcisnąć go 2x)
+
+Zobacz co się znalazło w pliku wynik3_2.txt
+
+	W pilku znalazł się tekst "witaj".
+
+W opisie rozwiązania zadania umieść:
+
+jak rozumiesz co się stało?
+
+czym oba te przykłady się różnią?
+
+DLACZEGO się różnią?
+
+	Już odpowiadam:
+	W pierwszym przykładzie po prostu zabiłem proces, bez kończenia strumienia, tylko po prostu wyłączyłem program zanim kazałem mu cokolwiek zapisać, zanim
+	mu cokolwiek przekazałem. W drugim przykładzie wyłączyłem proces ale kazałem mu zamknąć strumień wejścia, więc to co tam wcześniej zapisałem jeszcze
+	zdążyło zostać przetworzone przez program. Przykłady się różnią właśnie dlatego, że ctrl + c zabija proces, że tak to nazwę "bez gadania", kiedy
+	ctrl + d zabiło proces, ale przed tym powiedziało mu coś w stylu "dobra, czas kończyć, to już ostatnie co masz do zrobienia".
