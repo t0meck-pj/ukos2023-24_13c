@@ -1,0 +1,77 @@
+Zadanie 1.Utworzyć we własnym katalogu domowym niedużą strukturę podkatalogów i plików tekstowych. 
+Przydzielić różne uprawnienia dostępu, następnie spróbować wejść do katalogów domowych innych uczestników zajęć i sprawdzić, które z obiektów są tam dla nas dostępne (i w jakim sensie). 
+Spróbować utworzyć własny plik w cudzym katalogu ("kukułcze jajko") oraz spróbować usunąć cudzy plik we własnym katalogu (co można zaobserwować ?). Wypróbować powyższe operacje:
+
+w trybie tekstowym;
+
+przy użyciu programu Midnight Commander (mc);
+
+
+zalogowałem się na szuflandnie i będąc w katalogu domowy utworzyłem folder mkdir zadania_ukos2
+następnie zmieniłem dc do zadania_ukos2 i stworzyłem serie katalogów komendą mkdir kat1 do kat3
+Następnie Kat1 przydzieliłem uprawnienia chmod 777 kat1
+Czyli wszyscy mogą wszystko
+Nadałem kat2 chmod 007 kat2
+Nie mogę go usunąć ale wszyscy mogą wszystko
+Wszedłem do katalogu nadrzędnego za pomocą cd ..
+Wchodzę do katalogu s31324
+Próbuje utworzyć plik tekstowy za pomocą nano i wpisuje hehe jajko ale nie mam dostępu
+Próbując usunąć plik kolegi we własnym katalogu, nie byłem w stanie tego zrobić bo nie posiadam uprawnien
+
+
+Zadanie 2. utworzonej na swoim koncie strukturze podkatalogów przeprowadzić eksperymenty:
+
+usuwając wszelkie uprawnienia dostępu do katalogu bieżącego
+
+usuwając wszelkie uprawnienia dostępu do katalogu nadrzędnego (nadkatalogu).
+
+W jakich przypadkach możemy wykonać wtedy polecenie cd ? 
+
+W jakich przypadkach możemy wykonać polecenie chmod ? 
+
+Czy możemy bezpośrednio przeskoczyć do katalogu ABC/XYZ, jeśli nie mamy uprawnienia wstępu do ABC, ale mamy do XYZ ?
+
+Czy możemy także wrócić korzystając z polecnia cd - ?
+
+Wchodzę sobie do zadania_ukos2 i przechodzę do katalogu kat3 i używając chmod 000 ../kat3 odebrałem wszelkie uprawnienia
+wychodzę do cd, zmieniam directory do zadania_ukos2 i staram się wejść do kat3 > wynik nie mogę bo nie mam uprawnień
+Tworzę kat4 i wewtnątrz kat5 i odbieram dostęp kat4 chmod 000 ../../kat4 i mogę z niego wyjść ale wejść już nie mogę
+chmod możemy utworzyć tylko kiedy mamy uprawnienia do zapisu
+Nie jesteśmy w stanie przeskoczyć do pliku XYZ jeżeli nie mamy dostępu do ABC
+Po odebraniu uprawnien jesteśmy w stanie wyjść ale już nie wróce
+
+Zadanie 3. W zespołach 2- lub 3-osobowych (w opisie zadania na githubie proszę umieścić login osób z zespołu) wypróbować możliwość komunikacji przez współdzielony plik: 
+na jednym z kont w zespole utworzyć pusty plik i przydzielić odpowiednie uprawnienia dostępu (do pliku i do katalogu domowego). 
+Wpisywać i odczytywać komunikaty przy użyciu poleceń:
+
+echo treść_komunikatu > plik
+
+cat plik
+Sprawdzić, jaki skutek powoduje zamiana operatora > na operator >> w poleceniu echo. 
+Uruchom także drugi terminal i wykonaj w nim komendę tail -f plik i powtórz powyższe ćwiczenie w pierwszym terminalu (komunikacja za pomocą pliku).
+
+
+Partner do zadania s31324 - Patryk Latkowski
+
+Tworzę plik tekstowy w zadania_ukos2 za pomocą touch rozmowa.txt
+Nadaje uprawnienia chmod 666 rozmowa.txt
+Wysyłam echo UwU > rozmowa.txt
+Sprawdzam cat, widzę UwU
+Patryk robi echo SuccubMommy jest OwO > rozmowa.txt i nadpisał moje UwU
+Wykonuje polecnie echo Zgadzam sie >> rozmowa.txt i widze obydwie wiadomości
+Dzięki wykonywaniu poleceń z >> jesteśmy w stanie się komunikować
+
+
+Zadanie 4. Znaleźć w swoim katalogu domowym podkatalog public_html (jeśli go nie ma, to utworzyć; musi się on nazywać DOKŁADNIE tak jak podano, pisane małymi literami z podkreśleniem zamiast spacji pomiędzy słowami). 
+Umieścić w nim plik o nazwie strona.html o następującej zawartości:
+
+Utowrzyłem folder public_html za pomocą komendy mkdir public_html.
+Następnie utworzyłem plik komendą nano strona.html i wpisałem treść podaną w zadaniu.
+Sprawdzam uprawnienia za pomocą komendy ls -l.
+Wykazuje mi że że każdy user może to odczytać r-- to oznacza że każdy może zobaczyć moją stronę, ale nikt inny nie może jej edytować.
+http://szuflandia.pjwstk.edu.pl/~s26856/strona.html
+
+
+
+
+
