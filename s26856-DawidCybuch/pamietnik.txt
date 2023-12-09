@@ -1,12 +1,22 @@
-7.10.2023
+30.09.2023
+Moj drogi pamietniczku na dzisiejszych zajeciach nauczylem sie
+Jakie zadania powinienem wykonac
+Jak poprawnie wykonywac zadania
+Jakie sa zasady zaliczenia przedmiotu
+
+14.10.2023
 Moj drogi pamietniczku na dzisiejszych zajeciach nauczylem sie ze
 Jak poprawnie wykonac git commit, git push oraz inne podstawowe
 działania gita
 Nauczylem sie rowniez czym sa sciezki wzgledne oraz bezwzgledne
 oraz jaka cudowna komenda jest man
 
-Tutaj uzupełnić!
-
+28.10.2023
+Moj drogi pamietniczku na dzisiejszych zajeciach naczylem sie
+Trzeba bardzo uwazac podczas nadawania uprawnien, zle nadane
+uprawnienia moga sprawic ze nie bede mogl wyjsc/wejsc/usunac folderu
+lub pliku, bo odebralem sobie uprawnienia i jedynym moim ratunkiem
+bedzie kontakt z administrarem inaczej zwanym rootem
 
 02.12.2023
 Moj drogi pamietniczku na dzisiejszych zajeciach mielismy kolokwium
