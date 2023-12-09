@@ -1,0 +1,27 @@
+0. 
+komenda :ls -a
+-pokazało mi wszystkie pliki i katalogi również te ukryte
+
+Komenda ls -a | grep D
+
+wykonanie: użyłem ls -a | grep l ponieważ nie miałem plików z literką D
+
+-wyświetliło mi wszystkie pliki i katalogi w ktorych nazwie jest l
+jest ich dokładnie 5 
+
+komenda: ls -a | grep D > lista_plikow_z_literka_d.txt
+
+- po wpisaniu komendy utworzył się plik lista_plikow_z_literka_l.txt (zamieniłem d na l) 
+
+komenda :cat lista_plikow_z_literka_l.txt
+po wpisaniu komendy wypisało poprzednie 5 katalogów i jeden nowoutworzony
+
+komenda: ls -a | grep D | tee lista_plikow_z_literka_d_2.txt
+
+Wykonanie: ls -a | grep l | tee lista_plikow_z_literka_l_2.txt
+
+- po wpisaniu komendy utworzył sie nowy plik w którym był wynik z zadania poprzedniego z nowoutworzonym plikiem, dodatkowo od razu wyświetliła się zawartość. 
+
+
+ 
+

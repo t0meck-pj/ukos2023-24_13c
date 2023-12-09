@@ -1,0 +1,17 @@
+ZAD 1 
+A) 
+1. ps
+wyswietliły mi sie wszystkie aktualne procesy
+byly to cim bash i ps
+2. ps -a
+ps -a pozwala na wyswietlenie wszystkich procesow z wyjatkiem liderow sesji i procesow niezwiazanych z terminalem. 
+3. ps x
+ps x wysywietla procesy ktore aktualnie wykonuja sie w systemie 
+4. ps axu 
+ps axu wyswietla wszystkie procesy wykonywane na koncie wszystkich zalogowanych uzytkownikow oraz niezwiazane z terminalem.
+
+B)
+1. Wyswietl wszystkie procesy bash
+ps axu | grep bash
+2. Wyswietl wszystkie procesy nalezace do uzytkownia root
+ps -U root -u root u

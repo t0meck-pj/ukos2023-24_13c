@@ -1,0 +1,32 @@
+1. Uruchom komendę cat be parametrów
+- cat 
+
+program czekał na wpisanie tekstu
+
+- CTRL+C
+
+zakończenie działania polecenie
+
+2. Wydaj komendę cat > wynik3_1.txt
+Wpisz tekst witaj bez wciskania klawisza Enter
+Wciśnij CTRL+C
+Zobacz co się znalazło w pliku wynik3_1.txt
+
+- cat > wynik3_1.txt, CTRL+C
+
+plik jest pusty
+
+3. Wydaj komendę cat > wynik3_2.txt
+Wpisz tekst witaj bez wciskania klawisza Enter
+Wciśnij CTRL+D (możliwe, że będzie trzeba wcisnąć go 2x)
+Zobacz co się znalazło w pliku wynik3_2.txt
+
+- cat > wynik3_2.txt, CTRL+D x2
+
+po sprawdzeniu pliku zostaje wypisane slowo witaj
+
+ROZWIĄZANIE: 
+oba rozwiązania zakończyły działanie programu tylko CTRL+C nie zapisywało zawartości
+pliku, a CTRL+D tak.
+Różnią się tym że CTRL z +C przerywa nam działaeni programu i wyjście z programu a z +D 
+zapisanie programu i wyjście z niego
