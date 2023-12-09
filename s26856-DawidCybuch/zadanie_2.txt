@@ -37,7 +37,7 @@ Wchodzę sobie do zadania_ukos2 i przechodzę do katalogu kat3 i używając chmo
 wychodzę do cd, zmieniam directory do zadania_ukos2 i staram się wejść do kat3 > wynik nie mogę bo nie mam uprawnień
 Tworzę kat4 i wewtnątrz kat5 i odbieram dostęp kat4 chmod 000 ../../kat4 i mogę z niego wyjść ale wejść już nie mogę
 chmod możemy utworzyć tylko kiedy mamy uprawnienia do zapisu
-Nie jesteśmy w stanie przeskoczyć do pliku XYZ jeżeli nie mamy dostępu do ABC
+Nie jesteśmy w stanie przeskoczyć do folderu XYZ jeżeli nie mamy dostępu do ABC
 Po odebraniu uprawnien jesteśmy w stanie wyjść ale już nie wróce
 
 Zadanie 3. W zespołach 2- lub 3-osobowych (w opisie zadania na githubie proszę umieścić login osób z zespołu) wypróbować możliwość komunikacji przez współdzielony plik: 
