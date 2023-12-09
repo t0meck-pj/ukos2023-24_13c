@@ -1,0 +1,85 @@
+1. Uruchom terminal.
+2. Wyświetl zawartość aktualnego katalogu.
+-ls
+
+3. Sprawdź gdzie aktualnie się znajdujesz.
+-pwd
+
+4. Przejdź do katalogu Pulpit za pomocą ścieżki względnej
+-cd Desktop
+
+5. Sprawdź gdzie jesteś.
+-pwd
+
+6. Wyświetl zawartość bieżącego katalogu.
+-ls -l
+
+7. Wyświetl zawartość swojego katalogu domowego bez przechodzenia do niego (ls z odpowiednim parametrem).
+-ls ~
+
+8. Przejdź do katalogu Obrazy (lub innego katalogu, który jest dostępny - podaj wprost, że zmieniasz katalog na inny bo np. Obrazy nie są u Ciebie dostępne) w twoim katalogu domowym za pomocą ścieżki względnej.
+-cd Images
+
+9. Sprawdź gdzie jesteś.
+-pwd
+
+10. Zobacz do jakiego katalogu przejdziesz za pomocą ścieżki ././././././
+W opisie rozwiązania proszę umieścić również to jak rozumiesz co się właściwie stało.
+Dlaczego znalazła/eś się w tym miejscu do którego przeniosła Cię ta ścieżka?
+Czy dodanie kilku ./././././ na początku/środku/końcu powoduje, że ścieżka się zmieni?
+Co ta ścieżka oznacza/sobą reprezentuje?
+-po wpisaniu "cd ././././././" ścieżka się nie zmienia, kropka z przodu oznacza że pozostajemy w obecnym katalogu 
+
+11. Przejdź do swojego katalogu domowego za pomocą ścieżki bezwzględnej.
+-cd /home/s30310
+
+12. Zobacz co się stanie jak wpiszesz komendę 'cd /root'. Jak już to zrobisz, zastanów się co się stało. Poszukaj w Internecie.
+-po wpisaniu komendy wyskoczył błąd informujący o braku dostępu do katalogu root. Nikt nie ma dostępu do tego katalogu poza rootem
+
+13. Zobacz, co się stanie, jeśli wciśniesz kombinację klawiszy: Ctrl+Alt+F3
+Sprawdź w Internecie co się dzieje kiedy używa się takiej kombinacji. W Internecie mogą pojawić się wersje z F1-F6. To de facto to samo.
+Odpowiedź "wylogowało mnie" jest błędna. Nie. Nie wylogowało. Szukaj dalej.
+-po wciśnięciu ctrl+alt+f3 ukazał się pełnoekranowy terminal z opcją zalogowania się
+
+14. A teraz co się stanie po: Alt+F1 lub ALT+F2 lub ALT+F7 (na starszych linuxach)
+-kombinacje te pozwalają na przełączanie się pomiędzy terminalami
+
+
+
+
+1. Korzystając z komend cd oraz mkdir stwórz następujące drzewo katalogów w swoim katalogu domowym (w dowolnym podkatalogu, albo bezpośrednio w ~):
+ukos
+ |\ katalog
+ |   |\ katalog2
+ |    \ katalog3
+  \ klamka
+
+-mkdir ukos
+-cd ukos
+-mkdir katalog klamka
+-cd katalog
+-mkdir katalog2
+-cd katalog2
+-mkdir katalog3
+
+
+2. W katalogu ukos/klamka stwórz pliki zajęcia2.txt zajęcia2.log inny.txt nowy.txt
+
+-cd ukos/klamka
+-touch zajęcia2.txt zajęcia2.log inny.txt nowy.txt
+
+3. Za pomocą jednego polecenia mkdir stwórz w katalogu ukos następujący katalog: ukos/to/jest/dluga/nazwa
+-mkdir -p ukos/to/jest/dluga/nazwa
+
+4. następnie umieść w katalogu ukos/to/jest/dluga/nazwa plik dane.txt
+-cd ukos/to/jest/dluga/nazwa
+-touch dane.txt
+
+5. Usuń z katalogu ukos/klamka wszystkie pliki z rozszerzeniem txt
+-find ukos/klamka/*.txt -delete
+
+6. Usuń katalog ukos/katalog/katalog2
+-rm -r ukos/katalog/katalog2
+
+7. Usuń cały katalog klamka za pomocą jednego polecenia
+-rm -r ukos/klamka
