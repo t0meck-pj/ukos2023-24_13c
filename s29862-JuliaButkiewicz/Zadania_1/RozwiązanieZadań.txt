@@ -23,3 +23,17 @@ jakie pliki znajdują się w katalogu w którym
 obecnie się znajdujemy. Zadanie to przybliżyło
 mi działanie komendy "ls".
 
+Zadanie 3.
+Sprawdź gdzie aktualnie się znajdujesz.
+
+WYKONANIE:
+Wpisując komendę "pwd" wyświetla mi moją
+dokładną lokalizację. W moim przypadku to
+/home/PJWSTK/s29862.
+
+WNIOSKI:
+Wpisanie komendy "pwd" upewniło mnie gdzie,
+w jakim dokładnie folderze znajduję się obecnie.
+Komenda przydatna.
+
+
