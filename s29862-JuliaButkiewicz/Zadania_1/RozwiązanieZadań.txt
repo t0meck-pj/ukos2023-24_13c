@@ -92,4 +92,15 @@ WNIOSKI:
 Mimo braku dostępu do katalogu obrazów poradziłam sobie 
 z tym zadaniem przenosząc się do folderu PPRG.
 
+Zadanie 9.
+Sprawdź, gdzie jesteś.
+
+WYKONANIE:
+Wpisuje komendę "pwd".
+Znajduję się w /home/PJWSTK/s29862.
+
+WNIOSKI:
+Wynik spodziewany, gdyż komenda została już wcześniej
+przeze mnie użyta i poznana.
+
 
