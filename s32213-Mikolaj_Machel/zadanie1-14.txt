@@ -59,3 +59,12 @@ Jak już to zrobisz, zastanów się co się stało. Poszukaj w internecie.
 Wpisałem polecenie cd /root wywaliło błąd brak dostępu 
 polecenie cd służy do zmiany katalogu a ścieżka /root jest katalogiem administratora 
 czyli wnioskując po komunikacie brak dostępu nie mam dostępu do katalogów admina 
+
+13. Zadanie 13 i 14 trzeba wykonać na maszynie wirtualnej lub na fizycznym komputerze. Nie można go zrobić zdalnie na szuflandii.
+Zobacz, co się stanie, jeśli wciśniesz kombinację klawiszy: Ctrl+Alt+F3
+Sprawdź w Internecie co się dzieje kiedy używa się takiej kombinacji. W Internecie mogą pojawić się wersje z F1-F6. To de facto to samo.
+Odpowiedź "wylogowało mnie" jest błędna. Nie. Nie wylogowało. Szukaj dalej.
+Wyświetla sie dodatkowa konsola bądź też kolejnt wirtualny terminal
+
+14. A teraz co sie stanie po: Alt+F1 lub Alt+F2 lub Alt+F7 (na starszych lin)
+komenda pozwala na przełączanie sie miedzy konsolami  
