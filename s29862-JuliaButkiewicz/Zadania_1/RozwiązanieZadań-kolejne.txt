@@ -45,3 +45,22 @@ Dzięki parametrowi -p mogę wpisać to w jednej komendzie.
 WNIOSEK:
 Dowiedziałam się czegoś o parametrze -p.
 
+Zadanie 4.
+Umieść w katalogu ukos/to/jest/dluga/nazwa plik dane.txt
+
+WYKONANIE:
+Użyłam komendy "touch ukos/to/jest/dluga/nazwa/dane.txt
+
+WNIOSKI:
+Nie miałam większego problemu ze stworzeniem tego pliku.
+
+Zadanie 5.
+Usuń z katalogu ukos/klamka wszystkie pliki z rozszerzeniem .txt
+
+WYKONANIE:
+Gdy znalazłam się w katalogu klamka, wystarczyło użyć komendy rm *.txt.
+
+WNIOSKI:
+Szybki sposób na usunięcie wielu plików z dowolnym roszerzeniem. Oszczędza 
+wiele czasu.
+
