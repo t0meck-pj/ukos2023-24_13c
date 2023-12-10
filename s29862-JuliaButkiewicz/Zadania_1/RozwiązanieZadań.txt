@@ -130,4 +130,16 @@ Używając cd /home/s29862 przenoszę się do katalogu domowego.
 WNIOSKI:
 Efekt spodziewany. Komanda poznana już wcześniej.
 
+Zadanie 12.
+Zobacz co się stanie jak wpiszesz komendę "cd/root". Jak już to robisz,
+zastanów się co się stało. Poszukaj w internecie.
+
+WYKONANIE:
+Używam "cd/root", przez co na konsoli wyświetla mi się brak dostępu.
+
+WNIOSKI:
+Komenda ta przenosi nas do folderu który wymaga specjalnej autoryzacji,
+Aby się tam zalogować wymagane jest logowanie na konto super usera.
+
+
 
