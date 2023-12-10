@@ -116,9 +116,18 @@ Użycie ścieżki "././././././" spowodowało, że moja lokalizacja
 nie zmieniła się. Dla pewności użyłam "pwd" co potwierdziło moje
 podejrzenia.
 
-WNIOSEK:
+WNIOSKI:
 Użycie "./" daje nam obecny folder, stąd też ile razy byśmy tego nie wpisali
 nasza lokalizacja nie zmieni się. Zadanie to zaskoczyło mnie i
 pozwoliło bardziej doczytać o użyciu "./"
+
+Zadanie 11.
+Przejdź do swojego katalogu domowego za pomocą ścieżki bezwzględnej.
+
+WYKONANIE: 
+Używając cd /home/s29862 przenoszę się do katalogu domowego.
+
+WNIOSKI:
+Efekt spodziewany. Komanda poznana już wcześniej.
 
 
