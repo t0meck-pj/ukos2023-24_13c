@@ -1,0 +1,24 @@
+Zadanie 1.
+Korzystając z komend cd oraz mkdir stwórz
+następujące drzewo katalogów w swoim katalogu domowym.
+
+ukos
+ |\ katalog
+ |    |\katalog2
+ |     \katalog3
+  \ klamka
+
+WYKONANIE:
+Wpisuje kolejno: 
+"mkdir ukos"
+"cd ukos"
+"mkdir katalog"
+"mkdir klamka"
+"cd katalog"
+"mkdir katalog2"
+"mkdir katalog3"
+
+WNIOSKI:
+Drzewko nie sprawiło większych problemów. 
+
+
