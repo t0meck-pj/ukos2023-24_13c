@@ -45,3 +45,15 @@ Przenosi mnie ona na pulpit.
 
 WNIOSKI:
 Bardziej uciążliwe niż wpisanie "/root". Takie wnioski.
+
+Zadanie 5.
+Sprawdź gdzie jesteś.
+
+WYKONANIE:
+Wpisuje komendę "pwd".
+Wyświetla mi, że znajduję się w katalogu "/" czyli w roocie/pulpicie.
+
+WNIOSKI:
+Rezultat taki, jak oczekiwany w zadaniu powyżej.
+
+
