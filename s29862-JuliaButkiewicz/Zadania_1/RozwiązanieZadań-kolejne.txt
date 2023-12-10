@@ -64,3 +64,21 @@ WNIOSKI:
 Szybki sposób na usunięcie wielu plików z dowolnym roszerzeniem. Oszczędza 
 wiele czasu.
 
+Zadanie 6.
+Usun katalog ukos/katalog/katalog2
+
+WYKONANIE:
+Używam komendy "rmdir ~/ukos/katalog/katalog2".
+
+WNIOSKI:
+Użycie komendy powiodło się. Żadnych specjalnych wniosków
+
+Zadanie 7.
+Usuń cały katalog klamka za pomocą jednego polecenia.
+
+WYKONANIE:
+Używam polecenia "rm -r ukos/klamka"
+
+WNIOSEK:
+-r ignoruje istnienie plików w folderze, przez co katalog
+klamka mógł zostać usunięty.
