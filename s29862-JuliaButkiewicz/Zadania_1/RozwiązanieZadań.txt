@@ -9,3 +9,17 @@ Wpisuje hasło by finalnie znaleźć się w Szuflandii.
 WNIOSKI:
 Efekt spodziewany. Zdanie nie stworzyło większego problemu.
 
+Zadanie 2.
+Wyświetl zawartość aktualnego katalogu.
+
+WYKONANIE:
+Używam komendy "ls" w terminalu.
+Komenda ta listuje mi zawartość aktualnego katalogu.
+W moim przypadku jest to folder "PPRG".
+
+WNIOSKI:
+Konsekwencją wpisania komendy "ls" było ukazanie
+jakie pliki znajdują się w katalogu w którym
+obecnie się znajdujemy. Zadanie to przybliżyło
+mi działanie komendy "ls".
+
