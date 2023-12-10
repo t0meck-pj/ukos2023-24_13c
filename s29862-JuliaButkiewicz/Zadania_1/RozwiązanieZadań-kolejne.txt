@@ -21,4 +21,17 @@ Wpisuje kolejno:
 WNIOSKI:
 Drzewko nie sprawiło większych problemów. 
 
+Zadanie 2.
+W katalogu ukos/klamka stwórz plik zajęcia2.txt zajęcia2.log 
+inny.txt nowy.txt.
+
+WYKONANIE:
+Odkryłam, że można to zadanie wykonać jedną linią polecenia!
+Użyłam więc "touch zajęcia2.txt zajęcia2.log inny.txt nowy.txt"
+Dla sprawdzenia wpisałam "ls".
+
+WNIOSKI:
+Nauczyłam się, że niektóre rzeczy można wykonać jedną komendą.
+Oszczędza to czas.
+
 
