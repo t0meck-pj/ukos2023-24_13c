@@ -157,5 +157,15 @@ Po poprawnym zalogowaniu można dalej korzystać z tego dodatkowego
 terminala. Tworzy to tak zwaną guest machine, czyli wychodziłoby na to
 że to konsola gościa.
 
+Zadanie 14.
+A teraz co się stanie po: Alt+F1 lub Alt+F2 lub Alt+F7.
+
+WYKONANIE:
+Otwierają się kolejne terminale gości. F1 jako pierwszy otwarty,
+F2 jako drugi i tak dalej.
+
+WNIOSKI:
+Możliwe jest korzystanie z maksymalnie 6 terminali gości. A wyżej
+podany skrót klawiszowy pomaga nam przełączać się między nimi.
 
 
