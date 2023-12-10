@@ -80,4 +80,16 @@ Efekt spodziewany, choć musiałam wypróbować kilku komend by dotrzeć
 do tego rozwiązania. Internet wylistował mi wiele
 różnych komend, stąd to zagmatwaie. 
 
+Zadanie 8.
+Przejdź do katalogu obrazy (lub innego[..]) za pomocą ścieżki względnej.
+
+WYKONANIE:
+Katalog obrazy nie jest u mnie dostępy.
+Dlatego też wpisuję komendę "cd PPRG"
+by zmieniło mój katalog na ten dostępny.
+
+WNIOSKI:
+Mimo braku dostępu do katalogu obrazów poradziłam sobie 
+z tym zadaniem przenosząc się do folderu PPRG.
+
 
