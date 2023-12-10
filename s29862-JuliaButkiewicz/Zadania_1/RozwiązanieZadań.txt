@@ -56,4 +56,16 @@ Wyświetla mi, że znajduję się w katalogu "/" czyli w roocie/pulpicie.
 WNIOSKI:
 Rezultat taki, jak oczekiwany w zadaniu powyżej.
 
+Zadanie 6.
+Wyświetl zawartość bieżącego katalogu.
+
+WYKONANIE:
+Wpisuję komendę "ls".
+Widzę tabelkę w której wyświetlają się biblioteki i binaria.
+Do tego dostrzec można kilka innych plików.
+
+WNIOSKI:
+Jest to temat do doczytania. By spojrzeć głębiej na rozszerzenia plików
+jakie pojawiły się w tabelce.
+
 
