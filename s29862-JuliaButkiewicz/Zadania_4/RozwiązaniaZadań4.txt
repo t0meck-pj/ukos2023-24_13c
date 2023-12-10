@@ -31,4 +31,24 @@ Względna: mkdir -p /tmp/ukos/kot/ma/ale/jan/kowalski
 Bezwzględna: mkdir -p ../../../kot/ma/ale/jan/kowalski
 
 Zadanie 3.
+Masz taki układ katalogów, jak wyżej i ciągle jesteś w katalogu kota.
+Jak przenieść katalog ale do katalogu i używając:
+-źródło(ś.wzgledna), miejsce docelowe (ś.absolutna).
+-źródło(ś.absolutna), miejsce docelowe (ś.względna).
+
+ROZWIĄZANIE:
+Użyje do tego komendy MV.
+- mv ../../../kot/ma/ale /tmp/ukos/ala/i
+- mv /tmp/ukos/kot/ma/ale ../../i 
+
+Zadanie 4.
+Jak zamknąć program, który nie reaguje na CTRL+C?
+
+ROZWIĄZANIE:
+Z moich internetowych poszukiwań wynika, iż są dwa sposoby
+(i na pewno dużo więcej, jednak te znalazłam). Użyłabym 
+CTRL + \ <-- co powinno skutecznie zabić proces. Lub mogłabym
+użyć komendy kill, gdybym znała tylko id danego procesu.
+
+Zadanie 5.
 
