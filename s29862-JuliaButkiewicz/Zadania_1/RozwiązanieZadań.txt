@@ -36,4 +36,12 @@ Wpisanie komendy "pwd" upewniło mnie gdzie,
 w jakim dokładnie folderze znajduję się obecnie.
 Komenda przydatna.
 
+Zadanie 4.
+Przejdź do katalogu pulpit za pomocą ścieżki względnej.
 
+WYKONANIE:
+Wpisuje komendę "cd ../../.." <- używam ścieżki względnej.
+Przenosi mnie ona na pulpit.
+
+WNIOSKI:
+Bardziej uciążliwe niż wpisanie "/root". Takie wnioski.
