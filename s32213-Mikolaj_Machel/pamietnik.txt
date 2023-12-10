@@ -1,0 +1,8 @@
+10.12.2023
+Drogi pamiętniczku dziś nauczyłem sie jak zrobić w git PAT oraz podstawowych komend gita.
+Zrobiłem swoj pierwszy commit oraz skonfigurowałem putty i wszedłem na szuflandię, ale zabawa!!
+Dowiedziałem sie co daje mi znajomość komend terminala oraz jak moge przechodzić miedzy katalogami, 
+tworzyć w nich własne foldery oraz pliki tekstowe(.txt) oraz je edytować oraz usuwać.
+
+
+
