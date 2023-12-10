@@ -103,4 +103,22 @@ WNIOSKI:
 Wynik spodziewany, gdyż komenda została już wcześniej
 przeze mnie użyta i poznana.
 
+Zadanie 10.
+Zobacz do jakiego katalogu przejdziesz za pomocą ścieżki
+././././././ W opisie rozwiązania umieść również jak rozumiesz
+co się właściwie stało. Dlaczego znalazłaś się w tym miejscu do
+którego przeniosła cię ta ścieżka? Czy dodanie kilku ./././././ na
+początku/środku/końcu powoduje, że ścieżka się zmieni?
+Co ta ścieżka oznacza/sobą reprezentuje?
+
+WYKONANIE:
+Użycie ścieżki "././././././" spowodowało, że moja lokalizacja
+nie zmieniła się. Dla pewności użyłam "pwd" co potwierdziło moje
+podejrzenia.
+
+WNIOSEK:
+Użycie "./" daje nam obecny folder, stąd też ile razy byśmy tego nie wpisali
+nasza lokalizacja nie zmieni się. Zadanie to zaskoczyło mnie i
+pozwoliło bardziej doczytać o użyciu "./"
+
 
