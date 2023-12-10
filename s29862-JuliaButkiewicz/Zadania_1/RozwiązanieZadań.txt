@@ -68,4 +68,16 @@ WNIOSKI:
 Jest to temat do doczytania. By spojrzeć głębiej na rozszerzenia plików
 jakie pojawiły się w tabelce.
 
+Zadanie 7.
+Wyświetl zawartość swojego katalogu domowego bez przechodzenia przez niego.
+
+WYKONANIE:
+Wpisuje komendę "ls ~" która to listuję
+mi zawartość katalogu domowego bez przechodzenia przez niego.
+
+WNIOSKI:
+Efekt spodziewany, choć musiałam wypróbować kilku komend by dotrzeć
+do tego rozwiązania. Internet wylistował mi wiele
+różnych komend, stąd to zagmatwaie. 
+
 
