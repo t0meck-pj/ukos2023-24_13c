@@ -1,33 +1,63 @@
-W terminalu jest kilka przydatnych skrótów klawiszowych. Jednym z nich jest CTRL+C lub jak to jest często podawane C-c lub ^C. Niektórzy z Państwa już go mieli okazję przetestować. Jest to sposób na wyłączenie aktywnego programu w terminalu. Proszę go przetestować w taki sposób, że:
+INFO: Zadanie do wykonania na linuxie z dostępnym środowiskiem graficznym.
 
-1. Uruchom komendę cat be parametrów
-2. Wciśnij CTRL+C i zobacz co się stanie
--zakończyło się wykonywanie komendy cat
+CTRL+Z służy do wstrzymania bieżącego procesu i przeniesienia go do tła. To znaczy, że program jest w pamięci, ale nie wykonuje żadnych operacji. Jest wstrzymany.
 
-Kolejnym fajnym (zależy dla kogo :) ) skrótem klawiszowym jest CTRL+D. Służy on do zakończenia strumienia wejściowego. Działa to trochę inaczej niż poprzednie rozwiązanie, mimo że na pierwszy rzut oknawygląda tak samo. Tym razem nie wysyła sygnału zakończenia, a jedynia zamyka strumień wejściowy. Jest to bardzo przydatne, jeśli chcemy zakończyć działanie jakiegoś programu korzystającego ze standardowego wejścia (stdin), ale w sposób możliwie bezpieczny.
 Zobacz co się stanie:
 
-1. Wydaj komendę cat > wynik3_1.txt
+1. Wpisz komendę gimp (lub np. edytor tekstowy gedit)
 
-2. Wpisz tekst witaj bez wciskania klawisza Enter
-
-3. Wciśnij CTRL+C
-
-4. Zobacz co się znalazło w pliku wynik3_1.txt
+-po zainstalowaniu gimpa i wpisaniu komendy "gimp" otworzył się program gimp
 
 
-1. Wydaj komendę cat > wynik3_2.txt
+2. W terminalu w którym sie to uruchomiło wciśnij CTRL+Z
 
-2. Wpisz tekst witaj bez wciskania klawisza Enter
+3. Spróbuj coś wyklikać w gimpie / gedicie
 
-3. Wciśnij CTRL+D (możliwe, że będzie trzeba wcisnąć go 2x)
+-program przestał działać
 
-4. Zobacz co się znalazło w pliku wynik3_2.txt
 
-W opisie rozwiązania zadania umieść:
+4. Otwórz dowolne inne okno i przesuń je tak by częściowo nachodziło na okno gimpa / gedita i potem je odsuń by odsłonić w pełni okno gimpa / gedita
 
--jak rozumiesz co się stało?
+Co się stało? Wstrzymaliśmy program gimp/gedit. Program wstrzymany za pomocą kombinacji CTRL+Z jest przenoszony w tło (background). Efekt jest taki, że taki program przestaje odpowiadać na cokolwiek a jego okno nie jest przerysowywane i robi się mozaika.
 
--czym oba te przykłady się różnią?
+Komenda bg służy do wznowienia w tle wstrzymanego programu. Zobacz:
 
--DLACZEGO się różnią?
+1. Wpisz komendę: bg
+
+Jak widać gimp/gedit ożył (jeśli nie, to zapytaj prowadzącego)
+
+-zgadza się
+
+
+Komenda fg służy do wznowienia na pierwszym planie wstrzymanego wcześniej procesu. Zobacz co się stanie:
+
+1. Wpisz komendę: fg
+
+Jak widać proces wrócił i można wcisnąć na przykład CTRL+C aby go zakończyć.
+
+W momencie uruchamiania programu, możemy od razu nakazać wykonanie go w tle. Służy do tego znak & umieszczony na końcu instrukcji.
+
+Zobacz:
+
+INFO: Jeśli jakiegoś programu nie ma to zastąp go innym, który znasz.
+
+1. Wykonaj komendę gimp &
+
+2. Wykonaj komendę gedit &
+
+3. Wykonaj komendę geany &
+
+Zobacz co się stało (domyślam się, że uruchomiły się 3 programy, a na terminalu ciągle można coś pisać.
+
+-po zainstalowaniu gedita i geany wszystkie komendy otworzyły 3 programy i terminal dalej reaguje na kolejne komendy
+
+
+Kolejna komenda to jobs. Służy ona do wyświetlania listy zadań (jobów; nie mylić z procesami) przeniesionych do tła.
+
+1. Przywróć program gedit (lub gimp, w każdym razie nie uruchomiony jako ostatni program) z tła na pierwszy plan. Skorzystaj z jobs aby dowiedzieć się jakie mają numery poszczególne zadania działające w tle.
+
+składnia: fg %(numer jobu)
+
+-jobs
+
+-fg %2
