@@ -1,0 +1,34 @@
+Zadanie 0.
+Przypuśćmy, że nie możesz utworzyć żadnego pliku na swoim koncie
+uczelnianym np. na szuflandii. Co mogło się stać?
+
+ROZWIĄZANIE:
+-Brak uprawnień.
+-Np. może nasz katalog w ogóle nie istnieć.
+- <-- niestety nic innego nie przychodzi mi do głowy.
+
+WNIOSKI:
+Muszę spojrzeć głębiej w internety by się czegoś dowiedzieć.
+
+Zadanie 1.
+Dany jest katalog plików: (drzewko z katalogami).
+Znajdujesz się w katalogu kota. Katalog ala, jest w katalogu
+/tmp/ukos. Jak przejść do katalogu ala ale za pomocą:
+- ś.względnej
+- ś.bezwzględnej
+
+ROZWIĄZANIE:
+Do ścieżki względnej przechodzę używając "cd ../.."
+Do ścieżki bezwzględnej "cd tmp/ukos/ala"
+
+Zadanie 2.
+Masz taki układ katalogów, jak wyżej i ciągle jesteś w katalogu kota.
+Jak stworzyć poddrzewo katalogów jan/kowalski w katalogu ale
+za pomocą jednej komendy? Podaj dwa rozwiązania.
+
+ROZWIĄZANIE:
+Względna: mkdir -p /tmp/ukos/kot/ma/ale/jan/kowalski
+Bezwzględna: mkdir -p ../../../kot/ma/ale/jan/kowalski
+
+Zadanie 3.
+
