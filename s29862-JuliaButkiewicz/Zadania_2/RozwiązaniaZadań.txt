@@ -58,6 +58,29 @@ Sprawdź jaki skutek powoduje zmiana operatora>na operator>>w poleceniu echo.
 Uruchom także drugi terminal[...].
 
 ROZWIĄZANIE:
+W moim folderze /ukos/Zjazd zrobiłam komunikator.txt
+Nadałam tam uprawnienia użytkownikowi s30157.
+Wrzuciłam wiadomość używając "echo lol czy to działa? > komunikator.txt"
+Dostałam szybką odpowiedź od treści " ". (Wciąż czekam na odpowiedź).
+
+WNIOSEK:
+Komunikator działał. Użycie ">" powodowało nadpisanie a ">>" dodanie nowej treści.
+Przy czym komenda podana "tail -f" pokazywała zmiany które zostały dopisane, w 
+czasie rzeczywistym.
+
+Zadanie 4.
+Znaleźć w swoim katalogu domowym, podkatalog public_html.
+Umieścic w nim plik o nazwie strona.html o nast. zawartości:
+[HTML,BODY,H1]. Sprawdzić jakie są minimalne uprawnienia
+dostępu, które trzeba przydzielić do:
+-katalogu domowego
+-katalogu public_html
+-pliku strona.html, aby zawartość była widoczna w przeglądarce interne-
+towej pod adresem...
+
+ROZWIĄZANIE:
+
+
 
 
 
