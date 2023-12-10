@@ -1,0 +1,11 @@
+Zadanie 1.
+Uruchom terminal.
+
+WYKONANIE:
+Używając programu puTTY loguję się do Szuflandii.
+Po wpisaniu loginu, otwiera się terminal.
+Wpisuje hasło by finalnie znaleźć się w Szuflandii.
+
+WNIOSKI:
+Efekt spodziewany. Zdanie nie stworzyło większego problemu.
+
