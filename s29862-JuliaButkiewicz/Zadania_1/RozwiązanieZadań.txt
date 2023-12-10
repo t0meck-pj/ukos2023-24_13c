@@ -141,5 +141,21 @@ WNIOSKI:
 Komenda ta przenosi nas do folderu który wymaga specjalnej autoryzacji,
 Aby się tam zalogować wymagane jest logowanie na konto super usera.
 
+Zadanie 13.
+Zobacz co się stanie jeśli wciśniesz kombinację klawiszy:
+Ctrl + Alt + F3. Sprawdź w internecie co się dzieje kiedy używa 
+się takiej kombinacji. W internecie mogą pojawić się
+wersje z F1-F6. TO de facto to samo. Odpowiedź "wylogowało mnie"
+jest błędna. Nie. Nie wylogowało. Szukaj dalej.
+
+WYKONANIE:
+Po wciśnięciu tejże kombinacji wyskakuje nam dodatkowy terminal
+oraz opcje logowania.
+
+WNIOSKI:
+Po poprawnym zalogowaniu można dalej korzystać z tego dodatkowego
+terminala. Tworzy to tak zwaną guest machine, czyli wychodziłoby na to
+że to konsola gościa.
+
 
 
