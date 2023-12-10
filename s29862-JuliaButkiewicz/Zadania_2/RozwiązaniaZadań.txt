@@ -61,7 +61,7 @@ ROZWIĄZANIE:
 W moim folderze /ukos/Zjazd zrobiłam komunikator.txt
 Nadałam tam uprawnienia użytkownikowi s30157.
 Wrzuciłam wiadomość używając "echo lol czy to działa? > komunikator.txt"
-Dostałam szybką odpowiedź od treści " ". (Wciąż czekam na odpowiedź).
+Dostałam szybką odpowiedź od treści "VOID". Która nadpisała moją.
 
 WNIOSEK:
 Komunikator działał. Użycie ">" powodowało nadpisanie a ">>" dodanie nowej treści.
