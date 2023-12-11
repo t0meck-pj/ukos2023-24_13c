@@ -1,32 +1,36 @@
 1. Przejdź do swojego katalogu domowego
--cd ~
+    -cd ~
 
 2. Wydaj komendę: ls -a
-
 3. Zobacz ile plików wypisało.
--wypisało 10 plików
+    -wypisało 10 plików
 
 4. Teraz wydaj komendę: ls -a | grep D
-HINT: Jeśli nie masz żadnego pliku czy katalogu z literką D to wybierz inną literkę, która już będzie w nazwie jakiegoś pliku czy katalogu.
--wypisało katalog o nazwie "Desktop"
+HINT: Jeśli nie masz żadnego pliku czy katalogu z literką D to wybierz inną 
+literkę, która już będzie w nazwie jakiegoś pliku czy katalogu.
+    -wypisało katalog o nazwie "Desktop"
 
 5. Zobacz ile teraz jest wyników. Co się stało?
-Otóż program grep służy do wyszukiwania wierszy w pliku lub strumieniu wejściowym, które pasują do wzorca. Tu podano wzorzec jako "D".
-1 wynik. Wypisało jedyny katalog zawierający literę "D"
+Otóż program grep służy do wyszukiwania wierszy w pliku lub strumieniu 
+wejściowym, które pasują do wzorca. Tu podano wzorzec jako "D".
+    -Wypisało jedyny katalog zawierający literę "D"
 
 6. A teraz wykonaj komendę: ls -a | grep D > lista_plikow_z_literka_d.txt
-
 7. Zobacz czy utworzył sie jakiś plik?
 Jaka jest jego treść?
 Co znaczy | oraz co znaczy > ?
--Utworzył się plik o nazwie "lista_plikow_z_literka_d.txt", zawiera on nazwy plików zawierających literę "D".
--"|" oznacza przekierowanie wyjścia jednego programu na wejście drugiego programu, ">" oznacza nadpisywanie poprzedniej zawartości pliku
+    -Utworzył się plik o nazwie "lista_plikow_z_literka_d.txt", zawiera on 
+    nazwy plików zawierających literę "D".
+    -"|" oznacza przekierowanie wyjścia jednego programu na wejście drugiego 
+    programu, ">" oznacza nadpisywanie poprzedniej zawartości pliku
 
 8. A teraz wykonaj komendę: ls -a | grep D | tee lista_plikow_z_literka_d_2.txt
-
 9. Zobacz czy plik się utworzył?
 Jaka jest treść względem poprzedniej próby bez programu tee?
 Co robi program tee?
 
--Utworzył się plik o nazwie "lista_plikow_z_literka_d_2.txt", zawartość pliku została od razu wypisana przez terminal, co nie występowało przy tworzeniu pliku "lista_plikow_z_literka_d.txt"
--tee pobiera dane wejściowe i wypisuje je na standardowe wyjście oraz do wybranych plików
+    -Utworzył się plik o nazwie "lista_plikow_z_literka_d_2.txt", zawartość 
+    pliku została od razu wypisana przez terminal, co nie występowało przy 
+    tworzeniu pliku "lista_plikow_z_literka_d.txt"
+    -tee pobiera dane wejściowe i wypisuje je na standardowe wyjście oraz do 
+    wybranych plików
