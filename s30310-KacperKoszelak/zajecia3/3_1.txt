@@ -5,28 +5,30 @@ Zadania:
 A: Zobacz co się stanie jeśli wpiszemy w terminalu:
 
 1. ps
--wypisano aktualne procesy w postaci listy
+    -wypisano aktualne procesy w postaci listy
 
 2. ps -a
--wyświetla wszystkie procesy poza "liderami" i procesy niezwiązane z terminalem 
+    -wyświetla wszystkie procesy poza "liderami" i procesy niezwiązane z 
+    terminalem 
 
 3. ps x
--wyświetla wszystkie procesy, łącznie z tymi działającymi w tle
+    -wyświetla wszystkie procesy, łącznie z tymi działającymi w tle
 
 4. ps axu
-INFO: tu kolejność parametrów a, x, u nie ma znaczenie a jedynie fakt, że są podane. Dowolna kolejność powinna dać ten sam wynik.
--wyświetla procesy wszystkich użytkowników
+INFO: tu kolejność parametrów a, x, u nie ma znaczenie a jedynie fakt, że są 
+podane. Dowolna kolejność powinna dać ten sam wynik.
+    -wyświetla procesy wszystkich użytkowników
 
 Jak myślisz, co oznacza znak zapytania w kolumnie 2?
--Znak zapytania oznacza brak podpiętego terminala pod ten proces
+    -Znak zapytania oznacza brak podpiętego terminala pod ten proces
 
 Nie wiesz? A gdzie może być wyjaśnienie?
--wyjaśnienie znalazłem w Internecie
+    -wyjaśnienie znalazłem w Internecie
 
 B: Jak wykonasz poniższe 2 zadania?
 
 1. Wyświetl wszystkie procesy bash
--ps aux | grep bash
+    -ps aux | grep bash
 
 2. Wyświetl wszystkei procesy należące do użytkownika root
--ps -U root -u root u
+    -ps -U root -u root u
