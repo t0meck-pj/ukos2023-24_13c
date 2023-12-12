@@ -1,0 +1,31 @@
+1. Korzystając z komend cd oraz mkdir stwórz następujące drzewo katalogów w swoim katalogu domowym
+(w dowolnym podkatalogu, albo bezpośrednio w ~):
+Najszybciej można zrobić to komendami 
+mkdir -p ukos/katalog/katalog2
+mkdir -p ukos/katalog/katalog3
+mkdir -p ukos/klamka
+z racji ze jestem początkujący zrobiłem w kazdym katalogu komendą mkdir "nazwa katalogu"
+
+2. W katalogu ukos/klamka stwórz pliki zajęcia2.txt zajęcia2.log inny.txt nowy.txt
+mozna zrobić to jedną komędą touch zajęcia2.txt zajęcia2.log inny.txt nowy.txt
+
+3. Za pomocą jednego polecenia mkdir stwórz w katalogu ukos następujący katalog: ukos/to/jest/dluga/nazwa
+Opcja -p pozwala na tworzenie struktury katalogów, nawet jeśli niektóre z podkatalogów jeszcze nie istnieją.
+wiec jesli napiszemy w katalogu ukos mkdir -p /to/jest/dluga/nazwa
+stworzy nam za jedną komędą wszystkie katalogi z dowolną nazwą po / 
+
+4. następnie umieść w katalogu ukos/to/jest/dluga/nazwa plik dane.txt
+Umieściłem plik komędą touch to/jest/dluga/nazwa/dane.txt
+sprawdziłem czy plik sie utworzył i tak sie stało
+
+5. Usuń z katalogu ukos/klamka wszystkie pliki z rozszerzeniem .txt
+komenda rm klamka/*.txt i usuwa wszystkie pliki z roz txt
+sprawdziłem czy faktycznie tak sie stało 
+
+6. Usuń katalog ukos/katalog/katalog2
+Komenda rmdir katalog/katalog2 powoduje ze katalog2 sie usuwa a katalog3 nadal pozostał
+sprawdziłem czy faktycznie zmiany zostały poprawnie wykonane
+
+7. Usuń cały katalog klamka za pomocą jednego polecenia
+rm -r klamka powoduje ze usuwa sie katalog z jego zawartościa 
+po wpisaniu ls katalog znika z lisy
