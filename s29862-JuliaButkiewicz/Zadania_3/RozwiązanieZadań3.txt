@@ -1,0 +1,46 @@
+Zadanie 1.
+[...] Uruchom komendę cat bez parametrów.
+Wciśnij CTRL+C i zobacz co się stanie.
+
+WYKONANIE:
+Po wpisaniu cat bez parametrów, konsola oczekuja
+aż zacznę coś pisywać. Jednakże po użyciu CTRL + C 
+kończy to działanie tej komendy.
+
+WNIOSKI:
+Przydatne i do zapamiętania w razie przypadkowego, lub
+nieumyślnego odpalenia którejść z komend. CTRL+C szybko 
+kończy ten proces.
+
+________________________________________________________
+
+Zadanie 2.
+[...] Użycie komendy CTRL+D. Zobacz co się stanie:
+-Wydaj komendę cat > wynik3_1.txt
+-Wpisz tekst witaj (nie wciskaj enter).
+-Wciśnij CTRL+C.
+-Zobacz co znalazło się w pliku wynik3_1.txt
+
+WYKONANIE:
+Postępowałam zgodnie z powyższymi krokami.
+Wpierw komenda cat, następnie tekst witaj bez entera,
+później połączenie klawiszy CTRL+C i sprawdzenie pliku wynik.
+
+WNIOSKI:
+Przez użycie połączenia CTRL+C nie zapisała się żadna wiadomość
+w pliku .txt. Jest on pusty.
+
+Zobacz co się stanie c.d:
+-Wydaj komendę cat > wynik3_2.txt
+-Wpisz tekst Witaj (nie wciskaj entera).
+-Wciśnij CTRL+D (x2).
+-Zobacz co się znalazło w pliku wynik3_2.txt
+
+WYKONANIE:
+Wykonuje powyższe kroki po kolei.
+Zupełnie jak w podpunktach nad tym zadaniem.
+
+WNIOSKI:
+Tym razem wiadomość zapisała się do pliku.
+Przez użycie kombinacji klawiszy dwa razy. 
+

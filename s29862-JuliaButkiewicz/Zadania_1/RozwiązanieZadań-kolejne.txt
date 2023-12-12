@@ -1,0 +1,84 @@
+Zadanie 1.
+Korzystając z komend cd oraz mkdir stwórz
+następujące drzewo katalogów w swoim katalogu domowym.
+
+ukos
+ |\ katalog
+ |    |\katalog2
+ |     \katalog3
+  \ klamka
+
+WYKONANIE:
+Wpisuje kolejno: 
+"mkdir ukos"
+"cd ukos"
+"mkdir katalog"
+"mkdir klamka"
+"cd katalog"
+"mkdir katalog2"
+"mkdir katalog3"
+
+WNIOSKI:
+Drzewko nie sprawiło większych problemów. 
+
+Zadanie 2.
+W katalogu ukos/klamka stwórz plik zajęcia2.txt zajęcia2.log 
+inny.txt nowy.txt.
+
+WYKONANIE:
+Odkryłam, że można to zadanie wykonać jedną linią polecenia!
+Użyłam więc "touch zajęcia2.txt zajęcia2.log inny.txt nowy.txt"
+Dla sprawdzenia wpisałam "ls".
+
+WNIOSKI:
+Nauczyłam się, że niektóre rzeczy można wykonać jedną komendą.
+Oszczędza to czas.
+
+Zadanie 3.
+Za pomocą jednego polecenia mkdir stwórz w katalogu ukos następujący
+katalog: ukos/to/jest/długa/nazwa
+
+WYKONANIE:
+Wpisuję "mkdir -p ukos/to/jest/dluga/nazwa"
+Dzięki parametrowi -p mogę wpisać to w jednej komendzie.
+
+WNIOSEK:
+Dowiedziałam się czegoś o parametrze -p.
+
+Zadanie 4.
+Umieść w katalogu ukos/to/jest/dluga/nazwa plik dane.txt
+
+WYKONANIE:
+Użyłam komendy "touch ukos/to/jest/dluga/nazwa/dane.txt
+
+WNIOSKI:
+Nie miałam większego problemu ze stworzeniem tego pliku.
+
+Zadanie 5.
+Usuń z katalogu ukos/klamka wszystkie pliki z rozszerzeniem .txt
+
+WYKONANIE:
+Gdy znalazłam się w katalogu klamka, wystarczyło użyć komendy rm *.txt.
+
+WNIOSKI:
+Szybki sposób na usunięcie wielu plików z dowolnym roszerzeniem. Oszczędza 
+wiele czasu.
+
+Zadanie 6.
+Usun katalog ukos/katalog/katalog2
+
+WYKONANIE:
+Używam komendy "rmdir ~/ukos/katalog/katalog2".
+
+WNIOSKI:
+Użycie komendy powiodło się. Żadnych specjalnych wniosków
+
+Zadanie 7.
+Usuń cały katalog klamka za pomocą jednego polecenia.
+
+WYKONANIE:
+Używam polecenia "rm -r ukos/klamka"
+
+WNIOSEK:
+-r ignoruje istnienie plików w folderze, przez co katalog
+klamka mógł zostać usunięty.

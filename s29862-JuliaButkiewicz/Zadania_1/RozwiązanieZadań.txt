@@ -1,0 +1,171 @@
+Zadanie 1.
+Uruchom terminal.
+
+WYKONANIE:
+Używając programu puTTY loguję się do Szuflandii.
+Po wpisaniu loginu, otwiera się terminal.
+Wpisuje hasło by finalnie znaleźć się w Szuflandii.
+
+WNIOSKI:
+Efekt spodziewany. Zdanie nie stworzyło większego problemu.
+
+Zadanie 2.
+Wyświetl zawartość aktualnego katalogu.
+
+WYKONANIE:
+Używam komendy "ls" w terminalu.
+Komenda ta listuje mi zawartość aktualnego katalogu.
+W moim przypadku jest to folder "PPRG".
+
+WNIOSKI:
+Konsekwencją wpisania komendy "ls" było ukazanie
+jakie pliki znajdują się w katalogu w którym
+obecnie się znajdujemy. Zadanie to przybliżyło
+mi działanie komendy "ls".
+
+Zadanie 3.
+Sprawdź gdzie aktualnie się znajdujesz.
+
+WYKONANIE:
+Wpisując komendę "pwd" wyświetla mi moją
+dokładną lokalizację. W moim przypadku to
+/home/PJWSTK/s29862.
+
+WNIOSKI:
+Wpisanie komendy "pwd" upewniło mnie gdzie,
+w jakim dokładnie folderze znajduję się obecnie.
+Komenda przydatna.
+
+Zadanie 4.
+Przejdź do katalogu pulpit za pomocą ścieżki względnej.
+
+WYKONANIE:
+Wpisuje komendę "cd ../../.." <- używam ścieżki względnej.
+Przenosi mnie ona na pulpit.
+
+WNIOSKI:
+Bardziej uciążliwe niż wpisanie "/root". Takie wnioski.
+
+Zadanie 5.
+Sprawdź gdzie jesteś.
+
+WYKONANIE:
+Wpisuje komendę "pwd".
+Wyświetla mi, że znajduję się w katalogu "/" czyli w roocie/pulpicie.
+
+WNIOSKI:
+Rezultat taki, jak oczekiwany w zadaniu powyżej.
+
+Zadanie 6.
+Wyświetl zawartość bieżącego katalogu.
+
+WYKONANIE:
+Wpisuję komendę "ls".
+Widzę tabelkę w której wyświetlają się biblioteki i binaria.
+Do tego dostrzec można kilka innych plików.
+
+WNIOSKI:
+Jest to temat do doczytania. By spojrzeć głębiej na rozszerzenia plików
+jakie pojawiły się w tabelce.
+
+Zadanie 7.
+Wyświetl zawartość swojego katalogu domowego bez przechodzenia przez niego.
+
+WYKONANIE:
+Wpisuje komendę "ls ~" która to listuję
+mi zawartość katalogu domowego bez przechodzenia przez niego.
+
+WNIOSKI:
+Efekt spodziewany, choć musiałam wypróbować kilku komend by dotrzeć
+do tego rozwiązania. Internet wylistował mi wiele
+różnych komend, stąd to zagmatwaie. 
+
+Zadanie 8.
+Przejdź do katalogu obrazy (lub innego[..]) za pomocą ścieżki względnej.
+
+WYKONANIE:
+Katalog obrazy nie jest u mnie dostępy.
+Dlatego też wpisuję komendę "cd PPRG"
+by zmieniło mój katalog na ten dostępny.
+
+WNIOSKI:
+Mimo braku dostępu do katalogu obrazów poradziłam sobie 
+z tym zadaniem przenosząc się do folderu PPRG.
+
+Zadanie 9.
+Sprawdź, gdzie jesteś.
+
+WYKONANIE:
+Wpisuje komendę "pwd".
+Znajduję się w /home/PJWSTK/s29862.
+
+WNIOSKI:
+Wynik spodziewany, gdyż komenda została już wcześniej
+przeze mnie użyta i poznana.
+
+Zadanie 10.
+Zobacz do jakiego katalogu przejdziesz za pomocą ścieżki
+././././././ W opisie rozwiązania umieść również jak rozumiesz
+co się właściwie stało. Dlaczego znalazłaś się w tym miejscu do
+którego przeniosła cię ta ścieżka? Czy dodanie kilku ./././././ na
+początku/środku/końcu powoduje, że ścieżka się zmieni?
+Co ta ścieżka oznacza/sobą reprezentuje?
+
+WYKONANIE:
+Użycie ścieżki "././././././" spowodowało, że moja lokalizacja
+nie zmieniła się. Dla pewności użyłam "pwd" co potwierdziło moje
+podejrzenia.
+
+WNIOSKI:
+Użycie "./" daje nam obecny folder, stąd też ile razy byśmy tego nie wpisali
+nasza lokalizacja nie zmieni się. Zadanie to zaskoczyło mnie i
+pozwoliło bardziej doczytać o użyciu "./"
+
+Zadanie 11.
+Przejdź do swojego katalogu domowego za pomocą ścieżki bezwzględnej.
+
+WYKONANIE: 
+Używając cd /home/s29862 przenoszę się do katalogu domowego.
+
+WNIOSKI:
+Efekt spodziewany. Komanda poznana już wcześniej.
+
+Zadanie 12.
+Zobacz co się stanie jak wpiszesz komendę "cd/root". Jak już to robisz,
+zastanów się co się stało. Poszukaj w internecie.
+
+WYKONANIE:
+Używam "cd/root", przez co na konsoli wyświetla mi się brak dostępu.
+
+WNIOSKI:
+Komenda ta przenosi nas do folderu który wymaga specjalnej autoryzacji,
+Aby się tam zalogować wymagane jest logowanie na konto super usera.
+
+Zadanie 13.
+Zobacz co się stanie jeśli wciśniesz kombinację klawiszy:
+Ctrl + Alt + F3. Sprawdź w internecie co się dzieje kiedy używa 
+się takiej kombinacji. W internecie mogą pojawić się
+wersje z F1-F6. TO de facto to samo. Odpowiedź "wylogowało mnie"
+jest błędna. Nie. Nie wylogowało. Szukaj dalej.
+
+WYKONANIE:
+Po wciśnięciu tejże kombinacji wyskakuje nam dodatkowy terminal
+oraz opcje logowania.
+
+WNIOSKI:
+Po poprawnym zalogowaniu można dalej korzystać z tego dodatkowego
+terminala. Tworzy to tak zwaną guest machine, czyli wychodziłoby na to
+że to konsola gościa.
+
+Zadanie 14.
+A teraz co się stanie po: Alt+F1 lub Alt+F2 lub Alt+F7.
+
+WYKONANIE:
+Otwierają się kolejne terminale gości. F1 jako pierwszy otwarty,
+F2 jako drugi i tak dalej.
+
+WNIOSKI:
+Możliwe jest korzystanie z maksymalnie 6 terminali gości. A wyżej
+podany skrót klawiszowy pomaga nam przełączać się między nimi.
+
+

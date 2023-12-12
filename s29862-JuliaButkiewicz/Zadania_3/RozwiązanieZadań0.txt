@@ -1,0 +1,52 @@
+Zadanie 1-3.
+Przejdź do katalogu domowego > Wykonaj komendę ls -a
+> Zobacz ile plików wypisało.
+
+WYKONANIE:
+Będąc w katalogu domowym wpisuje ls -a.
+Wyświetlają się wszystkie pliki i katalogi.
+
+WNIOSEK:
+Poznałam działanie parametru -a.
+Wylistowało nawet te ukryte foldery i pliki.
+
+Zadanie 4-5.
+Teraz wydaj komendę ls -a | grep D > Zobacz ile jest wyników.
+
+WYKONANIE:
+Wpisuję "ls -a | grep t". 
+Listuje mi karalogi i pliki, w których nazwie występuje
+literka t.
+
+WNIOSEK:
+Przydatne gdy potrzebujemy znaleźć dany ciąg znaków, a raczej
+plik czy folder nazwany danym ciągiem znaków, lub zawierający 
+podany znak.
+
+Zadanie 6-7.
+Wydaj komendę ls -a | grep D > lista_plików_z_literką_d.txt
+Zobacz czy utworzył się jakiś plik?
+
+WYKONANIE:
+Wpisuje komendę podaną powyżej, zastępuje D literką P.
+
+WNIOSEK:
+Stworzył się plik lista_plikow_z_literka_p.txt. A w nim
+znalazły się pozycję z literką p, sztuk 4. "|" przekierował wyjście
+jednego polecenia do wejścia kolejnego. A dzióbek ">" przekierował listowanie
+pozycji do pliku tekstowego.
+
+Zadanie 8-9.
+A teraz wykonaj komendę: ls -a | grep P | tee lista_plikow_z_literka_p_2.txt
+Zobacz czy plik sie utworzył? Jaka jest treść względem próby bez tee?
+Co robi tee?
+
+WYKONANIE:
+Wykonuje komendę znowu zastępując D literką P.
+
+WNIOSKI:
+Poza tym, że znów pojawił się plik .txt. To jeszcze wylistowało
+pozycje z literką P na terminalu. Tee odczytuje standardowe
+wejście i zapisuje je zarówno na standardowe wyjście, jak i na pliku.
+
+
