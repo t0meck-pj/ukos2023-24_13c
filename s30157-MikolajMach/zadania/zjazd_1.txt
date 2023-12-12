@@ -1,0 +1,132 @@
+PRACA DOMOWA UKOS - ĆW1
+
+Zadanie 1.  Uruchom terminal.
+
+WYKONANIE: wykorzystując komendę ssh s30157@szuflandia.pjwstk.edu.pl
+i po wpisaniu hasła loguję się do szuflandii.
+
+WNIOSKI: Otwarcie terminala nie było zbyt skomplikowane. Dla niektórych
+może być mylące brak wyświetlania się czegokolwiek podczas wpisywania
+hasła.
+
+Zadanie 2.  Wyświetl zawartość aktualnego katalogu.
+
+WYKONANIE: By wyświetlić zawartość katalogu w którym aktualnie się
+znajduję, wpisuję w otwartym wcześniej terminalu komendę "ls".
+
+WNIOSKI: Po wpisania komendy "ls" ukazało się jakie pliki/foldery
+znajdują się w katalogu w którym aktualnie się znajduję.
+
+Zadanie 3.  Sprawdź gdzie aktualnie się znajdujesz.
+
+WYKONANIE: Wpisując komendę "pwd" wyświetla mi się moją dokładną
+lokalizację czyli /home/PJWSTK/s30157
+
+WNIOSKI: Wpisanie komendy "pwd" potwierdziło mi w jakim folderze
+i katalogu znajduję się obecnie.
+
+Zadanie 4.  Przejdź do katalogu Pulpit za pomocą ścieżki względnej.
+
+WYKONANIE: Wpisując komendę "cd ../../../" przenoszę się na pulpit
+używając tak zwanej ścieżki względnej.
+
+WNIOSKI: Jest to dużo bardziej uciążliwy sposób niż używanie ścieżki
+bezwględnej np. "/root".
+
+Zadanie 5.  Sprawdź gdzie jesteś.
+
+WYKONANIE: Po wpisaniu komendy "pwd", wyświetla mi, że znaduje się
+w katalogu "/" czyli w roocie/pulpicie.
+
+WNIOSKI: Rezultat którego można było się spodziewać ze względu
+na poprzednie zadanie.
+
+Zadanie 6.  Wyświetl zawartość bieżącego katalogu.
+
+WYKONANIE: Po wpisaniu komendy "ls" widzę tabelkę w której wyświetlają
+się biblioteki i binaria. Do tego mogę dostrzec kilka innych
+plików/katalogów.
+
+WNIOSEK: Efekt spodziewany ze względu na katalog w którym się znajdowałem
+
+Zadanie 7.  Wyświetl zawartość swojego katalogu domowego bez
+przechodzenia do niego.
+
+WYKONANIE: Wpisuje komendę "ls ~" która listuje mi zawatość katalogu
+domowego.
+
+WNIOSEK: Efekt spodziewany, choć niezbyt oczywisty.
+
+Zadanie 8.  Przejdź do katalogu Obrazy (lub innego katalogu, który jest
+dostępny - podaj wprost, że zmieniasz katalog na inny bo np.
+Obrazy nie są u Ciebie dostępne) w twoim katalogu domowym za pomocą
+ścieżki względnej.
+
+WYKONANIE: Obrazy nie są u mnie dostępne, dlatego wpisuje "cd PPRG"
+by zmieniło mój katalog na ten dostępny.
+
+WNIOSEK: Nie miałam dostępu do obrazów, mimo to udało mi się dostać
+do dostępnego katalogu.
+
+Zadanie 9.  Sprawdź gdzie jesteś.
+
+WYKONANIE: Wpisując komendę "pwd" sprawdzam gdzie aktualnie się znajduje
+W moim przypadku to "/home/PJWSTK/s30157/".
+
+WNIOSEK: Wynik spodziewany, komenda była już przeze mnie używana
+w poprzednich zadaniach
+
+Zadanie 10. Zobacz do jakiego katalogu przejdziesz za pomocą
+ścieżki ././././././
+W opisie rozwiązania proszę umieścić również to jak rozumiesz
+co się właściwie stało.
+Dlaczego znalazła/eś się w tym miejscu do którego przeniosła Cię
+ta ścieżka?
+Czy dodanie kilku ./././././ na początku/środku/końcu powoduje,
+że ścieżka się zmieni?
+Co ta ścieżka oznacza/sobą reprezentuje?
+
+WYKONANIE: Użycie ścieżki "./././././" nie zmieniło nic.
+Nieważne ile "./" bym wpisał moja lokalizacja nie zmieniła by się.
+
+WNIOSEK: "./" oznacza aktualną lokalizację
+
+Zadanie 11. Przejdź do swojego katalogu domowego za pomocą ścieżki
+bezwzględnej.
+
+WYKONANIE: Używając komendy "cd .." cofam się do katalogu domowego.
+
+WNIOSEK: Efekt spodziewany po doczytaniu o możliwościach "cd ..".
+
+Zadanie 12. Zobacz co się stanie jak wpiszesz komendę 'cd /root'.
+Jak już to zrobisz, zastanów się co się stało. Poszukaj w Internecie.
+
+WYKONANIE: Używam 'cd /root', przez co na konsoli wyświetla mi się
+brak dostępu. Komenda ta, przenosi nas do /root katalogu,
+co wymaga specjalnej autoryzacji gdyż jest to systemowa biblioteka.
+
+WNIOSEK: Efekt niespodziewany. Po doczytaniu się o katalogu /root,
+wszystko stało się jasne. Wymagany jest dostęp administratora.
+
+Zadanie 13. Zobacz, co się stanie, jeśli wciśniesz kombinację klawiszy:
+Ctrl+Alt+F3
+Sprawdź w Internecie co się dzieje kiedy używa się takiej kombinacji.
+W Internecie mogą pojawić się wersje z F1-F6. To de facto to samo.
+Odpowiedź "wylogowało mnie" jest błędna. Nie. Nie wylogowało. Szukaj dalej.
+
+WYKONANIE: Po użyciu kombinacji klawiszy: Ctrl+Alt+F3 otwiera nam się
+dodatkowy terminal.
+
+WNIOSEK: Używając wirtualnego terminala otwiera nam się kolejny
+wirtualny terminal jednak w przypadku samej konsoli, to ona się powiela.
+Nie wylogowuje użytkownika.
+
+Zadanie 14. A teraz co się stanie po: Alt+F1 lub ALT+F2 lub ALT+F7
+(na starszych linuxach)
+
+WYKONANIE: Używając Alt+F1, przywołałam pierwszy otwarty terminal,
+to samo w przypadku pozostałych kombinacji klawiszy.
+Alt+F2 przywołuje ten drugi otwarty terminal.
+
+WNIOSEK: Przydatna kombinacja klawiszy gdy trzeba korzystać
+z kilku terminali naraz.

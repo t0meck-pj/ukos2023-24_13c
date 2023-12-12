@@ -1,0 +1,37 @@
+UKOS ZADANIE DOMOWE - ĆW 1.2
+Zadanie 1
+Korzystając z komend cd oraz mkdir stwórz następujące drzewo katalogów
+w swoim katalogu domowym (w dowolnym podkatalogu,
+albo bezpośrednio w ~):
+Wykonałem zadanie przy pomocy komend cd oraz mkdir w podanej kolejności:
+- mkdir ukos
+- cd ukos
+- mkdir katalog klamka
+- cd katalog
+- mkdir katalog2 katalog3
+
+Zadanie 2
+W katalogu ukos/klamka stwórz pliki zajęcia2.txt zajęcia2.log
+inny.txt nowy.txt:
+Wykonałem zadanie przy pomocy komendy: "touch  zajęcia.txt zajęcia.log inny.txt nowy.txt" będąc w katalogu domowym
+
+Zadanie 3
+Za pomocą jednego polecenia mkdir stwórz w katalogu ukos następujący
+katalog: ukos/to/jest/dluga/nazwa
+Wykonałem zadanie przy pomocy komendy: mkdir -p ukos/to/jest/druga/nazwa
+
+Zadanie 4
+następnie umieść w katalogu ukos/to/jest/druga/nazwa plik dane.txt:
+Wykonałem zadanie przy pomocy komendy: touch ukos/to/jest/druga/nazwa/dane.txt
+
+Zadanie 5
+Usuń z katalogu ukos/klamka wszystkie pliki z rozszerzeniem txt:
+Wykonałem zadanie przy pomocy komendy: "rm *.txt" będąc w kataolgu klamka
+
+Zadanie 6
+Usuń katalog ukos/katalog/katalog2:
+Wykonałem zadanie przy pomocy komendy: rmdir ukos/katalog/katalog2
+
+Zadanie 7
+Usuń cały katalog klamka za pomocą jednego polecenia:
+Wykonałem zadanie przy pomocy komendy: rm -r ukos/klamka
