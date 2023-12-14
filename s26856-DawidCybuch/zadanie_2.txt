@@ -68,9 +68,11 @@ Umieścić w nim plik o nazwie strona.html o następującej zawartości:
 Utowrzyłem folder public_html za pomocą komendy mkdir public_html.
 Następnie utworzyłem plik komendą nano strona.html i wpisałem treść podaną w zadaniu.
 Sprawdzam uprawnienia za pomocą komendy ls -l.
-Wykazuje mi że że każdy user może to odczytać r-- to oznacza że każdy może zobaczyć moją stronę, ale nikt inny nie może jej edytować.
+Po wykonaniu komendy ls -l dostaje informacje jakie są przydzielone uprawnienia
+Owner -rw- - czyli jestem w stanie "widziec" oraz edytować ten plik
+Grupa -r-- - Grupa może odczytywać ale nie mogą edytować
+Wszyscy -r-- - Wszyscy mogą odczytać ale nie mogą edytować
 http://szuflandia.pjwstk.edu.pl/~s26856/strona.html
-
 
 
 
