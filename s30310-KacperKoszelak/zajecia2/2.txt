@@ -13,6 +13,10 @@ katalog1
    └── katalog3
        └── tekst2.txt
 
+-jestem w stanie wylistować cudze pliki i katalogi, ale bez uprawnień do 
+odczytu nie mogę wejść do żadnego katalogu. Bez problemu jestem w stanie usunąć 
+cudzy plik z własnego katalogu.
+
 2. W utworzonej na swoim koncie strukturze podkatalogów przeprowadzić 
 eksperymenty:
 
