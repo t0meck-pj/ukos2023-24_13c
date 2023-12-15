@@ -20,7 +20,7 @@ Znajdujesz się w katalogu kota. Katalog ala, jest w katalogu
 
 ROZWIĄZANIE:
 Do ścieżki względnej przechodzę używając "cd ../.."
-Do ścieżki bezwzględnej "cd tmp/ukos/ala"
+Do ścieżki bezwzględnej "cd /tmp/ukos/ala"
 
 Zadanie 2.
 Masz taki układ katalogów, jak wyżej i ciągle jesteś w katalogu kota.
