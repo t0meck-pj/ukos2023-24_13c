@@ -5,10 +5,11 @@ uczelnianym np. na szuflandii. Co mogło się stać?
 ROZWIĄZANIE:
 -Brak uprawnień.
 -Np. może nasz katalog w ogóle nie istnieć.
-- <-- niestety nic innego nie przychodzi mi do głowy.
+-Błąd dysków lub macierzy.
 
 WNIOSKI:
-Muszę spojrzeć głębiej w internety by się czegoś dowiedzieć.
+Muszę spojrzeć głębiej w internety by się czegoś dowiedzieć. 
+Zadanie poprawione, dopisano ostatnie rozwiązanie.
 
 Zadanie 1.
 Dany jest katalog plików: (drzewko z katalogami).
