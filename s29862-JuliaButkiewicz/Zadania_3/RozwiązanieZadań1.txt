@@ -21,7 +21,10 @@ B: Jak wykonasz poniższe dwa zadania?
 -wyświetl wszystkie procesy należące do użytkownika root.
 
 WYKONANIE:
-Aby wyświetlić wszystkie procesy bash : "ps aux | grep bash"
+Aby wyświetlić wszystkie procesy bash : 
+"ps aux | grep -E '[b]ash' | awk '$11 !~ /bash/'" <-- Jeśli dobrze zrozumiałam
+to dzięki tej linii pliki z nazwą BASH zostaną zignorowane,
+natomiast wylistuje to same procesy bash.
 Aby wyświetlić procesy należące do użytkownika root: "ps -u root".
 
 WNIOSKI:
