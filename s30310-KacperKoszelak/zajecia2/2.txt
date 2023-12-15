@@ -13,6 +13,10 @@ katalog1
    └── katalog3
        └── tekst2.txt
 
+    -jestem w stanie wylistować cudze pliki i katalogi, ale bez uprawnień do 
+odczytu nie mogę wejść do żadnego katalogu. Bez problemu jestem w stanie usunąć 
+cudzy plik z własnego katalogu.
+
 2. W utworzonej na swoim koncie strukturze podkatalogów przeprowadzić 
 eksperymenty:
 
@@ -25,7 +29,8 @@ usuwając wszelkie uprawnienia dostępu do katalogu nadrzędnego (nadkatalogu).
     -chmod -rwx katalog1
 
     W jakich przypadkach możemy wykonać wtedy polecenie cd ? 
-        -jedynie do plików/katalogów do których mamy uprawnienia
+        -jedynie do plików/katalogów do których mamy co najmniej uprawnienia do 
+         odczytu
 
     W jakich przypadkach możemy wykonać polecenie chmod ? 
         -gdy to my jesteśmy właścicielami pliku/katalogu
@@ -53,9 +58,9 @@ cat plik
 Sprawdzić, jaki skutek powoduje zamiana operatora > na operator >> w poleceniu 
 echo. Uruchom także drugi terminal i wykonaj w nim komendę tail -f plik i 
 powtórz powyższe ćwiczenie w pierwszym terminalu (komunikacja za pomocą pliku).
-    -operator > wpisuje komunikat do pliku bez uwzględnienia poprzedniego 
-    tekstu wewnątrz
-    -operator >> wpisuje komunikat do pliku, nadpisuje poprzednie dane
+    -operator > wpisuje komunikat do pliku zastępując poprzedni tekst wewnątrz
+    -operator >> wpisuje komunikat do pliku, poprzednie dane pozostają i dopisuje 
+     nowy tekst
     -tail -f pokazuje jakie zmiany zaszły w pliku
     -wykonane z pomocą s30566
 

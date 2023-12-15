@@ -5,7 +5,7 @@ terminalu. Proszę go przetestować w taki sposób, że:
 
 1. Uruchom komendę cat be parametrów
 2. Wciśnij CTRL+C i zobacz co się stanie
-    -zakończyło się wykonywanie komendy cat
+    -zakończyło się wykonywanie komendy cat, program wypisał komunikat "^C"
 
 Kolejnym fajnym (zależy dla kogo :) ) skrótem klawiszowym jest CTRL+D. Służy on 
 do zakończenia strumienia wejściowego. Działa to trochę inaczej niż poprzednie 
@@ -30,11 +30,12 @@ Zobacz co się stanie:
 W opisie rozwiązania zadania umieść:
 1. jak rozumiesz co się stało?
     -zawartość "wynik3_1.txt" nie została zapisana, a zawartość "wynik3_2.txt" 
-    została zachowana
+     została zachowana
 
 2.czym oba te przykłady się różnią?
-    -CTRL+C nie zapisuje wprowadzanego tekstu, a CTRL+D zapisuje
+    -CTRL+C natychmiastowo zabija obecnie wykonywany proces, a CTRL+D wychodzi 
+     z programu kończąc obecnie wykonywane procesy
 
 3.DLACZEGO się różnią?
-    -CTRL+C natychmiastowo przerywa wykonywanie programu, CTRL+D zwraca tekst z 
-    programu i go kończy
+    -Oba skróty mają inne zastosowania, CTRL+C służy do zabicia procesu, CTRL+D 
+     kończy obecny proces
