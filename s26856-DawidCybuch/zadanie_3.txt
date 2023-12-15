@@ -104,15 +104,15 @@ Gdybym nie wiedział wpisuje komende man ps i szukam co oznacza x
 B.1
 
 Używam komeny ps axu | grep bash
-Z racji tego że robię to w godzinach nocnych wyświetla mi tylko dwa procesy
-Ale gdybym robił to w dzień, pokazało by mi ich znacznie więcej
+Wyświetla mi wszystkie procesy które mają w swojej nazwie bash
+W przypadku chęci wyszukania procesów z nazwą bash wykonam polecenie
+ps axu | grep ^bash
+
 
 B.2
 
-Wykonałem komende ps axu | grep ^root
-specjalnie wykonałem ^root żeby pokazało mi tylko procesy root
-A nie wszystkie w tym nazwane np rootsroot
-
+Wykonałem komende ps -u root
+Dzięki sprecyzowaniu za pomocą -u wyszuka mi tylko i wyłącznie procesy użytkownika root.
 
 Zadanie 2
 
@@ -135,12 +135,12 @@ Użyta została komenda kill 4563 i wyłączył się gedit
 
 4.Zobacz działanie komendy killall bash
 
-Killall bash zabija wszystkie procesy basha
+Killall bash zabija wszystkie procesy basha, oprócz aktualnie używanego terminala
 
 5.Zobacz czy kill zadziała dla dowolnego procesu.
 
-Komenda kill nie zawsze zadziała, by kill zadziałał potrzebne jest sprecyzowanie 
-procesu i odpowoednich parametrow
+Komenda kill nie zawsze będzie działać, ze względu na typ wysyłanego sygnału.
+Sygnał KILL jest tylko i wyłącznie poleceniem i nie zawsze musi być on spełniony.
 
 wszystkiego dowiedziałem sie pomocą komendy man kill
 
@@ -155,23 +155,28 @@ Po uruchomieniu cat, wykoanie ^C zamyka proces i nie zapisuje żadnych zmian
 3.2 Wydaj komendę cat > wynik3_1.txt. Wpisz tekst witaj bez wciskania klawisza Enter.
 Wciśnij CTRL+C. Zobacz co się znalazło w pliku wynik3_1.txt:
 
-Plik jest całkowicie pusty
+Po użyciu kombinacji ^C plik jest pusty i nie zostały zapisane jakiekolwiek zmiany
 
 3.3 Wydaj komendę cat > wynik3_2.txt. Wpisz tekst witaj bez wciskania klawisza Enter.
 Wciśnij CTRL+D (możliwe, że będzie trzeba wcisnąć go 2x). Zobacz co się znalazło
 w pliku wynik3_2.txt:
-W pliku nie ma nic, plik jest całkowicie pusty
+
+Po wpisaniu tekstu Witaj oraz użycia kombinacji ^D (Musiałem nacisnąć 2xkrotnie)
+Zmiany zostały zapisane 
 
 jak rozumiesz co się stało?:
 Użycie ^C zamyka program od razu, bez ostrzeżenia
-Natomiast ^D wymaga ponownego użycia, jest w pewien sposób zabezpieczenie
+Natomiast ^D Zamyka proces ale zapisuje zmiany bez potrzeby zapisywanie F2 tudież jakim kolwiek innym sposobem.
 
 czym oba te przykłady się różnią?:
-Tym że ^C działa od razu, a ^D wymaga ponownego użycia
+Tym że ^C działa od razu i żadne zmiany nie zostaną zapisane
+Natomiast ^D zapisuje wszystkie wprowadzoen zmiany przed zamknięciem pliku, 
+zmiany zostaną zapisane czy tego chce czy nie.
+(Skoro używam ^D to raczej chce by zostały zapisane)
 
 DLACZEGO się różnią?
 ^C jest komendą która całkowicie zamyka proces
-^D posiada takowe zabezpieczenie by nie wyjść z procesu bez zapisania zmian
+^D Jest komendą która najpierww ZAPISZE zmiany przed zamknięcem danego procesu.
 
 Zadanie 4
 
@@ -211,6 +216,8 @@ Jak widać proces wrócił i można wcisnąć na przykład CTRL+C aby go zakońc
 
 W momencie uruchamiania programu, możemy od razu nakazać wykonanie go w tle. Służy do tego znak & umieszczony na końcu instrukcji.
 
+Po wykonaniu bg, mój gedit został zniesiony na dalszy plan
+
 Zobacz:
 INFO: Jeśli jakiegoś programu nie ma to zastąp go innym, który znasz.
 
@@ -222,15 +229,16 @@ Wykonaj komendę geany &
 
 Zobacz co się stało (domyślam się, że uruchomiły się 3 programy, a na terminalu ciągle można coś pisać.
 
+Uruchomiły się wszystkie programy wymienione w treści zadania, wszystkie te programy działają sobie w tle
+i są całkowicie innym bytem niż terminal z którego w tym momencie korzystam.
+Dzięki temu jesteśmy w stanie wykonywać bardzo dobry multitasking, bo nie dość że terminal nam cały czas działa
+To mogę przechodzić do innych programów.
+
 
 Kolejna komenda to jobs. Służy ona do wyświetlania listy zadań (jobów; nie mylić z procesami) przeniesionych do tła.
 
 Przywróć program gedit (lub gimp, w każdym razie nie uruchomiony jako ostatni program) z tła na pierwszy plan. Skorzystaj z jobs aby dowiedzieć się jakie mają numery poszczególne zadania działające w tle.
 składnia: fg %(numer jobu)
 
-
-
-
-
-
-
+Wykonuje komendę jobs, by wyświetliły mi się wszystkie joby, mój git ma przypisany numer 8
+By przywrócić go do działa z background wykonuje fq %8
