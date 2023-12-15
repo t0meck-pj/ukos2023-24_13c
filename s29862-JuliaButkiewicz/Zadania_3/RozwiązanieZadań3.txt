@@ -41,6 +41,7 @@ Wykonuje powyższe kroki po kolei.
 Zupełnie jak w podpunktach nad tym zadaniem.
 
 WNIOSKI:
-Tym razem wiadomość zapisała się do pliku.
-Przez użycie kombinacji klawiszy dwa razy. 
-
+CTRL + D wysyła tak zwany komunikat EOF - end of file.
+Podczas gdy wcześniej, używając CTRL + C, zabijało to 
+proces tak po wciśnięciu CTRL + D zabija to proces jednak zapisuje to
+input, który został wcześniej podany.
