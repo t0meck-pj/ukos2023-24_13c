@@ -5,10 +5,11 @@ uczelnianym np. na szuflandii. Co mogło się stać?
 ROZWIĄZANIE:
 -Brak uprawnień.
 -Np. może nasz katalog w ogóle nie istnieć.
-- <-- niestety nic innego nie przychodzi mi do głowy.
+-Błąd dysków lub macierzy.
 
 WNIOSKI:
-Muszę spojrzeć głębiej w internety by się czegoś dowiedzieć.
+Muszę spojrzeć głębiej w internety by się czegoś dowiedzieć. 
+Zadanie poprawione, dopisano ostatnie rozwiązanie.
 
 Zadanie 1.
 Dany jest katalog plików: (drzewko z katalogami).
@@ -19,7 +20,7 @@ Znajdujesz się w katalogu kota. Katalog ala, jest w katalogu
 
 ROZWIĄZANIE:
 Do ścieżki względnej przechodzę używając "cd ../.."
-Do ścieżki bezwzględnej "cd tmp/ukos/ala"
+Do ścieżki bezwzględnej "cd /tmp/ukos/ala"
 
 Zadanie 2.
 Masz taki układ katalogów, jak wyżej i ciągle jesteś w katalogu kota.
@@ -51,4 +52,60 @@ CTRL + \ <-- co powinno skutecznie zabić proces. Lub mogłabym
 użyć komendy kill, gdybym znała tylko id danego procesu.
 
 Zadanie 5.
+Jak wypisać wszystkie pliki w bieżącym katalogu, których nazwa zaczyna
+się od "al"?
+
+ROZWIĄZANIE:
+Szukając rozwiązania zastąpiłam 'al' --> 'in', gdyż wtedy
+faktycznie wyszukiwało mi pliki. Wpisałam więc, bazując
+na wysłanych materiałach komendę: ls -p | grep '^in[^/]*$'.
+W przypadku rozwiązania pierwotnego 'in' zastąpić 'al'.
+
+Zadanie 6a.
+Nadaj uprawnienia do katalogu ala tak aby:
+- każdy mógł do niego wejść.
+- tylko grupa mogła wyświetlić co w nim jest.
+- właściciel ma uprawnienia.
+
+Przygotuj 3 wariacje rozwiązania tego zadania używając
+różnych notacji:
+- oktalnej/ósemkowej/cyfrowej
+- literowej ze znakiem równości
+- literowej z plusami i minusami
+
+ROZWIĄZANIE:
+
+- Znak równości: chmod u=rwx,g=rx,o=x /tmp/ukos/ala
+- Plusy i minusy: chmod a+rwx,g-w,o-rw /tmp/ukos/ala
+- Cyfrowo: chmod 704 ala
+
+Zadanie 6b.
+Jak korzystając z notacji ze znakiem równości odebrać
+wszystkie uprawnienia dla danego zasobu?
+
+ROZWIĄZANIE: chmod a=- /tmp/ukos/ala
+
+Zadanie 7.
+Jak utworzyć plik z listą plików w bieżącym katalogu?
+
+ROZWIĄZANIE:
+Użyłam dir -a > lista.txt,
+można jeszcze posilić się o
+echo * > lista.txt <-- ten sposób również uworzył listę
+w pliku tekstowym.
+
+Zadanie 8.
+Jak przyspieszyć wpisywanie komend w terminalu?
+Jaki klawisz pozwala na uzupełnienie komend?
+
+ROZWIĄZANIE:
+Jest to klawisz TAB.
+
+Zadanie 9.
+Jak uruchomić program by nie blokował terminala. Są dwa sposoby.
+Jakie?
+
+ROZWIĄZANIE:
+Można otworzyć program "w tle" czyli używając "&"
+lub użyć nohup, komendy która odporna jest na blokowania.
 

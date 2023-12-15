@@ -1,0 +1,42 @@
+ZADANIE DO WYKONANIA NA LINUXIE.
+
+ZADANIE 1.
+Uruchom wybrany przez siebie graficzny edytor tekstowy.
+
+ROZWIĄZANIE:
+Wybrałam gedit'a.
+
+ZADANIE 2.
+Zobacz jakie PID ma gedit.
+
+ROZWIĄZANIE:
+Wpisuje: ps aux | grep gedit
+
+WNIOSEK: gedit ma numer 2544.
+
+ZADANIE 3.
+Wydaj komendę kill w taki sposób aby edytor się wyłączył.
+Zobacz, czy to działa.
+
+ROZWIĄZANIE:
+Wpisuję kill -9 2544 <-- PID programu.
+
+WNIOSEK: Program zakańcza się pomyślnie.
+
+ZADANIE 4.
+Zobacz działanie komendy killall bash.
+
+ROZWIĄZANIE:
+Wpisuje komendę.
+Wszystkie procesy bash z wyjątkiem mojego terminala
+wyłączają się. 
+
+ZADANIE 5.
+Zobacz czy kill zadziała dla dowolnego procesu?
+
+ROZWIĄZANIE:
+Wpisuje: kill (podaje numer PID).
+
+WNIOSKI:
+Nie działa to na każdy proces. Są procesy do których
+potrzebuje uprawnień, dlatego nie mogą one być wyłączone/zamknięte.
