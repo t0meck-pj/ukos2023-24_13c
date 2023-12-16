@@ -5,6 +5,9 @@ Dowiedziałem sie co daje mi znajomość komend terminala oraz jak moge przechod
 tworzyć w nich własne foldery oraz pliki tekstowe(.txt) oraz je edytować oraz usuwać.
 Nauczyłem sie że można tworzyć pliki w katalogach nie będąc w nich!
 Bardzo to usprawnia prace ponieważ nie musze wchodzic bezpośrednio w katalogi i tworzyć w nich za pomocą mkdir "nazwa"
-
+16.12.2013
+Drogi pamiętniczku dziś coś pokiełbasiłem z gitem i nie moge zrobic pull requesta i czuje ze powoli
+zaczynam rozumieć jak wszystko działa niestety ciągle mam problem z pamięcią do komend najwyraźniej potrzebuje
+jeszcze troche pracy z terminalem. 
 
 
