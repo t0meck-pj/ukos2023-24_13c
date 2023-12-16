@@ -1,0 +1,32 @@
+Zadanie 1.
+A: Co się stanie po wpisaniu:
+-ps
+-ps -a
+-ps x
+-ps aux
+
+WYKONANIE:
+ps - wyświetliło listę procesów (dwa procesy bash,ps)
+ps -a - wyświetla procesy nie związane z terminalem (mysql).
+ps x - wyświetla procesy wykonywane w systemie.
+ps aux - wyświetla procesy każdego z użytkowników zalogowanych.
+
+WNIOSKI:
+Komenda ps jest złożona, przez co jej skuteczność może pomóc
+nam w wielu późniejszych procesach pracy. Warto poznać parametry 
+związane właśnie z ps.
+
+B: Jak wykonasz poniższe dwa zadania?
+-wyświetl wszystkie procedy bash.
+-wyświetl wszystkie procesy należące do użytkownika root.
+
+WYKONANIE:
+Aby wyświetlić wszystkie procesy bash : "ps aux | grep bash"
+Aby wyświetlić procesy należące do użytkownika root: "ps -u root".
+
+WNIOSKI:
+Grep ułatwia nam znajdowanie nazw procesów na jakich nam obecnie zależy.
+Modyfikacja ps jest naprawdę przydatna, co w połączeniu z innymi np. z grepem
+pozwala nam dokładnie znaleźć to czego szukamy.
+
+

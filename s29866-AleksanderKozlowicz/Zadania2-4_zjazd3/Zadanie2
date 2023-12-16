@@ -18,5 +18,5 @@
 	- Dostalem 3 monity o tym ze operacja jest niedozwolona. 
 
 5. Zobacz czy kill zadziała dla dowolnego procesu.
-	- kill nie zadziala dla procesow dla ktorych user nie ma uprawnien, nie zadziala rowniez dla procesow ktore 	zakonczyly swoje dzialanie ale pomimo 
-	to sa wpisane w tablicy procesow
+	- kill nie zadziala dla procesow dla ktorych user nie ma uprawnien, nie zadziala rowniez 
+	dla procesow ktore zakonczyly swoje dzialanie ale pomimo to sa wpisane w tablicy procesow

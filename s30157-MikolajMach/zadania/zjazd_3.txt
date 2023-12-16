@@ -1,0 +1,106 @@
+UKOS ZADANIE DOMOWE - ĆW 3
+
+0.1
+Przejdź do swojego katalogu domowego:
+
+Wykorzystałem komendę "cd ~"
+
+0.2
+Wydaj komendę: ls -a
+
+wydaję komendę "ls -a"
+
+0.3
+Zobacz ile plików wypisało.
+
+Wypisało mi 7 katalogów i 6 plików.
+
+0.4
+Teraz wydaj komendę: ls -a | grep D
+HINT: Jeśli nie masz żadnego pliku czy katalogu z literką D to wybierz inną literkę,
+która już będzie w nazwie jakiegoś pliku czy katalogu.
+
+Wydałem komendę "ls -a | grep s"
+
+0.5
+Zobacz ile teraz jest wyników. Co się stało?
+Otóż program grep służy do wyszukiwania wierszy w pliku lub strumieniu wejściowym, które pasują do wzorca.
+Tu podano wzorzec jako "D".
+
+Wyświetliło mi 9 wyników.
+
+0.6
+A teraz wykonaj komendę: ls -a | grep D > lista_plikow_z_literka_d.txt
+
+wydałem komendę "ls -a | grep s > lista_plikow_z_literka_s.txt"
+
+0.7
+Zobacz czy utworzył sie jakiś plik?
+Jaka jest jego treść?
+Co znaczy | oraz co znaczy > ?
+
+utworzył się plik o nazwie "ista_plikow_z_literka_s.txt"
+
+w pliku znajdują się wypisane wyniki z komendy "ls -a | grep s"
+
+"|" oznacza przekierowanie komendy
+">" oznacza plik w którym można coś zapisać
+
+0.8
+A teraz wykonaj komendę: ls -a | grep D | tee lista_plikow_z_literka_d_2.txt
+
+wykonałem komendę "ls -a | grep s | tee lista_plikow_z_literka_s_2.txt"
+
+0.9
+Zobacz czy plik się utworzył?
+Jaka jest treść względem poprzedniej próby bez programu tee?
+Co robi program tee?
+
+Plik "lista_plikow_z_literka_s_2.txt" został utworzony.
+
+Wyniki komendy "ls -a | grep s" zostały zarówno wpisane w plik tekstowy jak i zostały wyświetlnone w konsoli
+
+Tee jest poleceniem, które wypisuje dane wejściowe z komendy na standardowe wyjście czyli konsolę 
+oraz do dowolnej liczby plików, w tym przypadku plik "lista_plikow_z_literka_s_2.txt"
+
+Zadania 1
+Program ps służy do wyświetlania listy procesów. 
+
+Zadania:
+
+A: Zobacz co się stanie jeśli wpiszemy w terminalu:
+
+1.ps
+
+komenda ta wyświetla aktualne procesy
+
+2.ps -a
+
+komenda ta wyświetla procesy z wyjątkiem liderów i procesów nie związanych z terminalem
+
+3.ps x
+
+komenda ta wyświetla wszystkie aktualne procesy, zarówno te związane z terminalem jak i te nie związane
+
+4.ps axu
+
+komenda ta wyświetla procesy wykonywane na koncie wszystkich urzytkowników, którzy są zalogowani
+
+INFO: tu kolejność parametrów a, x, u nie ma znaczenie a jedynie fakt, że są podane. Dowolna kolejność powinna dać ten sam wynik.
+
+Jak myślisz, co oznacza znak zapytania w kolumnie 2?
+Nie wiesz? A gdzie może być wyjaśnienie?
+
+Procesy ze znakiem zapytania to procesy działające w tle, które nie są związane z terminalem.
+Wyjaśnienie można było znaleźć przy pomocy komendy "man"
+
+B: Jak wykonasz poniższe 2 zadania?
+
+1.Wyświetl wszystkie procesy bash
+
+Zadanie to wykonałem przy pomocy komendyu "ps -ef | grep bash"
+
+2.Wyświetl wszystkei procesy należące do użytkownika root
+
+Zadanie to wykonałem korzystając z komendy "ps -u root"
+

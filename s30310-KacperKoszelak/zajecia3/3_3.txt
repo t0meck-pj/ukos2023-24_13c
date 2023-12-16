@@ -1,0 +1,40 @@
+W terminalu jest kilka przydatnych skrótów klawiszowych. Jednym z nich jest 
+CTRL+C lub jak to jest często podawane C-c lub ^C. Niektórzy z Państwa już go 
+mieli okazję przetestować. Jest to sposób na wyłączenie aktywnego programu w 
+terminalu. Proszę go przetestować w taki sposób, że:
+
+1. Uruchom komendę cat be parametrów
+2. Wciśnij CTRL+C i zobacz co się stanie
+    -zakończyło się wykonywanie komendy cat
+
+Kolejnym fajnym (zależy dla kogo :) ) skrótem klawiszowym jest CTRL+D. Służy on 
+do zakończenia strumienia wejściowego. Działa to trochę inaczej niż poprzednie 
+rozwiązanie, mimo że na pierwszy rzut oknawygląda tak samo. Tym razem nie 
+wysyła sygnału zakończenia, a jedynia zamyka strumień wejściowy. Jest to bardzo 
+przydatne, jeśli chcemy zakończyć działanie jakiegoś programu korzystającego ze 
+standardowego wejścia (stdin), ale w sposób możliwie bezpieczny.
+Zobacz co się stanie:
+
+1. Wydaj komendę cat > wynik3_1.txt
+2. Wpisz tekst witaj bez wciskania klawisza Enter
+3. Wciśnij CTRL+C
+4. Zobacz co się znalazło w pliku wynik3_1.txt
+    -plik jest pusty, nic się w nim nie znalazło
+
+1. Wydaj komendę cat > wynik3_2.txt
+2. Wpisz tekst witaj bez wciskania klawisza Enter
+3. Wciśnij CTRL+D (możliwe, że będzie trzeba wcisnąć go 2x)
+4. Zobacz co się znalazło w pliku wynik3_2.txt
+    -w pliku wynik3_2.txt znajduje się wiadomość "witaj"
+
+W opisie rozwiązania zadania umieść:
+1. jak rozumiesz co się stało?
+    -zawartość "wynik3_1.txt" nie została zapisana, a zawartość "wynik3_2.txt" 
+    została zachowana
+
+2.czym oba te przykłady się różnią?
+    -CTRL+C nie zapisuje wprowadzanego tekstu, a CTRL+D zapisuje
+
+3.DLACZEGO się różnią?
+    -CTRL+C natychmiastowo przerywa wykonywanie programu, CTRL+D zwraca tekst z 
+    programu i go kończy
