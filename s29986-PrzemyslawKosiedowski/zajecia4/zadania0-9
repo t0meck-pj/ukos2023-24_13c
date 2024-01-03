@@ -13,21 +13,13 @@ Odpowiedz:
 Zadanie 1
 Jest dane takie drzewo katalogow:
 .
-
 ├── ala
-
 │   ├── i
-
 │   │   └── as
-
 │   └── ma
-
 │       └── kota
-
 └── kot
-
     └── ma
-
         └── ale
 
 Znajdujesz sie w katalogu kota. Katalog ala jest w katalogu /tmp/ukos.
@@ -38,7 +30,7 @@ Jak przejsc do katalogu ala za pomoca:
 
 Wykonanie:
  - Sciezka wzgledna: cd ../..
- - Sciezka bezwzgledna: cd ~/tmp/ukos/ala
+ - Sciezka bezwzgledna: cd /tmp/ukos/ala
 
 Wniosek:
 Obu sciezek mozna uzywac naprzemiennie. Efekt, ktory osiagniemy w obu
@@ -57,7 +49,7 @@ komendy? Podaj rozwiazania uzywajac sciezek absolutnych i relatywnych.
 
 Wykonanie:
  - Sciezka relatywna: mkdir -p ../../../kot/ma/ale/jan/kowalski 
- - Sciezka absolutna: mkdir -p ~/tmp/ukos/kot/ma/ale/jan/kowalski
+ - Sciezka absolutna: mkdir -p /tmp/ukos/kot/ma/ale/jan/kowalski
 
 Wniosek:
 Polecenie mkdir z parametrem p nie zwraca bledu, jesli katalog istnieje, co za
@@ -73,8 +65,8 @@ przeniesc katalog ale do katalogu i uzywajac:
 
 
 Wykonanie:
- - mv ../../../kot/ma/ale ~/tmp/ukos/ala/i
- - mv ~/tmp/ukos/kot/ma/ale ../../i
+ - mv ../../../kot/ma/ale /tmp/ukos/ala/i
+ - mv /tmp/ukos/kot/ma/ale ../../i
 
 Wniosek:
 To zadanie potwierdza moje zdanie z zadania 1.
@@ -135,9 +127,9 @@ Wszystkie wersje powinny byc zapisane w jednym poleceniu: bez uzywania && czy |
 
 
 Wykonanie: 
- - Oktala: chmod 751 ~/tmp/ukos/ala
- - Literowa ze znakiem rownosci: chmod u=rwx,g=rx,o=x ~/tmp/ukos/ala
- - Literowa z plusami i minusami: chmod a+rwx,g-w,o-rw ~/tmp/ukos/ala
+ - Oktala: chmod 751 /tmp/ukos/ala
+ - Literowa ze znakiem rownosci: chmod u=rwx,g=rx,o=x /tmp/ukos/ala
+ - Literowa z plusami i minusami: chmod a+rwx,g-w,o-rw /tmp/ukos/ala
 
 
 Zadanie 6b
@@ -145,7 +137,7 @@ Jak korzystajac z notacji ze znakiem rownosci odebrac wszystkie uprawnienia dla
 danego zasobu?
 
 
-Wykonanie: chmod a=- ~/tmp/ukos/ala
+Wykonanie: chmod a=- /tmp/ukos/ala
 
 
 Wniosek do obu zadan:
