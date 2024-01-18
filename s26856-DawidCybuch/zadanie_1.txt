@@ -64,6 +64,7 @@ Dodanie dodaktowych ././ - osobiście dodałem ich około 40, spowodowało że n
 
 ODP. Na komentarz w PR, niestety nie wiem co Pan miał na myśli poprzez przeliczenie przez system.
 
+ODP_2. Sciezka podana przez Pana w komentarzu do PR jest to sciezka wzgledna
 
 Zadanie 11. 
 Używam komendy cd ~
