@@ -74,6 +74,9 @@ Grupa -r-- - Grupa może odczytywać ale nie mogą edytować
 Wszyscy -r-- - Wszyscy mogą odczytać ale nie mogą edytować
 http://szuflandia.pjwstk.edu.pl/~s26856/strona.html
 
-
-
-
+ODP.
+Po wykonaniu notacji copy%paste zostalo otrzymalem taki wynik
+Z tego co widze na wszystkich plaszczyznach sa przydzielone takie same uprawnienia
+-rw-r--r-- 1 s26856 domain users     0 10-27 00:04 man
+-rw-r--r-- 1 s26856 domain users 12198 10-27 00:26 q
+-rw-r--r-- 1 s26856 domain users    68 10-27 00:08 strona.html
