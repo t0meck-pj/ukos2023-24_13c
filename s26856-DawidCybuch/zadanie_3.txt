@@ -103,7 +103,7 @@ Gdybym nie wiedział wpisuje komende man ps i szukam co oznacza x
 
 B.1
 
-Używam komeny ps axu | grep bash
+Używam komeny ps -a | grep bash lub ps -e | grep bash
 Wyświetla mi wszystkie procesy które mają w swojej nazwie bash
 W przypadku chęci wyszukania procesów z nazwą bash wykonam polecenie
 ps axu | grep ^bash
@@ -175,8 +175,8 @@ zmiany zostaną zapisane czy tego chce czy nie.
 (Skoro używam ^D to raczej chce by zostały zapisane)
 
 DLACZEGO się różnią?
-^C jest komendą która całkowicie zamyka proces
-^D Jest komendą która najpierww ZAPISZE zmiany przed zamknięcem danego procesu.
+^C automatycznie zabija proces bez zapisania poprzedniego wprowadzonego imputu
+^D Zabija proces ale zapisuje input który zostal wczesniej wprowadzony
 
 Zadanie 4
 
