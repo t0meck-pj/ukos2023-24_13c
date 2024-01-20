@@ -15,8 +15,6 @@ Zadanie 1.
 
 Jest dane takie drzewo katalogów:
 
-.
-
 ├── ala
 
 │   ├── i
@@ -38,11 +36,11 @@ Jak przejść do katalogu ala za pomocą:
 
 ścieżki względnej (relatywnej)
 
-Używam komendy cd ../..
+Używam komendy cd tmp/ukos/ala
 
 ścieżki bezwzględnej (absolutnej)
 
-Używam komendy cd tmp/ukos/ala
+Używam komendy cd ../..
 
 
 Zadanie 2.
