@@ -1,0 +1,251 @@
+Na poczatku chcialbym powiedziec, ze nie zawarlem w zadaniu kazdego polecenia,
+a niektore takze modyfikowalem. Oprocz PowerShell-a wykorzystalem Pana skrypt i
+dokumentacje: https://learn.microsoft.com/pl-pl/powershell/scripting/how-to-use-docs?view=powershell-7.4
+
+-------------------------------------------------------------------------------
+
+Windows PowerShell jest poteznym narzedziem, jednak na poczatku jest ono
+ograniczone, poniewaz "Zeby uruchomic jakikolwiek skrypt w PowerShell-u to
+domyslnie musi on byc podpisany przez Microsoft". Aby to ograniczenie zdjac
+uruchomilem go z uprawnieniami Admina i wpisalem polecenie: 
+
+Set-ExecutionPolicy Bypass
+po czym zatwierdzilem odpowiadajac "Y".
+
+Przy okazji musialem jeszcze uzyc polecenia Update-Help, poniewaz bez tego
+cmdlet Get-Help nie wyswietlal pelnej pomocy.
+
+-------------------------------------------------------------------------------
+
+Z Pana skryptu dowiedzialem sie takze, ze domyslnie PS nie uruchamia modulow.
+Zeby wyswietlic liste dostepnych modulow uzylem polecenia:
+
+Get-Module -ListAvailable
+
+Faktycznie, musialem troszke poczekac, bo jest ich calkiem sporo. W kolejnym
+kroku uzylem polecenia, ktore zwraca tylko te moduly, ktorych wersja jest 
+wieksza badz rowna 2.0.0.0:
+
+Get-Module -ListAvailable | Where-Object {$_.Version -ge "2.0.0.0"}
+
+W PS-u, polecenia mozna wykonywac takze korzystajac z aliasow zamiast pelnych
+nazw. Zamiast Where-Object mozna napisac "?", zamiast While-Object - "%" itd.
+W nastepnym kroku wyswietle wszystkie polecenia w dostepnych modulach, ktorych
+wersja jest wieksza badz rowna 2.0.0.0, z uzyciem aliasow:
+
+Pana wersja polecenia:
+Get-Module -ListAvailable | ? {$_.Version -ge "2.0.0.0"} | % {Get-Command -Modu
+le $_.Name}
+
+Moja wersja polecenia:
+gmo -ListAvailable | ? {$_.Version -ge "2.0.0.0"} | % {gcm -Module $_.Name}
+
+Wynik: 
+Obie wersje dzialaja tak samo
+
+Wniosek:
+Moja wersja na pewno jest krotsza, ale przy tym tez moim zdaniem mniej czytelna
+ 
+
+Teraz wypisze w postaci tabelki graficznej otworzonej w nowym okienku wszystkie
+komandlety, ktore maja w nazwie "Set-", "Add-" lub "Get-", a ich wersja jest
+wieksza od 1.0.0.0 i mniejsza lub rowna 2.0.0.0 (troszke zmodyfikowalem Pana
+wersje):
+
+Polecenie:
+Get-Module -ListAvailable | ? {($_.Version -gt "1.0.0.0") -and ($_.Version -le 
+"2.0.0.0")} | % {Get-Command -Module $_.Name} | ? {($_.Name -like "Set-*") -or 
+($_.Name -like "Add-*") -or ($_.Name -like "Get-*")} | Out-GridView
+
+Wynik:
+Polecenie wykonalo sie pomyslnie, uzyskalem wynik, ktory chcialem
+
+Wniosek:
+Polecenie wyszlo bardzo dlugie, kolorowa skladnia bardzo pomogla przy 
+wpisywaniu go do konsoli. Z ciekawosci sprawdzilem gdzie jeszcze moge
+wyswietlic wynik polecenia zamias tabelki uzywajac skrotu CTRL+SPACE po
+wpisaniu "Out-" i zdziwilem sie, ze mozna to wyslac do drukarki, a jeszcze
+bardziej tym, ze to zadzialalo. Dobrze, ze drukarka byla wylaczona.
+
+-------------------------------------------------------------------------------
+
+W kolejnej czesci skryptu wykorzystywal Pan modul BitsTransfer do zarzadzania
+przesylaniem danych w tle. Zaimportowalem go poleceniem:
+
+ipmo BitsTransfer
+
+W skrypcie jest napisane, ze mamy sciagnac na zajeciach obraz maszyny
+wirtualnej do javy z serwera uruchomionego na zajeciach. Skorzystam z obrazu
+archlinux-a, ktory znalazlem na stronie: 
+https://geo.mirror.pkgbuild.com/iso/2024.01.01/
+
+Polecenie:
+Start-BitsTransfer -Source https://geo.mirror.pkgbuild.com/iso/2024.01.01/archlinux-2024.01.01-x86_64.iso
+ -Destination D:\
+
+Wynik:
+Plik udalo sie pobrac pomyslnie
+
+Wniosek:
+Przydatne narzedzie, opcja pobierania rzeczy w sposob asynchroniczny tylko
+czyni je lepszym.
+
+
+PS umozliwia takze mierzenie czasu wykonywanej komendy. Mozna to zrobic za
+pomoca Measure-Command. Przyklad:
+
+Measure-Command {Get-ChildItem -Path C:\Windows}
+
+Wniosek:
+Na pewno sie kiedys przyda, wykorzystalem to do zmierzenia czasu wyswietlania
+wszystkich modulow (Measure-Command {gmo -ListAvailable}), wyszlo ok. 2,5s.
+
+Aliasy mozna znalezc za pomoca Get-Alias. Przyklad:
+Get-Alias | ? {$_.Definition -like "Get-ChildItem"}
+
+Wynik:
+Aliasy dla Get-ChildItem to dir, gci, ls.
+
+Pytanie:
+Zadaje je, poniewaz sprobowalem wpisac: Get-Alias -Definition Get-ChildItem i
+polecenie dalo ten sam wynik. Czy jest jakas roznica pomiedzy Pana zapisem, a 
+moim?
+
+-------------------------------------------------------------------------------
+
+W PS-u mozna takze uruchamiac programy. Mozna to zrobic za pomoca operatora
+wolania call - "&". Polecenie:
+
+& C:\Windows\notepad.exe
+lub w tym przypadku wystarczy samo notepad.
+
+
+Listowac aplikacje/programy mozna na 2 sposoby:
+
+Sposob 1 - Rejest
+PS potrafi "wejsc" do rejestru jak na dysk, co umozliwia przegladanie go jak
+zwykly system plikow. Aby wylistowac liste wszystkich aplikacji na komputerze
+uzylem polecenia:
+
+ls hklm:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
+
+Wynik mozna zmienic wybierajac sobie, ktore dane chcemy miec wyswietlone:
+
+ls | %{Get-ItemProperty $_.pspath | Select-Object DisplayName, InstallDate, 
+UninstallString} | Format-Table -AutoSize
+
+Mozna je odistalowac wpisujac "%{& $_.UninstallString}" zamiast "Format-Table 
+-AutoSize" na koncu polecenia
+
+
+Sposob 2 - WMI
+WMI sluzy do zarzadzania systemem. Aby wyswielic wszystkie programy, wpisujemy:
+
+Get-WmiObject -Class Win32_Product | Select-Object Name, Vendor | Format-Table 
+-AutoSize
+
+Teraz wersja, w ktorej chcemy znalezc wszystkie pakiety od Intela, z aliasami
+(troszke zmodyfikowalem Pana wersje):
+
+gwmi -Class Win32_Product | ?{$_.Vendor.toLower() -like "*intel*"} | select 
+Name, Vendor | ft -AutoSize
+
+Wynik:
+Polecenie zadzialalo poprawnie
+
+Odinstalowac mozna poleceniem (pozwolilem sobie zmodyfikowac Pana skrypt):
+gwmi -Class Win32_Product | ? {$_.Vendor.toLower() -like "*intel*"} |
+%{$_.Uninstall()}
+
+Wynik:
+Szczerze nie sprawdzalem, bo nie chce sobie przypadkiem czegos odinstalowac.
+Gdyby mogl Pan ocenic poprawnosc tego polecenia to bylbym wdzieczny.
+
+
+Wniosek:
+Oba sposoby sa dobre, mi akurat bardziej pasuje druga opcja, poniewaz sciezka w
+sposobie pierwszym do najkrotszych nie nalezy. Wiem, mozna przypisac ja do
+zmiennej, ale jakos przez WMI wydaje sie to bardziej naturalne, jesli mozna
+to tak okreslic.
+
+-------------------------------------------------------------------------------
+
+PS ma wiele dyskow. Mozna je wylisowac poleceniem:
+
+Get-PSDrive (jest tez alias gdr)
+
+Mamy dostepne zwykle partycje, HKML i HKCU (dostep do rejestru) oraz:
+ - Alias - przechowuje wszystkie aliasy zdefiniowane w biezacej sesji
+ - Cert - magazyn certyfikatow TLS/SSL
+ - Env - zmienne srodowiskowe w biezacej sesji
+ - Function - wszystkie funkcje w biezacej sesji, ktore mozna uruchomic
+ - Variable - zmienne utworzone i dostepne w biezacej sesji
+ - WSMan - dostep do calego systemu WMI
+Dyski mozna rowniez dogrywac, np. GH (GitHub) czy AD (ActiveDirectory)
+
+Wniosek:
+Mozna to wykorzystac na wiele sposobow, np. do wylistowania wszystkich aliasow:
+ls -Path alias:
+
+-------------------------------------------------------------------------------
+
+W PS mozna takze bawic sie powiadomieniami. Ponizej kod z Pana skryptu:
+
+[void][System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms")
+$icoPath = Get-Process -id $pid | Select-Object -ExpandProperty Path
+$myNotification = New-Object System.Windows.Forms.NotifyIcon
+$myNotification.Icon = [System.Drawing.Icon]::ExtractAssociatedIcon($icoPath)
+$myNotification.BalloonTipIcon = 'Error'
+$myNotification.BalloonTipText = "Your cat has meowed!"
+$myNotification.BalloonTipTitle = "Cat Error"
+$myNotification.Visible = $True
+$myNotification.ShowBalloonTip(10000)
+
+Po uruchomieniu tego kodu pojawilo sie powiadomienie "Your cat has meowed!" z
+ikona bledu (Error) i tytulem "Cat Error". Wyswietlalo sie przez 10 sekund. 
+Mozna go zmodyfikowac znmieniajac wymienione wczesniej wartosci. 
+
+Oprocz tego mozna takze zapisac: 
+ a) funkcje, ktora ulatwi ich wprowadzanie:
+
+function GiveMePopup {
+  param(
+      [Parameter(Mandatory=$true)]
+      $Text,
+ 
+      [Parameter(Mandatory=$true)]
+      $Title,
+   
+      [ValidateSet('None', 'Info', 'Warning', 'Error')]
+      $Icon = 'Info',
+
+      $Timeout = 10000
+  )
+[void][System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms")
+ $icoPath = Get-Process -id $pid | Select-Object -ExpandProperty Path
+ $myNotification = New-Object System.Windows.Forms.NotifyIcon
+ $myNotification.Icon = [System.Drawing.Icon]::ExtractAssociatedIcon($icoPath)
+ $myNotification.BalloonTipIcon = $Icon
+ $myNotification.BalloonTipText = $Text 
+ $myNotification.BalloonTipTitle = $Title
+ $myNotification.Visible = $True 
+ $myNotification.ShowBalloonTip(1000)
+}
+I wywolac poleceniem: 
+GiveMePopup -Text "Your cat has meowed!" -Title "Cat Error" -Icon Error
+ 
+ b) petle, ktora wywola go wielokrotnie (troszke zmienilem Pana skrypt):
+
+for($i = 1; $i -le 10; $i++) {
+ GiveMePopup -Text "Feed him NOW!" -Title "Your cat is hungry :(" -Icon Warning
+}
+ 
+ c) zmienic ilosc wierszy (maksymalnie 4, rowniez zmienilem wartosci):
+GiveMePopup -Text "W1`nW2`nW3`nZapraszam!" -Title "Sprzedam wiersze" -Icon Info
+
+Wniosek:
+Troche sie pobawilem tym kodem, i przyznaje, fajne to cudo, nawet udalo mi sie
+nim strollowac kolege. Mozliwosc tworzenia powiadomien systemowych moze byc
+przydatna np. do informowania o pewnych zdarzenia w trakcie wykonywania skryptu
+oraz pozwala na lepsza integracje z uzytkownikiem.
+
