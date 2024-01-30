@@ -5,7 +5,8 @@ terminalu. Proszę go przetestować w taki sposób, że:
 
 1. Uruchom komendę cat be parametrów
 2. Wciśnij CTRL+C i zobacz co się stanie
-    -zakończyło się wykonywanie komendy cat, program wypisał komunikat "^C"
+    -zakończyło się wykonywanie komendy cat, bash wypisał tekstową 
+	reprezentację tejże kombinacji - "^C"
 
 Kolejnym fajnym (zależy dla kogo :) ) skrótem klawiszowym jest CTRL+D. Służy on 
 do zakończenia strumienia wejściowego. Działa to trochę inaczej niż poprzednie 
@@ -33,9 +34,10 @@ W opisie rozwiązania zadania umieść:
      została zachowana
 
 2.czym oba te przykłady się różnią?
-    -CTRL+C natychmiastowo zabija obecnie wykonywany proces, a CTRL+D wychodzi 
-     z programu kończąc obecnie wykonywane procesy
+    -CTRL+C natychmiastowo zabija obecnie wykonywany proces, a CTRL+D przetwarza 
+    wpisane dane i kończy pracę
+
 
 3.DLACZEGO się różnią?
-    -Oba skróty mają inne zastosowania, CTRL+C służy do zabicia procesu, CTRL+D 
-     kończy obecny proces
+    -Oba skróty mają inne zastosowania, CTRL+C służy do zabicia procesu, a 
+	CTRL+D zapisuje treść na swoim standardowym wyjściu
