@@ -13,9 +13,10 @@ katalog1
    └── katalog3
        └── tekst2.txt
 
-    -jestem w stanie wylistować cudze pliki i katalogi, ale bez uprawnień do 
-odczytu nie mogę wejść do żadnego katalogu. Bez problemu jestem w stanie usunąć 
-cudzy plik z własnego katalogu.
+    -po przyznaniu mi uprawnień do wykonywania jestem w stanie wylistować cudze
+    pliki i katalogi, ale bez uprawnień do odczytu nie mogę zobaczyć zawartości
+    plików. Bez problemu jestem w stanie usunąć cudzy plik z 
+    własnego katalogu.
 
 2. W utworzonej na swoim koncie strukturze podkatalogów przeprowadzić 
 eksperymenty:
@@ -30,7 +31,7 @@ usuwając wszelkie uprawnienia dostępu do katalogu nadrzędnego (nadkatalogu).
 
     W jakich przypadkach możemy wykonać wtedy polecenie cd ? 
         -jedynie do plików/katalogów do których mamy co najmniej uprawnienia do 
-         odczytu
+         wykonywania
 
     W jakich przypadkach możemy wykonać polecenie chmod ? 
         -gdy to my jesteśmy właścicielami pliku/katalogu
