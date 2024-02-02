@@ -30,8 +30,7 @@ usuwając wszelkie uprawnienia dostępu do katalogu nadrzędnego (nadkatalogu).
     -chmod -rwx katalog1
 
     W jakich przypadkach możemy wykonać wtedy polecenie cd ? 
-        -jedynie do plików/katalogów do których mamy co najmniej uprawnienia do 
-         odczytu i wykonywania
+        -jedynie do plików/katalogów do których mamy uprawnienia dostępu
 
     W jakich przypadkach możemy wykonać polecenie chmod ? 
         -gdy to my jesteśmy właścicielami pliku/katalogu
