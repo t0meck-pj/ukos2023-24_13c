@@ -40,4 +40,4 @@ W opisie rozwiązania zadania umieść:
 
 3.DLACZEGO się różnią?
     -Oba skróty mają inne zastosowania, CTRL+C służy do zabicia procesu, a 
-	CTRL+D kończy program
+	CTRL+D zamyka strumień wejściowy
