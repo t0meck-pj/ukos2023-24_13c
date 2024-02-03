@@ -107,3 +107,28 @@ Odpowiedź: chmod u=,g=,o= nazwa_zasobu
 
 
 
+Zadanie 7
+Jak utworzyć plik z listą plików w bieżącym katalogu?
+Podaj rozwiązania używające różne techniki.
+Np. nie używając dedykowanego polecenia do listowania zawartości katalogów.
+Tu trzeba będzie się trochę zastanowić, jak to uzyskać, a możliwości jest sporo.
+Zrobiłem to poleceniami:
+- echo * .* > plik
+- find -maxdepth 1 > plik
+- tree -L 1 > plik
+- dir -a > plik
+
+
+
+Zadanie 8
+Jak przyspieszyć wpisywanie komend w terminalu? Jaki klawisz pozwala na
+uzupełnianie komend?
+- strzałka w górę / strzałka w dół
+- tabulator
+
+
+
+Zadanie 9
+Jak uruchomić program by nie blokował terminala? Są dwa sposoby. Jakie?
+- uruchomienie programu dodając na końcu polecenia znak &
+- uruchomienie programu i wciśnięcie CTRL+Z
