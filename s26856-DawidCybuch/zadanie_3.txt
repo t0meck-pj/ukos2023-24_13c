@@ -96,7 +96,6 @@ Wyświetla wszystkie procesy użytkownika, w tym te ukryte
 
 A.4
 
-
 Wypisuje wszystkie możliwe procesy
 Literka x oznacza należące do użytkowników
 Gdybym nie wiedział wpisuje komende man ps i szukam co oznacza x
@@ -176,7 +175,7 @@ zmiany zostaną zapisane czy tego chce czy nie.
 
 DLACZEGO się różnią?
 ^C automatycznie zabija proces bez zapisania poprzedniego wprowadzonego imputu
-^D Zabija proces ale zapisuje input który zostal wczesniej wprowadzony
+^D wysyla sygnal o wczytaniu niepelnego wiersza pamieci
 
 Zadanie 4
 
