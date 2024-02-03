@@ -16,19 +16,12 @@ Zadanie 1.
 Jest dane takie drzewo katalogów:
 
 ├── ala
-
 │   ├── i
-
 │   │   └── as
-
 │   └── ma
-
 │       └── kota
-
 └── kot
-
     └── ma
-
         └── ale
 
 Znajdujesz się w katalogu kota. Katalog ala, jest w katalogu /tmp/ukos.
@@ -42,9 +35,7 @@ Używam komendy cd tmp/ukos/ala
 
 Używam komendy cd ../..
 
-
 Zadanie 2.
-
 
 Masz taki układ katalogów, jak wyżej i ciągle jesteś w katalogu kota. Jak utworzyć poddrzewo katalogów jan/kowalski w katalogu ale za pomocą jednej komendy?
 
@@ -57,18 +48,17 @@ mkdir -p /tmp/ukos/kot/ma/ale/jan/kowalski
 
 mkdir -p ../../../kot/ma/ale/jan/kowalski
 
-
 Zadanie 3.
 
 Masz taki układ katalogów, jak wyżej i ciągle jesteś w katalogu kota. Jak przenieść katalog ale do katalogu i używając:
 
 źródło (ścieżka względna), miejsce docelowe (ścieżka absolutna)
 
-mv /tmp/ukos/kot/ma/ale ../../i
+mv /tmp/ukos/kot/ma/ale../../i
 
 źródło (ścieżka absolutna), miejsce docelowe (ścieżka względna)
 
-mv ../../../kot/ma/ale /tmp/ukos/ala/i
+mv ../../../kot/ma/ale/tmp/ukos/ala/i
 
 Zadanie 4
 
