@@ -1,0 +1,70 @@
+1. Uruchom terminal.
+Uruchamiam putty, wpisuje swoj host name
+Po wpisaniu hasła znajduje sie w szuflandii
+
+2. Wyświetl zawartość aktualnego katalogu.
+Komenda ls pokazuje mi zawarość aktualnego katalogu
+Komenda ls -1 pokazuje to samo tylko wszystko w kolumnie y
+komenda ls pokazuje mi katalog gitdemo(który stworzyłem do ćwiczeń)
+oraz ukos2023-24_13c który jest skopiowanym repozytorium z gita.
+Zrobiłem to komendą git clone.
+Komenda ls -l pokazuje szczegółową liste z literami w myślnikach jak -rw-r--r--
+(nie wiem co to jeszcze znaczy ale pewnie niedługo sie dowiem)
+
+3. Sprawdź gdzie aktualnie się znajdujesz.
+Za pomoćą komendy pwd czyli print working directory
+wyświetlę aktualny katalog w którym sie znajduję czyli
+home/PJWSTK/s32213
+
+4. Przejdź do katalogu Pulpit za pomocą ścieżki względnej
+Zdajduje sie w katalogu pulpit
+
+5. Sprawdź gdzie jesteś.
+moge to zrobic przez pwd i jestem na /home/PJWSTK/s32213
+
+6. Wyświetl zawartość bieżącego katalogu.
+Wpisuje ls i pokazuje gitdemo oraz ukos2023-24_13c
+
+7. Wyświetl zawartość swojego katalogu domowego bez przechodzenia do niego (ls z odpowiednim parametrem).
+Wpisuje w wiersz poleceń ls -pa wypisuje zawartość folderów dodało / na końcu i dzięki komendzie "a"
+pokazuje ukryte pliki(w tym folderze takich nie ma)
+(osobiście wole na końcu komend z ls dawać -1)
+wpisałem też komendę którą podesłął mi kolega ls -pa | grep / 
+To polecenie wykonuje listowanie zawartości oraz zwraca tylko te linie które zawierją ukośnik
+ 
+
+8. Przejdź do katalogu Obrazy (lub innego katalogu, który jest dostępny - podaj wprost, że zmieniasz katalog na inny bo Obrazy nie są u Ciebie dostępne) w twoim katalogu domowym za pomocą ścieżki względnej.
+Urzyłem komendy cd ukos2023-24_13c/
+Sprawdzam czy przeniosło mnie do katalogu ukos2023 komendą pwd 
+wynik prawidłowy
+
+
+9. Sprawdź gdzie jesteś.
+Już to zrobiłem:)
+
+10. Zobacz do jakiego katalogu przejdziesz za pomocą ścieżki ././././././
+W opisie rozwiązania proszę umieścić również to jak rozumiesz co się właściwie stało.
+Dlaczego znalazła/eś się w tym miejscu do którego przeniosła Cię ta ścieżka?
+Czy dodanie kilku ./././././ na początku/środku/końcu powoduje, że ścieżka się zmieni?
+Co ta ścieżka oznacza/sobą reprezentuje?
+Ogolnie rzecz biorąc wpisując ./ reprezentuje bierzący katalog 
+wiec jesli wpisze ././././ czy ./././././././././ dalej bedzie pokazywać bierzący katalog
+wiec nic sie nie zmieni.
+11.Przejdź do swojego katalogu domowego za pomocą ścieżki bezwzględnej.
+Użyłem komendy cd ~
+wróciło mnie do katalogu domowego
+
+12. Zobacz co się stanie jak wpiszesz komendę 'cd/root'.
+Jak już to zrobisz, zastanów się co się stało. Poszukaj w internecie.
+Wpisałem polecenie cd /root wywaliło błąd brak dostępu 
+polecenie cd służy do zmiany katalogu a ścieżka /root jest katalogiem administratora 
+czyli wnioskując po komunikacie brak dostępu nie mam dostępu do katalogów admina 
+
+13. Zadanie 13 i 14 trzeba wykonać na maszynie wirtualnej lub na fizycznym komputerze. Nie można go zrobić zdalnie na szuflandii.
+Zobacz, co się stanie, jeśli wciśniesz kombinację klawiszy: Ctrl+Alt+F3
+Sprawdź w Internecie co się dzieje kiedy używa się takiej kombinacji. W Internecie mogą pojawić się wersje z F1-F6. To de facto to samo.
+Odpowiedź "wylogowało mnie" jest błędna. Nie. Nie wylogowało. Szukaj dalej.
+Wyświetla sie dodatkowa konsola bądź też kolejnt wirtualny terminal
+
+14. A teraz co sie stanie po: Alt+F1 lub Alt+F2 lub Alt+F7 (na starszych lin)
+komenda pozwala na przełączanie sie miedzy konsolami  
