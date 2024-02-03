@@ -102,11 +102,8 @@ Gdybym nie wiedział wpisuje komende man ps i szukam co oznacza x
 
 B.1
 
-Używam komeny ps -a | grep bash lub ps -e | grep bash
-Wyświetla mi wszystkie procesy które mają w swojej nazwie bash
-W przypadku chęci wyszukania procesów z nazwą bash wykonam polecenie
-ps axu | grep ^bash
-
+Aby wyszukac procesow bash uzywam nastepujaca komende
+ps axu | grep -E '[b]ash' | awk '$11 !~ /bash/'"
 
 B.2
 
@@ -240,4 +237,4 @@ Przywróć program gedit (lub gimp, w każdym razie nie uruchomiony jako ostatni
 składnia: fg %(numer jobu)
 
 Wykonuje komendę jobs, by wyświetliły mi się wszystkie joby, mój git ma przypisany numer 8
-By przywrócić go do działa z background wykonuje fq %8
+By przywrócić go do działa z background wykonuje fq %3
