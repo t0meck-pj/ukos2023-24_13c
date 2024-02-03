@@ -117,6 +117,7 @@ Jak przyspieszyc pisanie komend w termialu?
 Jaki klawisz piozwala na uzupelnienie komend?
 
 Jest to Tabulator potocznie zwany TAB
+Przydatne jest takze korzystanie ze strzalek kierunkowych w gore i w dol
 
 Zadanie 9
 
