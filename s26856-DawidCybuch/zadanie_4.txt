@@ -54,19 +54,20 @@ Masz taki układ katalogów, jak wyżej i ciągle jesteś w katalogu kota. Jak p
 
 źródło (ścieżka względna), miejsce docelowe (ścieżka absolutna)
 
-mv /tmp/ukos/kot/ma/ale../../i
+mv ../../../kot/ma/ale /tmp/ukos/ala/i
 
 źródło (ścieżka absolutna), miejsce docelowe (ścieżka względna)
 
-mv ../../../kot/ma/ale/tmp/ukos/ala/i
+mv /tmp/ukos/kot/ma/ale ../../i
 
 Zadanie 4
 
-Do zrobienia/wyszukania
+Najlatwiej bedzie wyslanie do programu kill za pomoca
+kill -9 [PID Programu]
 
 Zadanie 5
 
-Do zrobienia wyszukania
+Uzywam komendy find -maxdepth 1 -name 'al*'
 
 Zadanie 6a
 Nadaj uprawnienia do katalogu ala tak aby:
@@ -100,7 +101,28 @@ Jak korzystając z notacji ze znakiem równości odebrać wszystkie uprawnienia 
 
 chmod a=- /tmp/ukos/ala
 
-Resztę zadań wykonam w najbliższym możliwym czasie;
-Powód - Crunch w pracy na projekcie, za co z góry przepraszam
+Zadanie 7
 
+Jak utworzyc plik z lista plikow w biezacym katalogu?
+
+Dwa rozwiazania
+
+dir -a > lista.txt
+
+echo * > lista.txt
+
+zadanie 8.
+
+Jak przyspieszyc pisanie komend w termialu?
+Jaki klawisz piozwala na uzupelnienie komend?
+
+Jest to Tabulator potocznie zwany TAB
+
+Zadanie 9
+
+Jak uruchomic program by nie blokowal terminala. 
+Sa dwa sposoby. Jakie?
+
+Otwarcie programu w tle używając &
+Uzyc nohup
 
