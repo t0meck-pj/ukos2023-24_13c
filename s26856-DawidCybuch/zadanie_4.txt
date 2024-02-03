@@ -29,11 +29,11 @@ Jak przejść do katalogu ala za pomocą:
 
 ścieżki względnej (relatywnej)
 
-Używam komendy cd tmp/ukos/ala
+Używam komendy cd ../..
 
 ścieżki bezwzględnej (absolutnej)
 
-Używam komendy cd ../..
+Używam komendy cd /tmp/ukos/ala
 
 Zadanie 2.
 
