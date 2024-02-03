@@ -1,0 +1,18 @@
+Wstęp do powershella
+Pierwszą część materiału potraktowałem informacyjnie, nie doszukałem się żadnego
+konkretnego polecenia, wypróbowałem podane komendy według instrukcji np.
+1.
+Get-Module -ListAvailable | ? {$_.Version -ge "2.0.0.0"}
+Wniosek: Polecenie całkiem długo się wykonywało, jednakże zgodnie z podaną notatką
+otrzymałem wszystkie moduły, których których wersja jest większa albo równa 2.0.0.0
+
+Również pobrałem plik używając polecenia  Start-BitsTransfer (podany link nie działał,
+jednakże skorzystałem z innej domeny pobierając plik obrazu dysku)
+
+Użyłem polecenia Measure-Command {Get-Module -Listavailable}
+Wykonanie tego polecenia zajęło 1164 milisekund.
+
+Odnośnie notyfikacji to moim zdaniem była to jedna z ciekawszych rzeczy w tym materiale.
+Nie wiedziałem, że za pomocą kilku poleceń, mogę wywołać systemowe 'alerty'
+Załączony skrypt wykonał się poprawnie, wyskoczyło okienko 'Cat Error' kot zamiałczał :)
+
