@@ -1,1 +1,31 @@
 Poprawna lokalizacja pamietnika, niebawem pojawią się tu wpisy.
+
+ZJAZD 1:
+Kochany pamiętniczku...na dzisiejszych zajęciach zapoznałam się
+ze strukturą głównych folderów w systemie Linux.
+Przećwiczyłam dodatkowe polecenia używane w Linuksie. 
+Oswoiłam się z Gitem, z którym już wcześniej miałam do czynienia.
+
+ZJAZD 2:
+Kochany pamiętniczku...Nauczyłam się różnicy między uprawnieniami a prawami.
+Dodatkowo nauczyłam się jak domyślnie zmieniać uprawnienia nadawane
+przy tworzeniu nowych plików.
+
+ZJAZD 3:
+Zrozumiałam pojęcie strumieni oraz zapoznałem się z ich operatorami.
+Poznałem narzędzia grep i tee i ich zastosowanie.
+Nauczyłam się monitorować procesy i komunikować się nimi za pomocą
+poleceń ps i kill. Zdobyłam wiedze na temat skrótów klawiszowych.
+
+ZJAZD 4:
+Poznałam różnicę między ścieżkami względnymi i bezwzględnymi.
+Zapoznałam się z wyrażeniami regularnymi oraz ich zastosowaniem. Nauczyłam się
+nadawać uprawnienia plikom.
+
+ZJAZD 5:
+KOLOKWIUM
+
+ZJAZD 6:
+Zapoznaliśmy się z podstawami powershella. Nauczyłam się jak z niego korzystać.
+Zapoznałam się z podstawowymi komendami oraz listą dostępnych modułów.
+Mam dobre poczucie co do PowerShella, wiem, że na pewno przyda mi się w przyszłości.
