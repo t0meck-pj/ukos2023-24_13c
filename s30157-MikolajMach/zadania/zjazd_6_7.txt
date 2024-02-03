@@ -1,0 +1,122 @@
+UKOS ZADANIA - ZJAZD 6_7
+
+Windows PowerShell jest narzędziem który ma ogromne możliwości jednak póki nie zdejmiemy blokady to tak naprawdę nie możemy zrobić nic.
+Dlatego trzeba uruchomić program z uprawnieniami administratora po czym wpisać komendę "Set-ExecutionPolicy Bypass",
+ po czym zatwierdzić odpowiadając "Y".
+
+Wpisanie polecenia "Get-Module -ListAvailable" wylistowało mi ogromną ilość modułów,
+następnie wykorzystałem polecenie "Get-Module -ListAvailable | Where-Object {$_.Version -ge "2.0.0.0"}",
+który wylistował mi wszystkie moduły których wersja była rowna 2.0.0.0 bądź większą.
+
+Postanowiłem wylistować wszystkie moduły w których nazwie zawarte jest "Intel"
+Oto komenda którą napisałem "Get-Module -ListAvailable | ? {$_.Version -ge "2.0.0.0"} | % {Get-Command -Module $_.Name} | ? {($_.Name -like "*Int*")}"
+Modułów które zostały wylistowane było 26.
+
+Wylistowałem sobie dostępne "dyski" przy pomocy polecenia "Get-PSDrive" po czym użyłem polecenia "cd hklm:\" żeby się dostać do rejestru.
+Przeglądałem go sobie oraz wylistowywałem zawartości katalogów.
+Nie korzystałem z komendy do odinstalowywania w obawie o moje aplikacje na moim prywatnym komputerze.
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+# Dyski w PS
+# Wspomniałem, że PowerShell ma wiele dysków. Możemy je sobie wylistować poniższą komendą:
+#Get-PSDrive
+#
+# Mamy tu dyski z pojedynczymi literkami. To normalne dyski w windowsie.
+# Dyski HKML i HKCU to dyski dające dostęp do rejestru.
+# Poza tym są jeszcze:
+# - Alias - lista wszystkich zdefiniowanych aliasów w bierzącej sesji. Tam są m.in. ls, dir, ?, %
+# - Cert - magazyn certyfikatów TLS/SSL stosowanych do szyfrowania danych. Głównie połączeń sieciowych ale też i
+  emaili czy podpisywania danych by można było sprawdzić czy treść np. dokumentu nie została zmodyfikowana.
+  Swoją drogą skrypty PowerShell-owe też można podpisać cyfrowo
+# - Env - zmienne środowiskowe w bierzącej sesji.
+# - Function - tu są wszystkie zdefiniowane w bierzącej sesji funkcje, które można uruchomić. Podziałamy na funkcjach za chwilkę.
+# - Variable - zmienne utworzone i dostępne w bierzącej sesji. NIE SĄ to zmienne środowiskowe tylko takie zmienne lokalne.
+# - WSMan - dostęp do całego systemu WMI. Czyli to co powyżej było robione poprzez Get-WmiObject można by było spróbować pobrać z tego dysku
+#
+# Poza tymi dyskami są jeszcze inne, które można sobie dodać/dograć np:
+# - GH - GitHub - tak, można po githubie "chodzić" w PowerShell-u
+# - AD - ActiveDirectory - dodaje dysk dający dostęp do ActiveDirectory
+		Dla tych co wiedzą co to jest to otwiera nowe możliwości.
+		Dla tych co nie wiedzą jest kolejnym dyskiem.
+# Takie dyski dodaje się przez załadowanie specjalnych modułów, które takie dyski udostępniają.
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Dotarłem do wszytkich podanych dysków i wylistowałem sobie ich zawartości przy pomocy polecenia "ls" będąc w wybranym katalogu.
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+# Trzeba załadować odpowiednią bibliotekę żeby można było skorzystać z tego cuda
+### Początek bloku do odkomentowania
+#[void] [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms")
+#
+#$icoPath = Get-Process -id $pid | Select-Object -ExpandProperty Path
+#
+#$myNotification = New-Object System.Windows.Forms.NotifyIcon
+#$myNotification.Icon = [System.Drawing.Icon]::ExtractAssociatedIcon($icoPath)
+#$myNotification.BalloonTipIcon = 'Error'
+#$myNotification.BalloonTipText = "Your cat has meowed!" 
+#$myNotification.BalloonTipTitle = "Cat Error"
+#$myNotification.Visible = $True 
+#$myNotification.ShowBalloonTip(10000)
+### Koniec bloku do odkomentowania
+#
+#
+#
+# Ponieważ powyższe wydaje się być trochę mozolne by za każdym razem podawać te same wartości itd...
+# To można zrobić sobie własną funkcję. Uruchomienie jej znajduje się poniżej więc nie trzeba jej komentować
+# bo jak się jej nie wywoła to nic nie zrobi
+#
+function GiveMePopup {
+    param(
+        [Parameter(Mandatory=$true)]
+        $Text,
+   
+        [Parameter(Mandatory=$true)]
+        $Title,
+   
+        [ValidateSet('None', 'Info', 'Warning', 'Error')]
+        $Icon = 'Info',
+
+        $Timeout = 10000
+    )
+    [void] [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms")
+    $icoPath = Get-Process -id $pid | Select-Object -ExpandProperty Path
+    $myNotification = New-Object System.Windows.Forms.NotifyIcon
+    $myNotification.Icon = [System.Drawing.Icon]::ExtractAssociatedIcon($icoPath)
+    $myNotification.BalloonTipIcon = $Icon
+    $myNotification.BalloonTipText = $Text 
+    $myNotification.BalloonTipTitle = $Title
+    $myNotification.Visible = $True 
+    $myNotification.ShowBalloonTip(1000)
+}
+#
+# I teraz można to łatwo wywołać w ten sposób
+#
+#GiveMePopup -Text "Your cat has meowed!" -Title "Cat Error" -Icon Error
+#
+# Albo wielokrotnie:
+#For($i = 1; $i -le 10; $i++) {
+#    GiveMePopup -Text "WTF-second passed!" -Title "WTF Notification" -Icon Info
+#}
+#
+# Można też wiele wierszy pokazać ale max 4
+#GiveMePopup -Text "Pierwszy wiersz`nDrugi wiersz`nTrzeci wiersz`nCzwarty wiersz" -Title "Długa informacja" -Icon Info
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Po załadowaniu biblioteki stworzyłem swoją wersję notyfikacji
+
+$icoPath = Get-Process -id $pid | Select-Object -ExpandProperty Path
+
+$myNotification = New-Object System.Windows.Forms.NotifyIcon
+$myNotification.Icon = [System.Drawing.Icon]::ExtractAssociatedIcon($icoPath)
+$myNotification.BalloonTipIcon = 'Error'
+$myNotification.BalloonTipText = "Your Guinea Pig just exploded!" 
+$myNotification.BalloonTipTitle = "Guinea-Pig Error"
+$myNotification.Visible = $True 
+$myNotification.ShowBalloonTip(5000)
+
+Zadziałało tak jak oczekiwałem
+Pobawiłem się trochę tworzeniem popup-ów i zrobiłem także wersję funkcji którą można wywołać.
+
