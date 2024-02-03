@@ -15,7 +15,8 @@ co nawet nie musiałam aż tak długo czekać. Zaraz po tym wpisałam kolejny sk
 który wylistował mi wersje modułów, które mają wersję 2.0.0.0 i wyższą. By to 
 osiągnąć wpisałam Get-Module -ListAvailable | ? {$_.Version -ge "2.0.0.0"}.
 
-Używając Get-Module -ListAvailable | ? {$_.Version -ge "2.0.0.0"} | % {Get-Command -Module $_.Name} wylistowało mi polecenia, które są dostępne w modułach, ale tylko w tych
+Używając Get-Module -ListAvailable | ? {$_.Version -ge "2.0.0.0"} | % {Get-Command -Module $_.Name} 
+wylistowało mi polecenia, które są dostępne w modułach, ale tylko w tych
 których wersja jest większa lub równa wersji 2.0.0.0. Długość skryptów konsekwentnie
 rośnie w miarę naszych potrzeb poszukiwania, jednak mimo wszystko są dość czytelne
 gdy pozna się do czego służą poszczególne znaki.
@@ -23,3 +24,51 @@ gdy pozna się do czego służą poszczególne znaki.
 Co by ułatwić dalsze poszukiwania, można do powyższego skryptu dodać ? {($_.Name -like
 "Add-*) -or ($_.Name -like "Get-*")} by jeszcze bardziej zawęzić pole poszukiwań. To
 wyświetliło mi tylko te moduły które w nazwie mają "Add" lub "Get".
+
+By oszczędzić sobie mozolnego wpisywania, używam strzałki w górę by przywołać
+poprzedni skrypt i tylko bardziej go modyfikować, czego użyłam by utworzyć 
+listowane wartości w tabelce. Co z pewnością wygląda czytelniej. Zrobiłam to
+dodając do skryptu | Out-GridView.
+
+W dalszej części wykonałam pobranie modułu BitsTransfer używając komendy
+impo BitsTransfer co pomoże mi w pobraniu plików w tle.
+Link nie zadziałał, nie miałam tam dostępu. Skorzystałam z linka, który sama znalazłam:
+http://downloads.sourceforge.net/virtualboximage/gos-3.0-x86
+
+Wpisując Start-BitsTransfer -Source http://downloads.sourceforge.net/virtualboximage/gos-3.0-x86
+-Destination D:\ udało mi się pomyślnie pobrać plik.
+
+Następnie poznałam przydatną komendę do mierzenia czasu, która pozwala zmierzyć czas jaki upływa na
+wykonanie określonej operacji. Przykładem takiej operacji może być wpisanie 
+Measure-Command {Get-ChildItem -Path C:\Windows}.
+
+Dodatkowo PS umożliwia też otwieranie programów z poziomu terminala. Na przykład & C:\Windows\notepad.exe
+To pozwoli nam otworzyć notepad :).
+
+W dalszej części poznałam listowanie aplikacji i programów na 2 sposoby.
+
+Wyniki jakie uzyskamy możemy sobie dowolnie podyfikować wpisując odpowienie aliasy do skryptu. 
+Dla przykładu.: ls | %{Get-ItemProperty $_.pspath | Select-Object DisplayName, InstallDate, UninstallString} | Format-Table -AutoSize.
+
+Drugim sposobem jest użycie WMI - windows management instrumentation.
+Używając WIM'a możemy doszukać się znacznie więcej.
+
+Wpisując komendę.: Get-WmiObject -Class Win32_Product | Select-Object Name, Vendor | Format-Table -AutoSize
+To wylistowało mi programy i firmy, które je stworzyły. 
+
+By zmodyfikować to jeszcze bardziej możemy np.: chcieć wylistować tylko programy zrobione przez Intela
+do tego skrypt zmodyfikujemy tak.:
+Get-WmiObject -Class Win32_Product | ?{$_.Vendor.toLower() -like "*intel*"} | Select-Name, Vendor | Format-Table
+-AutoSize.
+
+Można też dowolny program odinstalować używając odpowiedniego skryptu jednak z obawy, że mogę usunąć
+coś ważnego nie odważyłam się jej użyć na swoim prywatnym komputerze (nie żebym w pracowni się tego podjęła).
+
+Następnie po wykonaniu skryptu definiującego funkcję "GiveMePopup" oraz jej wywołaniu
+otrzymujemy możliwość łatwego wyświetlania notyfikacji dla użytkownika w PowerShellu.
+Dzięki możliwości wielokrotnego wywoływania funkcji w pętli, możemy generować
+powtarzające się notyfikacje co jest całkiem przydatne. Definiowanie własnych funkcji może znacznie
+ułatwić i przyspieszyć pisanie skryptów oraz zapewnić większą elastyczność w operacjach na
+danym systemi.
+
+-----------------------------------------------------------------------------------------------------------------------------
