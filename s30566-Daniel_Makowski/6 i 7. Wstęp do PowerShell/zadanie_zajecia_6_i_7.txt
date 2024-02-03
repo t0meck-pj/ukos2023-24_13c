@@ -1,0 +1,83 @@
+Adnotacja na wstęp
+Na starcie chciałbym przeprosić za tak późne oddanie tej pracy.
+Osobiście po przeczytaniu przekazanej przez Pana treści (a czytałem 2+1 razy) 
+potraktowałem tę część jako ciekawostkę. Przekazany materiał wygląda jakby miał 
+charakter czysto informacyjny i z tego co się dowiedziałem od innych osób z grupy,
+to nie ja jedyny w taki sposób potraktowałem ten temat prosił Pan dzisiaj o szczere uwagi,
+dlatego też to tutaj piszę. Nadal nie mam pewności co jest odemnie tutaj oczekiwane, 
+więc poniżej znajduje się taki bardziej log z moich "zabaw" w powershellu oraz sprawozdanie 
+z tego, co wywnioskowałem z przekazanego materiału, oraz miejscami będę pisać swoje przemyślenia.
+
+
+Przyjąłem do wiadomości, że mogę skorzystać z cmdleta "Get-Help" do uzyskania pomocy.
+
+# Znak "|" to potok (pipeline), który uruchamia kolejne polecenie na danych wyjściowych z poprzedniego polecenia
+# Jeśli podaje się kolekcję/listę/tablicę to poszczególne elementy tej kolecji po znaku | są widoczne jako "$_"
+# To taka specjalna zmienna, która jest automatycznie tworzona przez powershell'a kiedy się operuje na kolekcjach.
+
+Jest to coś innego. Ciekaw jestem jak się to sprawdza na codzień, bo nie brzmi zbyt uniwersalnie.
+
+# Poniższa linia zwróci tylko te moduły, których wersja jest >= 2.0.0.0
+# Get-Module -ListAvailable | ? {$_.Version -ge "2.0.0.0"}
+
+W bashu wykorzystał bym do tego awk (oczywiście gdybym miał tam taką listę). Zastanawia mnie, 
+czy obsługa takiej zmiennej nie jest czasami dodatkowym, niepotrzebnym kodem w oprogramowaniu.
+Sprawdziłem w get-help jak mogę wykorzystać Where-Object. Wylistowałem sobie moduły które są skryptami.
+
+Get-Module -ListAvailable | ? {$_.ModuleType -eq "Script"}
+
+Może to przyzwyczajenie do man'a, ale output cmdleta Get-Help jest dla mnie nie przystępny.
+Kiedy w manie mogę sobie na szybko prześledzić wzrokiem i na szybko wychwycić opcję jakiej potrzebuję,
+lub o jakiej chcę się czegoś dowiedzieć, tak w Get-Help muszę czytać powieść z kategorii "Nad Niemnem". 
+Być może się mylę. Widzę, że bardziej oczekiwany przezemnie rezultat jest pod opcją -full, czyli muszę więcej pisać. Szkoda czasu.
+
+Nie będę się rozwodził jakoś bardzo nad dalszymi przytoczonymi przez Pana przykładami, lecz tutaj podoba mi się bardzo to, że można
+wyświetlić zwykłą listę modułów w taki sposób jaki jest dla nas najbardziej przystępny. W szczególności podoba mi się
+opcja wypisania treści w postaci graficznej tabelki. Fajnie że wykorzystywany jest Desktop Enviroment windowsa, po co 
+ograniczać się tylko do tekstu kiedy można pójść o krok dalej.
+
+
+
+Dalej podążam z przekazanym materiałem, również załaduję moduł BitsTransfer... właśnie, załaduję?
+Rozmawiałem z Panem właśnie na ten temat, z tego co rozumiem to ma to przyspieszyć uruchamianie powłoki a jak bym chciał
+mieć od razu załadowane jakieś moduły, to mogę utworzyć profil w powershellu, tylko... po co? Skoro dostępna jest lista modułów,
+to czy moduł nie może być załadowywany wtedy, kiedy jest potrzebny? Po prostu by się automatycznie załadowywał po wpisaniu którejś
+z jego komend.
+Pobrałem materiały na bazie których właśnie pracuję, 
+
+Start-BitsTransfer -Source http://szuflandia.pjwstk.edu.pl/~t0meck/uko/ps-info.ps1 -Destination .
+
+Akurat po zrobieniu tego sprawdziłem, czy jest wget. Pamiętałem że był on w CMD, chciałem sprawdzić czy jest on również w PS.
+W sumie to spróbowałem zrobić to samo wgetem... ale nie zadziałał tak samo jak BitsTransfer, pewnie kwestia argumentów.
+
+Ciekawe jest to, że ls i dir to aliasy do Get-CildItem. Miło ze strony twórców, że starają się o przystępność PowerShella.
+
+Przeszedłem do listowania programów. Zauważyłem, że listowanie WMI chwilę zajmuje, zmierzyłem ten czas przez:
+Measure-Command {Get-WmiObject -Class Win32_Product | Format-Table -AutoSize}
+Aż 20 sekund!
+
+Listowałem oprogramowanie związanie ze słowem "Python". Wylistowało się poprawnie, ale trafiłem na taki błąd:
+
+You cannot call a method on a null-valued expression.                                                                                                                                                                                        At line:1 char:40                                                                                                                                                                                                                            + ... -Class Win32_Product | ?{$_.Vendor.toLower() -like "*python*"} | Sele ...                                                                                                                                                              +                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                                                                                                                                                              + CategoryInfo          : InvalidOperation: (:) [], RuntimeException                                                                                                                                                                         + FullyQualifiedErrorId : InvokeMethodOnNull  
+
+Okazuje się, że jest jakaś pozycja która ma tylko numer ID. Nie ma nazwy, nie ma wersji...
+
+{9AC08E99-230B-47e8-9721-4577B7F124EA} <--- winowajca
+
+
+Przyjąłem do wiadomości informacje o dyskach. Ciekawe rozwiązanie, ogólnie podoba mi się tutaj sposób obsługi rejestru.
+
+Chciałem spojrzeć na podlinkowaną witrynę http://www.powertheshell.com/balloontip/ ale chyba ktoś domeny nie opłacił :c
+
+Nie przepadam za kotami, więc wywołałem sobie powiadomienie o szczekającym na listonosza psie :-D
+
+GiveMePopup -Text "Pies szczeka" -Title "Poczta Polska" -Icon Info
+
+
+# I co? Fajne co nie? :-D
+
+Ciekawe ale nie przekonało mnie. Jakbym miał używać PowerShella to jedynie z przymusu, 
+lecz możliwość wywoływania czegokolwiek w GUI windowsa co nie koniecznie jest jakimś programem
+z nakładką graficzną, tylko na przykład właśnie powiadomieniem czy tabelką jest imponujące.
+
+Pozdrawiam
