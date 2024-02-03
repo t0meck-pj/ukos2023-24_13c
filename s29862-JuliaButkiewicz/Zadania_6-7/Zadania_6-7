@@ -1,0 +1,25 @@
+Poniżej znajduje się sprawozdanie z wykonywanych zadań z PowerShella.
+---------------------------------------------------------------------
+
+Dla pewności, od razu uruchomiłam powłokę Microsofto PowerShell z poziomu
+administratora by mieć pewność, że każda część skryptu będzie możliwa do
+uruchomienia. Używając Set-ExecutionPolicy Bypass, upewniłam się, że z poziomu
+zwykłego użytkownika również będę w stanie uruchamiać skrypty.
+
+Pierwsze testy skryptów na konsoli przebiegły pomyślnie.
+Po wpisaniu Get-Help GetExecutionPolicy -Examples pojawiło mi się przykładowe
+okno pomocy do danych skryptów. Z pewnością użyję tego jeszcze później.
+
+Wpisując Get-Module -ListAvailable, ukazało mi wszystkie dostępne moduły na
+co nawet nie musiałam aż tak długo czekać. Zaraz po tym wpisałam kolejny skrypt
+który wylistował mi wersje modułów, które mają wersję 2.0.0.0 i wyższą. By to 
+osiągnąć wpisałam Get-Module -ListAvailable | ? {$_.Version -ge "2.0.0.0"}.
+
+Używając Get-Module -ListAvailable | ? {$_.Version -ge "2.0.0.0"} | % {Get-Command -Module $_.Name} wylistowało mi polecenia, które są dostępne w modułach, ale tylko w tych
+których wersja jest większa lub równa wersji 2.0.0.0. Długość skryptów konsekwentnie
+rośnie w miarę naszych potrzeb poszukiwania, jednak mimo wszystko są dość czytelne
+gdy pozna się do czego służą poszczególne znaki.
+
+Co by ułatwić dalsze poszukiwania, można do powyższego skryptu dodać ? {($_.Name -like
+"Add-*) -or ($_.Name -like "Get-*")} by jeszcze bardziej zawęzić pole poszukiwań. To
+wyświetliło mi tylko te moduły które w nazwie mają "Add" lub "Get".
