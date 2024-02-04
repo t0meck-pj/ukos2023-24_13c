@@ -1,0 +1,133 @@
+0 (rozgrzewkowe)
+Przypuscmy, ze nie mozesz utworzyc zadnego pliku na swoim koncie uczelnianym
+np. na szuflandii. Co sie moglo stac? (wymien co najmniej 3 opcje)
+Zakladamy, ze mozesz zalogowac sie w konsoli i nie masz zaleglosci w oplatach.
+
+Rozwiazanie:
+ - brak mijesca na dysku serwera. 
+ - uszkodzony jest dysk serwera.
+ - nie mamy uprawnien do zapisu. 
+
+
+1
+Jest dane takie drzewo katalogow:
+.
+├── ala
+│   ├── i
+│   │   └── as
+│   └── ma
+│       └── kota
+└── kot
+    └── ma
+        └── ale
+
+Znajdujesz sie w katalogu kota. Katalog ala jest w katalogu /tmp/ukos.
+Jak przejsc do katalogu ala za pomoca:
+ - sciezki wzglednej (relatywnej)
+ - sciezki bezwzglednej (absolutnej)
+
+
+Wykonanie:
+ - Sciezka wzgledna: cd ../..
+ - Sciezka bezwzgledna: cd /tmp/ukos/ala
+
+
+2
+Masz taki uklad katalogow, jak wyzej i ciagle jestes w katalogu kota. Jak
+utworzyc  poddrzewo katalogow jan/kowalski w katalogu ale za pomoca jednej
+komendy? Podaj rozwiazania uzywajac sciezek absolutnych i relatywnych.
+
+
+Wykonanie:
+ - Sciezka relatywna: mkdir -p ../../../kot/ma/ale/jan/kowalski 
+ - Sciezka absolutna: mkdir -p /tmp/ukos/kot/ma/ale/jan/kowalski 
+
+
+3
+Masz taki uklad katalogow, jak wyzej i ciagle jestes w katalogu kota. Jak
+przeniesc katalog ale do katalogu i uzywajac:
+ - zrodlo (sciezka wzgledna), miejsce docelowe (sciezka absolutna)
+ - zrodlo (sciezka absolutna), miejsce docelowe (sciezka wzgledna)
+
+
+Wykonanie:
+ - mv ../../../kot/ma/ale /tmp/ukos/ala/i
+ - mv /tmp/ukos/kot/ma/ale ../../i
+
+
+ 4
+Jak zamknac program, ktory nie reaguje na ctrl+c?
+
+
+Wykonanie:
+wyslac do programu sygnal KILL poleceniem kill -9 <pid programu>
+
+
+5
+Jak wypisac wszystkie pliki (i tylko pliki bez katalogow) w biezacym katalogu, 
+ktorych nazwa zaczyna się od al? 
+Tu bedzie troche opisu ode mnie na temat wyrazen regularnych.
+Materialy:
+http://www.robelle.com/smugbook/regexpr.html
+https://www.regular-expressions.info/
+
+Narzedzia do testowania wyrażen regularnych w przyzwoity sposob:
+https://regex101.com/
+https://regexr.com/
+
+
+Wykonanie: find ./  -name 'al*'
+
+6a
+Nadaj uprawnienia do katalogu ala tak aby:
+ - kazdy mogl do niego wejsc
+ - tylko grupa mogla wyswietlic co w nim jest
+ - wlasciciel ma pelne uprawnienia
+	HINT: Jakie sa uprawnienia poczatkowe?
+Podpowiedz: powyzsze 3 punkty opisu to jedno zadanie. Nie 3 osobne.
+Przygotuj 3 wariacje rozwiazania tego zadania uzywajac roznych notacji: 
+ - oktalnej/osemkowej/cyfrowej
+ - literowej ze znakiem rownosci
+ - literowej z plusami i minusami
+Wszystkie wersje powinny byc zapisane w jednym poleceniu: bez uzywania && czy |
+
+
+Wykonanie: 
+ - Oktalna: chmod 704 /tmp/ukos/ala
+ - Literowa ze znakiem rownosci: chmod u=rwx,g=rx,o=x /tmp/ukos/ala
+ - Literowa z plusami i minusami: chmod a+rwx,g-w,o-rw /tmp/ukos/ala
+
+
+6b
+Jak korzystajac z notacji ze znakiem rownosci odebrac wszystkie uprawnienia dla
+danego zasobu?
+
+
+Wykonanie: chmod a=- /tmp/ukos/ala.
+
+7
+Jak utworzyc plik z lista plikow w biezacym katalogu?
+Podaj rozwiazania uzywajace rozne techniki.
+Np. nie uzywajac dedykowanego polecenia do listowania zawartosci katalogow.
+Tu trzeba bedzie sie troche zastanowic jak to uzyskac a możliwości jest sporo.
+
+
+Wykonanie:
+ - ls -a > plik
+ - echo * .* > plik
+ - dir -a > plik
+
+8
+Jak przyspieszyc wpisywanie komend w terminalu? Jaki klawisz pozwala na 
+uzupelnianie komend?
+
+
+Odpowiedz: 
+ - klawisz tab uzupelnia komende
+
+9
+Jak uruchomic program by nie blokowal terminala? Sa dwa sposoby. Jakie?
+
+Wykonanie:
+ - dodac & na koncu polecenia
+ - wcisnac ctrl+z po uruchomieniu programu, to wstrzyma jego prace

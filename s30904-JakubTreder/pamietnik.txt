@@ -1,4 +1,21 @@
 30.09.2023
 Mój drogi pamiętniczku na dzisiejszych zajęciach nauczyłem się:
 poleceń w systemach linuxowych, poruszania sie po katalogach unixowych,
+14.10.2023
+Mój drogi pamiętniczkui na dzisiejszych zajęciach uczylismy sie podstawowej obsługi basha.
+Dowiedzialem sie jak commitowac i robic pull requesty do gita oraz uczylismy sie o przyznawaniu dostepow
+28.10.2023
+Mój drogi pamiętniczku na dzisiejszych poruszalismy temat procesów i strumieni. 
+Nauczyłem sie np co to strumien wejsciowy i wyjscia..
+18.11.2023
+Moj drogi pamietniczku na dzisiejszych zajeciach powtarzalismy wiedze 
+potrzebna do zaliczenia kolokwium.
+02.12.2023
+Moj drogi pamietniczku, dzisiaj zaliczylem kolokwium
+16.12.2023 
+Moj drogi pamietniczku na tych zajeciach bylem nieobecny
+20.01.2024
+Moj drogi pamietniczku na tych zajeciach poznalem kilka nowych komend do pracy w 
+powershellu.
+
 
