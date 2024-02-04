@@ -7,7 +7,9 @@ Spodziewałem się takiego wyniku.
 Zadanie 2. Wyświetl zawartość aktualnego katalogu.
 
 Wykonuje to za pomocą komendy ls.
-Pokazuje mi zawartość aktualnego katalogu, w moim przypadku PRRG oraz UKOS.
+Pokazuje mi zawartość aktualnego katalogu, w moim przypadku PRRG oraz UKOS. 
+(Stan na dzień wykonywania zadania)
+Stan aktualny - Posiadam znacznie wiecej katalogow oraz plikow.
 Tutaj również spodziewałem się takiego wyniku.
 
 Zadnie 3. Sprawdz gdzie aktualnie się znajdujesz.
@@ -34,12 +36,12 @@ Spodziewałem się tego wyniku./
 
 Zadanie 7. Wyświetl zawartość swojego katalogu domowego bez przechodzenia do niego (ls z odpowiednim parametrem).
 
-Wpisuje komendę ls -pa | grep /. Wypisuje mi zawartość moich folderów
+Wpisuje komendę ls ~ i zostaje mi przedstawiona zawartość mojego folderu domowego.
 
 Spodziewałem się tego wyniku.
 
 Zadanie 8. Przejdź do katalogu Obrazy (lub innego katalogu, który jest dostępny - podaj wprost,
- że zmieniasz katalog na inny bo np. Obrazy nie są u Ciebie dostępne) w twoim katalogu domowym za pomocą ścieżki względnej.
+że zmieniasz katalog na inny bo np. Obrazy nie są u Ciebie dostępne) w twoim katalogu domowym za pomocą ścieżki względnej.
 
 
 
@@ -57,9 +59,12 @@ Spodziewałem się aktualnego wyniku.
 Zadanie 10. Zobacz do jakiego katalogu przejdziesz za pomocą ścieżki ././././././
 
 Użyłem komendy cd ./././././././././. Użycie tej komendy sprawiło że nie przeniosłem się do żadnego folderu ponieważ linux
- jest skonstruowany że każdy katalog jest odznaczany ./. Czyli użycie tej komendy nie zmienia nic 
+jest skonstruowany że każdy katalog jest odznaczany ./. Czyli użycie tej komendy nie zmienia nic 
 Dodanie dodaktowych ././ - osobiście dodałem ich około 40, spowodowało że nadal jest w tym samym directory.
 
+ODP. Na komentarz w PR, niestety nie wiem co Pan miał na myśli poprzez przeliczenie przez system.
+
+ODP_2. Sciezka podana przez Pana w komentarzu do PR jest to sciezka wzgledna
 
 Zadanie 11. 
 Używam komendy cd ~
@@ -68,8 +73,8 @@ Spodziewałem się takiego wyniki.
 
 Zadanie 12. Zobacz co się stanie jak wpiszesz komendę 'cd/root'. Jak już to zrobisz, zastanów się co się stało. Poszukaj w internecie.
 
-Użycie komendy cd/root sprawia że przechodzimy z aktualnego directory, do directory /root.
- Czyli directory superusera a.k.a Admina bo ma kontrolę nad wszystkim.
+Użycie komendy cd /root sprawia że chce mnie przenieść do katalogu /root
+ALE jest to niemożliwe ponieważ nie posiadam uprawnień / brak dostępu.
 
 
 Zadanie 13. Zobacz, co się stanie, jeśli wciśniesz kombinację klawiszy: Ctrl+Alt+F3

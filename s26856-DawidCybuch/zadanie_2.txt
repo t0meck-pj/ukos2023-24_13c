@@ -37,7 +37,7 @@ Wchodzę sobie do zadania_ukos2 i przechodzę do katalogu kat3 i używając chmo
 wychodzę do cd, zmieniam directory do zadania_ukos2 i staram się wejść do kat3 > wynik nie mogę bo nie mam uprawnień
 Tworzę kat4 i wewtnątrz kat5 i odbieram dostęp kat4 chmod 000 ../../kat4 i mogę z niego wyjść ale wejść już nie mogę
 chmod możemy utworzyć tylko kiedy mamy uprawnienia do zapisu
-Nie jesteśmy w stanie przeskoczyć do pliku XYZ jeżeli nie mamy dostępu do ABC
+Nie jesteśmy w stanie przeskoczyć do folderu XYZ jeżeli nie mamy dostępu do ABC
 Po odebraniu uprawnien jesteśmy w stanie wyjść ale już nie wróce
 
 Zadanie 3. W zespołach 2- lub 3-osobowych (w opisie zadania na githubie proszę umieścić login osób z zespołu) wypróbować możliwość komunikacji przez współdzielony plik: 
@@ -68,10 +68,15 @@ Umieścić w nim plik o nazwie strona.html o następującej zawartości:
 Utowrzyłem folder public_html za pomocą komendy mkdir public_html.
 Następnie utworzyłem plik komendą nano strona.html i wpisałem treść podaną w zadaniu.
 Sprawdzam uprawnienia za pomocą komendy ls -l.
-Wykazuje mi że że każdy user może to odczytać r-- to oznacza że każdy może zobaczyć moją stronę, ale nikt inny nie może jej edytować.
+Po wykonaniu komendy ls -l dostaje informacje jakie są przydzielone uprawnienia
+Owner -rw- - czyli jestem w stanie "widziec" oraz edytować ten plik
+Grupa -r-- - Grupa może odczytywać ale nie mogą edytować
+Wszyscy -r-- - Wszyscy mogą odczytać ale nie mogą edytować
 http://szuflandia.pjwstk.edu.pl/~s26856/strona.html
 
-
-
-
-
+ODP.
+Po wykonaniu notacji copy%paste zostalo otrzymalem taki wynik
+Z tego co widze na wszystkich plaszczyznach sa przydzielone takie same uprawnienia
+-rw-r--r-- 1 s26856 domain users     0 10-27 00:04 man
+-rw-r--r-- 1 s26856 domain users 12198 10-27 00:26 q
+-rw-r--r-- 1 s26856 domain users    68 10-27 00:08 strona.html

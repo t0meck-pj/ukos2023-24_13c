@@ -1,14 +1,45 @@
-7.10.2023
+30.09.2023
+Moj drogi pamietniczku na dzisiejszych zajeciach nauczylem sie
+Jakie zadania powinienem wykonac
+Jak poprawnie wykonywac zadania
+Jakie sa zasady zaliczenia przedmiotu
+
+14.10.2023
 Moj drogi pamietniczku na dzisiejszych zajeciach nauczylem sie ze
 Jak poprawnie wykonac git commit, git push oraz inne podstawowe
 działania gita
 Nauczylem sie rowniez czym sa sciezki wzgledne oraz bezwzgledne
 oraz jaka cudowna komenda jest man
 
-Tutaj uzupełnić!
-
+28.10.2023
+Moj drogi pamietniczku na dzisiejszych zajeciach naczylem sie
+Trzeba bardzo uwazac podczas nadawania uprawnien, zle nadane
+uprawnienia moga sprawic ze nie bede mogl wyjsc/wejsc/usunac folderu
+lub pliku, bo odebralem sobie uprawnienia i jedynym moim ratunkiem
+bedzie kontakt z administrarem inaczej zwanym rootem
 
 02.12.2023
 Moj drogi pamietniczku na dzisiejszych zajeciach mielismy kolokwium
 pomimo swojej pewnosci siebie niestety uzyskalem 10 punktow, takze
 musze jeszcze popracowac nad swoja wiedza
+
+
+16.12.2023
+Moj drogi pamietniczku, ze wzgledow na covida nie bylo mnie fizycznie
+na uczelni, ale cale szczescie ze moglem poprawiac kolokwium zdalnie
+niestety jednak nie udalo mi sie poprawic, po nieudanej probie poprawy
+zajalem sie powershellem
+
+20.01.2024
+Moj drogi pamietniczku, dzis jest ten dzien, udalo mi sie zdac kolokwium
+Moglo pojsc znacznie lepiej, ale zdalem. Mam nadzieje ze na nastepnych
+semestrach bede sie bardziej przykladal do zajec z Profesorem
+Po kolokwium mielismy czas na zalatwienie spraw bierzacych, znow
+zajmowalem sie powershellem i poszlo mi znacznie lepiej
+
+3.02.2024
+Moj drogi pamietniczku, dzis byly ostatnie zajecia z UKOS
+Cale zajecia byly naprawde przyjemne, pomimo kilku bledow
+ktore popelnilem, wyciagnalem bardzo przydatne informacje
+Jest to moj ostatni wpis do Pamietniczka
+Wszystkie zadania zostaly wykonane

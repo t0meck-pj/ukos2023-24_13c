@@ -1,0 +1,129 @@
+Zadanie 0
+
+Przypuśćmy, że nie możesz utworzyć żadnego pliku na swoim koncie uczelnianym np. na szuflandii.
+Co się mogło stać? (wymień co najmniej 3 opcje)
+
+1. Katalog może nie istnieć.
+2. Nie posiadam uprawnień.
+3. Znajduję się poza swoim katalogu domowym.
+
+Wniosek:
+
+Muszę dokładnie patrzeć gdzie się znajduję, jeżeli chce wykonywać prace na szuflandii.
+
+Zadanie 1.
+
+Jest dane takie drzewo katalogów:
+
+├── ala
+│   ├── i
+│   │   └── as
+│   └── ma
+│       └── kota
+└── kot
+    └── ma
+        └── ale
+
+Znajdujesz się w katalogu kota. Katalog ala, jest w katalogu /tmp/ukos.
+Jak przejść do katalogu ala za pomocą:
+
+ścieżki względnej (relatywnej)
+
+Używam komendy cd ../..
+
+ścieżki bezwzględnej (absolutnej)
+
+Używam komendy cd /tmp/ukos/ala
+
+Zadanie 2.
+
+Masz taki układ katalogów, jak wyżej i ciągle jesteś w katalogu kota. Jak utworzyć poddrzewo katalogów jan/kowalski w katalogu ale za pomocą jednej komendy?
+
+Podaj rozwiązania używając ścieżek absolutnych i relatywnych.
+
+Ścieżka absolutna:
+mkdir -p /tmp/ukos/kot/ma/ale/jan/kowalski
+
+Ścieżka relatywna
+
+mkdir -p ../../../kot/ma/ale/jan/kowalski
+
+Zadanie 3.
+
+Masz taki układ katalogów, jak wyżej i ciągle jesteś w katalogu kota. Jak przenieść katalog ale do katalogu i używając:
+
+źródło (ścieżka względna), miejsce docelowe (ścieżka absolutna)
+
+mv ../../../kot/ma/ale /tmp/ukos/ala/i
+
+źródło (ścieżka absolutna), miejsce docelowe (ścieżka względna)
+
+mv /tmp/ukos/kot/ma/ale ../../i
+
+Zadanie 4
+
+Najlatwiej bedzie wyslanie do programu kill za pomoca
+kill -9 [PID Programu]
+
+Zadanie 5
+
+Uzywam komendy find -maxdepth 1 -name 'al*'
+
+Zadanie 6a
+Nadaj uprawnienia do katalogu ala tak aby:
+
+każdy mógł do niego wejść
+
+tylko grupa mogła wyświetlić co w nim jest
+
+właściciel ma pełne uprawnienia
+
+HINT: Jakie są uprawnienia początkowe?
+
+Podpowiedź: powyższe 3 punkty opisu to jedno zadanie. Nie 3 osobne.
+Przygotuj 3 wariacje rozwiązania tego zadania używając różnych notacji: 
+
+oktalnej/ósemkowej/cyfrowej
+
+Komenda: chmod 751 /tmp/ukos/ala
+
+literowej ze znakiem równości
+
+Komenda: chmod u=rwx,g=rx,o=x /tmp/ukos/ala
+
+literowej z plusami i minusami
+
+Komenda: chmod a+rwx,g-w,o-rw /tmp/ukos/ala
+
+Zadanie 6b
+
+Jak korzystając z notacji ze znakiem równości odebrać wszystkie uprawnienia dla danego zasobu?
+
+chmod a=- /tmp/ukos/ala
+
+Zadanie 7
+
+Jak utworzyc plik z lista plikow w biezacym katalogu?
+
+Dwa rozwiazania
+
+dir -a > lista.txt
+
+echo * > lista.txt
+
+zadanie 8.
+
+Jak przyspieszyc pisanie komend w termialu?
+Jaki klawisz piozwala na uzupelnienie komend?
+
+Jest to Tabulator potocznie zwany TAB
+Przydatne jest takze korzystanie ze strzalek kierunkowych w gore i w dol
+
+Zadanie 9
+
+Jak uruchomic program by nie blokowal terminala. 
+Sa dwa sposoby. Jakie?
+
+Otwarcie programu w tle używając &
+Uzyc nohup
+

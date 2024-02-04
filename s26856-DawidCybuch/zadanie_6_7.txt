@@ -1,0 +1,230 @@
+Sprawozdanie z podstaw uzytkowania microsoft powershell
+
+=======================================================
+
+Windows PowerShell jest doskonalym narzedziem, jednak
+zeby to narzedzie jakkolwiek bylo uzyteczne, musimy 
+zniesc ograniczenie ze wszystkie skrypty, czyli inne
+niz wydane przez microsoft, musimy zastosowac nastepujace
+kroki:
+
+Set-ExecutionPolicy Bypass
+i zatwierdzic to za pomoca y
+
+Nalezy jednak tez zwrocic uwage ze ta komeda moze
+byc wykonania wylocznie kiedy posiadamy uprawnienia 
+administratora.
+
+Tutaj tak samo jak podczas korzystania z cmd, putty
+oraz innych wersji edytorow tekstowych mozemy
+uzyc komendy by otrzymac pomoc.
+
+Ta komenda to:
+Get-Help Get-ExecutionPolicy
+Nalezy tutaj tez zwrocic uwage ze powinno sie podac 
+z jakim skryptem potrzebujemy pomocy poniewaz jest ich
+wielki ogrom
+
+a zeby dostac przykladowe wykorzystanie tej komendy
+mozemy dodac do poprzednio wymienionej komendy:
+Get-Help Get-ExecutionPolicy -Examples
+
+======================================================
+
+Wykorzystuja podane przez Profesora materialy
+Dostajemy pewna informacje na temat stalej skladni komend
+jest to: Czasownik-NaCzymOperowac
+
+Dalej wykorzystujac te same materialy jestem w stanie 
+dowiedziec sie jak wylistowac liste dostepnych modulow:
+
+Get-Module List-Available
+
+Podazajac dalej za instrukcja dowiaduje sie jak filtrowac
+moduly, ktorych wersja jest nowsza lub rowna 2.0.0.0 
+uzywajac nastepujacej komendy:
+
+Get-Module -ListAvailable | ? {$_.Version -ge "2.0.0.0"} |
+% {Get-Command -Modle $._Name}
+
+Oczywiscie ta komende mozna zmodyfikowac by byla krotsza,
+dluzsza, prostsza lub trudiejsza
+
+Zmienilem troche skladnie i zastapilem skroty pelnymi
+poleceniami:
+
+Get-Module -ListAvailable | Where-Object {$_.Version -ge 
+"2.0.0.0"} | ForEach-Object {Get-Command -Module $_.Name}
+
+Teraz wykonalem bardziej "chaotyczne" polecenie
+Get-Module -ListAvailable | Where-Object {$_.Version -ge "2.0.0.0"} |
+ForEach-Object { Get-Command -Module $_.Name } |
+Where-Object { ($_.Name -like "Add-*" -or $_.Name -like "Get-*") -and ($_.Version -gt "1.2.3.4") } |
+Out-File $env:TEMP\$PowerShellUKOSY.txt
+
+
+Dzieki temu poleceniu PS przefiltruje wszystkie dostepne z "Add-" lub "Get-"
+I wypisze mi to do mojego pliku tekstowego.
+
+
+============================================================================
+
+Kolejnymi poleceniami jest wykorzystanie BitsTransfer do zarzadzania
+przesylaniem danych w tle.
+
+ipmo BitTransfer
+
+Niestety serwer z obrazem wirtualny javy uruchomionego na zajeciach.
+Przeszukałem internet i znazlałem obrazy wirtualne dla windowsa
+na stronie: https://windowsbase.pl/vm
+
+Polecenie użyte
+
+Start-BitsTransfer -Source https://windowsbase.pl/download?file=https://archive.org/download/windows-server-2016-x-64/VM%20Machines/VMware%20%28VMDK%20Disk%20Images%29/Microsoft%20Windows%2095%20x86%20%5BEnglish%5D.7z 
+-Destination G:\
+
+Udało mi się pobrać plik  (I to bez zadnego malwera!)
+
+Jak to czesto bywa w konsolach jestesmy w stanie badac czas
+wykonywanego skryptu/polecenia
+
+Measure-Command {Get-ChildItem -Path C:\Windows}
+
+By ulatwic sobie prace na PS mozemy sobie wyszukac 
+danych aliasow 
+
+Get-Alias | ? {$_.Definition -like "Get-ChildItem"}
+
+==========================================================
+
+Z racji tego ze PS jest bardzo obszernym narzedziem
+a przede wszystkim jest to konsola wiec jestesmy w staie 
+takze otwierac programy.
+
+Do tego uzywam komendy
+& C:\Windows\tutaj.exe
+
+Udalo mi sie otworzyc 
+*Notatnik
+*explorer
+
+
+Dobre jest to ze jestesmy uzywac PS przegladac sobie rejestry
+jak na dyskach. Dzieki temu mozemy przegladac go jak zwykly system plikow
+
+Sa do tego dwa sposoby
+
+Metoda Rejestru
+
+ls hklm:\SOFTWARE\Microsoft\Windows\CurrentVersioon\Unistall
+
+Oczywiscie dzieki elastycznosci PS'a mozemy sobie wybierac dane
+ktore chcemy miec by byly wyswietlane
+
+ls | %{Get-ItemProperty $_.pspath | Select-Object DisplayName, InstallDate, 
+UninstallString} | Format-Table -AutoSize
+
+Mozemy je rowniez usuwac dodajac do skryptu
+%{$_.UninstallString} | Zamiast Format-Table -AutoSize 
+na koncu skryptu
+
+Mozna rowniez korzystac z WMI
+WMI jest uzywany do zarzadzania systemem.
+
+Wylistowanie wszystkich programow
+
+Get-WmiObject -Class Win32_Product | Select-Object Name, Vendor | 
+Format-table -Autosize
+
+Mozemy takze wyszukiwac konkretnych programow od danego producenta
+np
+Get-WmiOject -Class Win32_Product | ?{$_.Vendor.toLower() -like "nvidia"}
+| Select-Object Name, Vendor | Format-table -Autosize
+
+I tak samo jak podane wyzej by usunac programy wystarczy do mojego
+polecenia zamiast | Format-table -Autosize dac | %{$_.Uninstall()}
+
+Nie wykonalem skryptu z usuniecie bo nie chce ich usuwac
+
+=================================================================
+
+PS posiada wiele dyskow i mozna jest wylistowac:
+Get-PSDrive
+
+Dyski HKML i HKCU to dyski dające dostęp do rejestru.
+(Tutaj kopiuje z Pana Profesora zródeł)
+
+Poza tym są jeszcze:
+- Alias - przechowuje wszystkie aliasy zdefiniowane w biezacej sesji
+ - Cert - magazyn certyfikatow TLS/SSL
+ - Env - zmienne srodowiskowe w biezacej sesji
+ - Function - wszystkie funkcje w biezacej sesji, ktore mozna uruchomic
+ - Variable - zmienne utworzone i dostepne w biezacej sesji
+ - WSMan - dostep do calego systemu WMI
+Dyski mozna rowniez dogrywac, np. GH (GitHub) czy AD (ActiveDirectory)
+
+
+W PS mozna takze bawic sie powiadomieniami
+
+[void] [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms")
+
+$icoPath = Get-Process -id $pid | Select-Object -ExpandProperty Path
+
+$myNotification = New-Object System.Windows.Forms.NotifyIcon
+$myNotification.Icon = [System.Drawing.Icon]::ExtractAssociatedIcon($icoPath)
+$myNotification.BalloonTipIcon = 'Error'
+$myNotification.BalloonTipText = "Your cat has meowed!" 
+$myNotification.BalloonTipTitle = "Cat Error"
+$myNotification.Visible = $True 
+$myNotification.ShowBalloonTip(10000)
+
+Korzystajac z Pana Profesora skryptu dostalem error ze moj kot mialczy
+
+Korzystajac dalej z dostepnego materialu dowiaduje sie ze mozna
+wprowadzic dodatkowe funkcje ktore ulatwia wyswietlanie
+
+function GiveMePopup {
+  param(
+      [Parameter(Mandatory=$true)]
+      $Text,
+ 
+      [Parameter(Mandatory=$true)]
+      $Title,
+   
+      [ValidateSet('None', 'Info', 'Warning', 'Error')]
+      $Icon = 'Info',
+
+      $Timeout = 10000
+  )
+[void][System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms")
+ $icoPath = Get-Process -id $pid | Select-Object -ExpandProperty Path
+ $myNotification = New-Object System.Windows.Forms.NotifyIcon
+ $myNotification.Icon = [System.Drawing.Icon]::ExtractAssociatedIcon($icoPath)
+ $myNotification.BalloonTipIcon = $Icon
+ $myNotification.BalloonTipText = $Text 
+ $myNotification.BalloonTipTitle = $Title
+ $myNotification.Visible = $True 
+ $myNotification.ShowBalloonTip(1000)
+}
+I wywolac poleceniem: 
+GiveMePopup -Text "Your cat has meowed!" -Title "Cat Error" -Icon Error
+ 
+Mozna tez utworzyc petle, ktora wywola go wielokrotnie
+
+For($i = 1; $i -le 10; $i++) {
+    GiveMePopup -Text "You Shall NOT PASS!" -Title "Gandalf" -Icon Info
+}
+
+Oraz wymienic ilosc wierszy(niestety maksymalnie to 4)
+
+GiveMePopup -Text "Zrobilem`nZadania`nZ`nPowerShella"
+ -Title "PowerShell" -Icon Info
+ 
+============================================================
+Podsumowanie sprawozdania:
+
+Dzieki zawartym materialom zdobylem dodatkowe doswiadzczenie 
+w poslugiwaniu sie PowerShellem oraz poznalem nowe techniki
+modyfikacji skryptow, usuwania plikow z komputera i tworzenie
+spersonalizowanych error 
+
