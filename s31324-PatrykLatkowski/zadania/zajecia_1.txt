@@ -73,7 +73,7 @@ Czyli jak wpiszę X "../" to cofnę się o X katalogów
 Zadanie 1.11:
 Przejdź do swojego katalogu domowego za pomocą ścieżki bezwzględnej:
 Następnie postanowiłem przejść do katalogu domowego za pomocą ścieżki
-względnej, używając komendy "cd ../../". Sutkiem tego byłem
+względnej, używając komendy "cd ../../". Skutkiem tego byłem
 w katalogu domowym, co było zgodne z oczekiwaniami.
 
 Zadanie 1.12:
