@@ -69,7 +69,10 @@ Jak zamknac program, ktory nie reaguje na ctrl+c?
 
 
 Odpowiedz:
-Zeby zamknac program, wykorzystalbym skrot klawiszowy "CTRL + \"
+Zeby zamknac program, wykorzystalbym skrot klawiszowy "CTRL + \",
+która powoduje zamknięcie procesu. Warto zaznaczyć jednak,
+że użycie tej komendy może prowadzić do utraty nezapisanych danych w przypadku programów,
+które przechowują dane tylko w pamięci podręcznej.
 lub uzylbym komendy kill, lecz do tego potrzebowalbym id danego procesu.
 
 

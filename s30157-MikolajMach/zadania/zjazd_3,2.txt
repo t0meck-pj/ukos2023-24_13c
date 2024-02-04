@@ -89,4 +89,5 @@ Po sprawdzeniu wyniku okazało się że plik jest pusty i żadna wiadomość nie
 
 Robię to samo z tą różnicą że zamiast "CTRL + C" używam "CTRL + D".
 Po sprawdzeniu wyniku okazuje się że wiadomość została zapisana.
+"CTRL + C" kończy dany proces lub komendę, natomiast "CTRL + D" wychodzi z danej komendy
 
