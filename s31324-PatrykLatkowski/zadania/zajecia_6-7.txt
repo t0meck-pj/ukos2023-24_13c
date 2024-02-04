@@ -1,0 +1,24 @@
+1. Ustawienie Polityki Wykonywania Skryptów
+Set-ExecutionPolicy Bypass
+
+2. Listowanie Dostępnych Modułów
+Get-Module -ListAvailable
+
+3. Wyświetlanie Poleceń w Modułach o Wersji >= 2.0.0.0
+Get-Module -ListAvailable | ? {$_.Version -ge "2.0.0.0"} | %
+ {Get-Command -Module $_.Name}
+
+4. Pobieranie Dużego Pliku Przez BitsTransfer
+$job = Start-BitsTransfer -Source "adres_pliku" -Destination
+ "lokalizacja_docelowa" -Asynchronous
+
+5. Mierzenie Czasu Wykonania Polecenia
+Measure-Command {Get-ChildItem -Path C:\Windows}
+
+6. Wylistowanie Zainstalowanych Aplikacji Przez WMI
+Get-WmiObject -Class Win32_Product | Select-Object Name,
+ Vendor | Format-Table -AutoSize
+
+7. Dodawanie Własnych Funkcji do PowerShell
+GiveMePopup -Text "Your cat has meowed!" -Title
+ "Cat Error" -Icon Error

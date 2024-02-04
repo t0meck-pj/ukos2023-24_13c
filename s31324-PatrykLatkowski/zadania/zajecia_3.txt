@@ -81,8 +81,22 @@ Zrobiłem to komendą: ps axu | grep ^root
 
 
 Zadanie 2
-ZOSTANIE ZROBIONE JAK ODZYSKAM SWÓJ DYSK Z LINUXEM :))
-
+Uruchom wybrany przez Ciebie graficzny edytor tekstowy, np. gedit, gvim, itd
+Zobacz jaki ma in PID - przyda sie do tego komenda ps
+Wydaj komende kill w taki sposob, aby ten edytor sie wylaczyl. Zobacz, czy to
+dziala. UWAGA: Niektore programy przechwytuja sygnaly i moga je czesciowo
+blokowac. Jesli program nie wylacza sie, to zobacz jaka jest jego reakcja.
+Zobacz czy mozesz wyslac do niego SIGKILL (gdzie sprawdzisz jak to zrobic?)
+Zrobiłem to komendami:
+- gedit
+- ps aux | grep gedit
+- man kill
+- kill -l
+- kill -9 3371	
+Zobacz dzialanie komendy killall bash
+Zadziałało.
+Zobacz czy kill zadziala dla dowolnego procesu.
+Kill nie zawsze zadzialalo
 
 
 
@@ -101,8 +115,8 @@ w pliku wynik3_2.txt:
 -> Nic się nie znalazło w tym pliku.
 
 jak rozumiesz co się stało?:
--> ctrl + c służy do wyjścia bez potwierdzenia, natomiast ctrl + d słyży to wyjścia
-z potwierdzeniem.
+-> W pierwszym przypadku plik się nie zapisał, ponieważ polecenie zostało przerwane.
+W drugim wypadku polecenie nie zostało przerwane i można wrócić do edycji.
 
 czym oba te przykłady się różnią?:
 -> tym że trzeba ctrl + d wcisnąć dwa razy a ctrl + c raz.
@@ -114,4 +128,31 @@ DLACZEGO się różnią?
 
 
 Zadanie 4
-ZOSTANIE ZROBIONE JAK ODZYSKAM SWÓJ DYSK Z LINUXEM :))
+1. Wpisz komende gimp (lub np. edytor tekstowy gedit)
+2. W terminalu, w ktorym sie to uruchomilo wcisnij CTRL+Z
+3. Sprobuj cos wyklikac w gimpie / gedicie
+4. Otworz dowolne inne okno i przesun je tak by czesciowo nachodzilo na okno
+   gimpa / gedita i potem je odsun by odslonic w pelni okno gimpa / gedita
+Co sie stalo? Wstrzymalismy program gimp/gedit. Program wstrzymany za pomoca
+kombinacji CRTL+Z jest przenoszony w tlo (background). Efekt jest taki, ze taki
+program przestaje odpowiadac na cokolwiek.
+Wykonałem zadanie poleceniami:
+- gedit
+- CTRL+Z
+Program GIMP lub Gedit został wstrzymany po naciśnięciu CTRL+Z, przeniesiony
+do tła i przestał reagować na interakcje. Nawet po próbie interakcji z
+programem poprzez przesunięcie innych okien na jego obszar, program pozostanie
+w stanie wstrzymania, co można zauważyć po braku reakcji na te interakcje.
+1. Wpisz komende bg
+Powróciło do programu.
+1. Wykonaj komende gimp &
+2. Wykonaj komende gedit &
+3. Wykonaj komende geany &
+Uruchomiły się te programy w tle.
+1. Przywroc program gedit (lub gimp, w kazdym razie nie uruchomiony jako
+ostatni program) z tla na pierwszy plan. Skorzystaj z jobs aby dowiedziec
+sie jakie maja numery poszczegolne zadania dzialajace w tle.
+Skladnia: fg %(numer jobu).
+Polecenia które wykonałem:
+- jobs
+- fg %3

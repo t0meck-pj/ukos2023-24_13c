@@ -15,9 +15,8 @@ w katalogu bieżącym używając "chmod 000 .". Wszedłem do katalogu
 prowadzić do któryś z tych katalogów. Polecenie "chmod" mogę użyć, gdy mam
 uprawnienia do pliku, aktualnie nie mająć uprawnień do tych katalogów nie
 mogę tego wykonać. Czy możemy bezpośrednio przeskoczyć do katalogu ABC/XYZ,
-jeśli nie mamy uprawnienia wstępu do ABC, ale mamy do XYZ? - tak.
-Czy możemy także wrócić korzystając z polecnia cd - tak, ale tylko do
-folderów do których mam dostęp.
+jeśli nie mamy uprawnienia wstępu do ABC, ale mamy do XYZ?
+Nie, nie możemy. Nie mamy uprawnień, więc jest to niemożliwe.
 
 Zadanie 3 (Partner do zadania: s26856 - Dawid Cybuch)
 Dawid utworzył plik u siebie. Użył ">". Ja użyłem też tego. Okazało się, że
@@ -30,3 +29,7 @@ Jesteśmy w stanie się komunikować.
 Zadanie 4
 Stworzona stronka zgodnie z poleceniami. Znam struktury folderów stron
 internetowych, znam html'a więc nic nowego dla mnie.
+Minimalne uprawnienia dostepu potrzebne do wyświetlenia tej strony w przegladarce internetowej:
+- katalog domowy: 001
+- public_html: 001
+- strona.html: 004
