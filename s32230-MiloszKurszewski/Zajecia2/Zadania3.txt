@@ -22,11 +22,11 @@ usuwając wszelkie uprawnienia dostępu do katalogu nadrzędnego (nadkatalogu).
 Rozwiązanie: chmod 000 ..
 
 W jakich przypadkach możemy wykonać wtedy polecenie cd ? 
-Rozwiązanie: polecenie cd możemy wykonać wtedy, gdy mamy uprawnienia do odczytu danego katalogu i zapisu dla
+Rozwiązanie: polecenie cd możemy wykonać wtedy, gdy mamy uprawnienia do odczytu danego katalogu i
 katalogu nadrzędnego
 
 W jakich przypadkach możemy wykonać polecenie chmod ? 
-Rozwiązanie: polecenie chmod możemy wykonać wtedy, gdy mam uprawnienia do zapisu w danym katalogu.
+Rozwiązanie: polecenie chmod możemy wykonać wtedy, gdy jestesmy wlascicielem danego katalogu, lub Rootem.
 
 Czy możemy bezpośrednio przeskoczyć do katalogu ABC/XYZ, jeśli nie mamy uprawnienia wstępu do ABC, ale mamy do XYZ ?
 Rozwiązanie: Niestety nie możemy, aby wykonać polecenie cd, musimy mieć uprawnienia (x) do wszystkich 
@@ -64,7 +64,7 @@ katalogu public_html;
 
 pliku strona.html, aby zawartość pliku była widoczna w przeglądarce internetowej pod adresem http://szuflandia.pjwstk.edu.pl/~twój_login/strona.html
 Rozwiązanie: Utworzyłem stronę w podanym katalogu, jest widoczna z poziomu linku http://szuflandia.pjwstk.edu.pl/~s31052/strona.html
-Minimalne uprawnienia: 001 katalog public_html, 004 plik strona.html
+Minimalne uprawnienia: 701 katalog domowy, 001 katalog public_html, 004 plik strona.html
 
 
 

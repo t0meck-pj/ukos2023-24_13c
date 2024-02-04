@@ -8,7 +8,7 @@ Zadanie:
 1. Uruchom wybrany przez Ciebie graficzny edytor tekstowy, np. gedit, gvim, itd
    Wybrałem gedit
 2. Zobacz jaki ma in PID - przyda sie do tego komenda ps\
-   Wykonanie: ps aux | grepgedit
+   Wykonanie: ps aux | grep gedit
 3. Wydaj komende kill w taki sposob, aby ten edytor sie wylaczyl. Zobacz, czy
    to dziala. UWAGA: Niektore programy przechwytuja sygnaly i moga je czesciowo
    blokowac. Jesli program nie wylacza sie, to zobacz jaka jest jego reakcja.
