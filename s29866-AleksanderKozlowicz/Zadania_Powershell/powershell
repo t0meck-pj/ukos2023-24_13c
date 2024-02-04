@@ -1,0 +1,25 @@
+#Get-Module -ListAvailable | ? {$_.Version -ge "2.0.0.0"}
+
+Pozmienialem sobie wersje z 2.0.0.0 na 2.1 niestety nic mi nie wypisalo ale domyslam sie/jestem pewien
+ze wylistowalo by mi moduly z wersja 2.1. 
+
+#Get-Module -ListAvailable | ? {$_.Version -ge "2.0.0.0"} | % {Get-Command -Module $_.Name}
+To polecenie wydrukowalo na ekranie pelno polecen (niestety nie zadzialalo poprawnie gdyz wydrukowalo 
+tez moduly z wersja inna nic 2.0.0.0). 
+
+
+# Teraz byśmy chcieli jeszcze wyświetlić wszystkie te, które mają w nazwie "Add-" lub "Get-"
+#Get-Module -ListAvailable | ? {$_.Version -ge "2.0.0.0"} | % {Get-Command -Module $_.Name} 
+#| ? {($_.Name -like "Add-*") -or ($_.Name -like "Get-*")}
+Tak samo zmienilem tutaj parametr z "Add-*" na "Set-*" oraz usunalem czesc skryptu z Get. Pokazalo mi to tak
+jak w opisie.
+
+#Get-Module -ListAvailable | ? {$_.Version -ge "2.0.0.0"} | % {Get-Command -Module $_.Name} |
+# ? {($_.Name -like "Add-*") -or ($_.Name -like "Get-*")} | Out-GridView 
+To polecenie z kolei wypisało mi to samo co wyzej, w oddzielnym oknie powershell'a gdzie moge
+dodatkowo to sobie posortowac. 
+
+
+Zapoznalem sie rowniez z BitsTransfer pokazalo mi 8 modulow, probowalem pobrac plik iso debiana i faktycznie
+caly plik iso mi sie pobral.
+
