@@ -1,0 +1,92 @@
+UKOS ZJAZD 3
+
+Zad 3.2
+
+INFO: Zadanie do wykonania na linuxie z dostepnym srodowiskiem graficznym.
+
+PID jest to indentyfikator procesu ([P]rocess [ID]entificator). Za jego pomoca
+mozesz odwolac sie do danego procesu za pomoca roznych mechanizmow systemu.
+Jednym z takich mechanizmow jest wuslanie sygnalu (na przyklad zakonczenia) do
+procesu. Do tego mozna uzyc komendy kill (moze brzmi ona dosc brutalnie, ale
+coz, informatyka nie jest dla mieczakow). Komenda ta domyslnie wysyla sygnal
+zakonczenia procesu do zadanego procesu.
+
+Zadanie:
+1. Uruchom wybrany przez Ciebie graficzny edytor tekstowy, np. gedit, gvim, itd
+2. Zobacz jaki ma in PID - przyda sie do tego komenda ps
+3. Wydaj komende kill w taki sposob, aby ten edytor sie wylaczyl. Zobacz, czy
+   to dziala. 
+   
+   UWAGA: Niektore programy przechwytuja sygnaly i moga je czesciowo
+   blokowac. Jesli program nie wylacza sie, to zobacz jaka jest jego reakcja.
+   Zobacz czy mozesz wyslac do niego SIGKILL (gdzie sprawdzisz jak to zrobic?)
+
+4. Zobacz działanie komendy killall bash
+
+5. Zobacz czy kill zadziała dla dowolnego procesu.
+
+
+Wykonanie:
+
+1.Uruchomiłem gedit'a
+
+2.Wykonuję komendę "ps aux |grep gedit" w celu sprawdzenia numeru jaki ma gedit,
+jego numer to 2544
+
+3.Wpisuję komendę "kill -9 2544", który pomyślnie zakończył program
+
+4.Po wpisaniu komendy wszystkie procesy poza terminalem zostają wyłączone.
+
+5.Wpisałem komendę kill z podaniem numeru PID i nie wszystkie procesy można zamknąć przy pomocy
+tej komendy. Niektóre z nich wymagają odpowiednich uprawnień, daltego nie można ich zamknąć lub wyłączyć.
+
+Zad 3.3
+
+W terminalu jest kilka przydatnych skrótów klawiszowych. Jednym z nich jest CTRL+C lub jak to jest często podawane C-c lub ^C.
+Niektórzy z Państwa już go mieli okazję przetestować. Jest to sposób na wyłączenie aktywnego programu w terminalu. 
+Proszę go przetestować w taki sposób, że:
+
+1. Uruchom komendę cat be parametrów
+
+2. Wciśnij CTRL+C i zobacz co się stanie
+
+Wykonanie:
+
+Po wpisaniu cat bez parametrów, terminal oczekuje na wpisanie parametrów.
+Po użyciu "CTRL + C" proces się kończy.
+
+Kolejnym fajnym (zależy dla kogo :) ) skrótem klawiszowym jest CTRL+D. Służy on do zakończenia strumienia wejściowego.
+Działa to trochę inaczej niż poprzednie rozwiązanie, mimo że na pierwszy rzut oknawygląda tak samo.
+Tym razem nie wysyła sygnału zakończenia, a jedynia zamyka strumień wejściowy.
+Jest to bardzo przydatne, jeśli chcemy zakończyć działanie jakiegoś programu korzystającego ze standardowego wejścia (stdin),
+ale w sposób możliwie bezpieczny.
+
+Zobacz co się stanie:
+
+
+
+Wydaj komendę cat > wynik3_2.txt
+
+Wpisz tekst witaj bez wciskania klawisza Enter
+
+Wciśnij CTRL+D (możliwe, że będzie trzeba wcisnąć go 2x)
+
+Zobacz co się znalazło w pliku wynik3_2.txt
+
+W opisie rozwiązania zadania umieść:
+
+jak rozumiesz co się stało?
+
+czym oba te przykłady się różnią?
+
+DLACZEGO się różnią?
+
+Wykonanie:
+
+Wpisanie komendy "cat > wynik3_1.txt", następnie wpisanie tekstu witaj bez wciskania entera,
+a następnie użycie "CTRL + C".
+Po sprawdzeniu wyniku okazało się że plik jest pusty i żadna wiadomość nie została zapisana.
+
+Robię to samo z tą różnicą że zamiast "CTRL + C" używam "CTRL + D".
+Po sprawdzeniu wyniku okazuje się że wiadomość została zapisana.
+

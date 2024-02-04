@@ -1,0 +1,20 @@
+UKOS ZJAZD NR 3
+
+ZAD 4
+
+Wykonanie zadania:
+Po uruchomieniu gedit użyłem "CTRL + Z", proces został wstrzymany a ja nie mogę nic kliknąć.
+Program został wstrzymany przy pomocy "CTRL + Z" i przeniesiony w tło.
+Do wznowienia pracy programu wykorzystałem komendę bg.
+
+
+Po wykonaniu komend:
+-gimp &
+-gedit &
+-geany &
+
+wszystkie 3 programy uruchomiły się w tle a na konsoli ciągle można pisać.
+
+po wpisaniu komendy jobs mogę znaleźćnumery do każdego z programów
+i mogę je wyciągnąć z tła przy pomocy komendy "fg" oraz wybranym numerem jobu
+
