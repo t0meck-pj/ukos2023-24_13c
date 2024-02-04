@@ -1,0 +1,49 @@
+1. Przejdź do swojego katalogu domowego:
+
+użyłem komendę "cd ~"
+
+2. Wydaj komendę: ls -a
+
+wydaję komendę ls -a
+
+3. Zobacz ile plików wypisało.
+
+wypisało mi 5 katalogów i 7 plików.
+
+4. Teraz wydaj komendę: ls -a | grep D
+HINT: Jeśli nie masz żadnego pliku czy katalogu z literką D to wybierz inną literkę,
+która już będzie w nazwie jakiegoś pliku czy katalogu.
+
+wydałem komendę ls -a | grep o
+
+5. Zobacz ile teraz jest wyników. Co się stało?
+Otóż program grep służy do wyszukiwania wierszy w pliku lub strumieniu wejściowym, które pasują do wzorca.
+Tu podano wzorzec jako "D".
+
+wyszukało mi wszystko z literą o i wydało mi 7 wyników.
+
+6. A teraz wykonaj komendę: ls -a | grep D > lista_plikow_z_literka_d.txt
+
+wpisuje komendę "ls -a | grep o > lista_plikow_z_literka_d.txt"
+
+7. Zobacz czy utworzył sie jakiś plik?
+Jaka jest jego treść?
+Co znaczy | oraz co znaczy > ?
+
+stowrzyłem plik o nazwie "lista_plikow_z_literka_d.txt" w którym znajdują sie wylistowane pliki z literą o
+"|" oznacza przekierowanie komendy
+">" oznacza plik w którym można coś zapisać
+
+8. A teraz wykonaj komendę: ls -a | grep D | tee lista_plikow_z_literka_d_2.txt
+
+wykonałem komendę "ls -a | grep o | tee lista_plikow_z_literka_d_2.txt"
+
+9. Zobacz czy plik się utworzył?
+Jaka jest treść względem poprzedniej próby bez programu tee?
+Co robi program tee?
+
+stworzył się plik lista_plikow_z_literka_d_2.txt
+ (dopiero teraz zauważyłem ze nie zmieniłem u siebie nazwy pliku na z "d" na "o" ponieważ kopiowałem nazwe ze strony)
+wylistowało mi pliki z "o" w konsoli jak i w pliku txt
+komenda tee odczytuje standardowe dane wejściowe potem zapisuje dane wyjściowe programu na standardowym
+wyjściu i kopijuje je do określonego pliku lub plików
