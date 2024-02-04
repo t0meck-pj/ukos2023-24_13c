@@ -1,9 +1,22 @@
 1. 
+komenda bg sluzy do wznowienia w tle wstrzymanego programu.
+wykoanie:
 -bg 
--fg 
+wniosek: program został wznowiony
 
+komenda fg słuzy do wznowienia na pierwszym planie wstrzymanego procesu.
+wykonanie:
+-fg 
+wniosek: program został wznowiony
+
+Wykoananie kolejnego zadania:
 -gimp &
 -gedit &
 -geany &
+wynik: zastały otwarte trzy programy terminal czeka na kolejne polecenia.
 
-fg%(3605026)
+
+Przywróć program gedit (lub gimp, w każdym razie nie uruchomiony jako ostatni program) z tła na pierwszy plan. 
+Skorzystaj z jobs aby dowiedzieć się jakie mają numery poszczególne zadania działające w tle.
+
+wykonanie: fg%(3605026)

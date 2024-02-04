@@ -25,8 +25,9 @@ Zobacz co się znalazło w pliku wynik3_2.txt
 
 po sprawdzeniu pliku zostaje wypisane slowo witaj
 
-ROZWIĄZANIE: 
-oba rozwiązania zakończyły działanie programu tylko CTRL+C nie zapisywało zawartości
-pliku, a CTRL+D tak.
-Różnią się tym że CTRL z +C przerywa nam działaeni programu i wyjście z programu a z +D 
-zapisanie programu i wyjście z niego
+ROZWIĄZANIE I WNIOSEK:
+Przy użyciu CTRL + C żadne informację w pliku nie zostają zapisane, a po użyciu CTRL + D 
+plik zostaje zapisany z wcześniej wprowadzoną informacja. Dzieje się tak poniewaz 
+przy użyciu CTRL +D program nie przetwarza niczego wiecej i konczy prace po 
+przetworzeniu wpisanych informacji. 
+

@@ -12,15 +12,16 @@
 	Wykonanie: touch zajecia2.txt zajecia2.log inny.txt nowy.txt
 	wniosek: utworzenie plików
 
-3. Za pomoca jednego polecenia mkdir stworz w katalogu ukos nastepujacy ka-
-   talog: ukos/to/jest/dluga/nazwa
+3. Za pomoca jednego polecenia mkdir stworz w katalogu ukos nastepujacy 
+   katalog: ukos/to/jest/dluga/nazwa
 	Wykonanie: mkdir -p ukos/to/jest/dluga/nazwa
 
 4. Nastepnie umiesc w katalogu ukos/to/jest/dluga/nazwa plik dane.txt
 	Wykonanie: touch ukos/to/jest/dluga/nazwa/dane.txt
+	wniosek: plik "dane.txt" znajduje sie w katalogu ukos/to/jest/dluga/nazwa
 
 5. Usun z katalogu ukos/klamka wszystkie pliki z rozszerzeniem txt
-	Wykonanie: find /ukos/klamka/*.txt delete
+	Wykonanie: find  ~/ukos/klamka/*.txt -delete
 
 6. Usun katalog ukos/katalog/katalog2
 	Wykonanie: rm -r ~/ukos/katalog/katalog2
@@ -28,3 +29,4 @@
 7. Usun caly katalog klamka za pomoca jednego polecenia
 	Wykonanie: rm -r ukos/klamka
 	
+

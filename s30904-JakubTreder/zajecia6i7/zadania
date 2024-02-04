@@ -1,0 +1,25 @@
+Get-Module -ListAvailable | ? {$_.Version -ge "2.0.0.0}
+
+efekt:
+Wypisało mi moduły z wersja 2.0.0.0 i nie tylko 
+
+Get-Module -ListAvailable | ? {$_.Version -ge "2.0.0.0"} | % {Get-Command -Module $_.Name}
+
+efekt: 
+to polecenie wypisalo wszystloe komandlety ktorych wersja jest wieksza lub rowna 2.0.0.0
+
+
+# Teraz byśmy chcieli jeszcze wyświetlić wszystkie te, które mają w nazwie "Add-" lub "Get-"
+
+Get-Module -ListAvailable | ? {$_.Version -ge "2.0.0.0"} | % {Get-Command -Module $_.Name} 
+| ? {($_.Name -like "Add-*") -or ($_.Name -like "Get-*")}
+
+
+
+Get-Module -ListAvailable | ? {$_.Version -ge "2.0.0.0"} | % {Get-Command -Module $_.Name} |
+? {($_.Name -like "Add-*") -or ($_.Name -like "Get-*")} | Out-GridView 
+
+to polecenie wypisało to samo co powyższe tylko w formie tabelki . 
+
+
+Zapoznalem sie z BitsTransfer, pokazalo mi 8 modulow, caly plik iso sie pobral. .

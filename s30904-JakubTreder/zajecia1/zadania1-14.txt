@@ -37,8 +37,8 @@ Dlaczego znalazła/eś się w tym miejscu do którego przeniosła Cię ta ście�
 Czy dodanie kilku ./././././ na początku/środku/końcu powoduje, że ścieżka się zmieni?
 Co ta ścieżka oznacza/sobą reprezentuje?
 wykonanie: cd ././././././
-wynik: dalej jestem w katalogu Pictures
-odpowiedz: ./ to katalog biezący 
+wynik: dalej jestem w biezacym katalogu
+odpowiedz: ./ to katalog biezący, wiec niezaleznie ile razy bym to wpisal moja pozycja sie nie zmieni. 
 
 11.Przejdź do swojego katalogu domowego za pomocą ścieżki bezwzględnej.
 wykonanie: cd /home/osboxes
