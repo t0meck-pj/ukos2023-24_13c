@@ -8,8 +8,6 @@ w opłatach.:
 -> brak uprawnień
 
 
-
-
 Zadanie 1
 Jest dane takie drzewo katalogów:
 
@@ -33,10 +31,8 @@ Jest dane takie drzewo katalogów:
 
 Znajdujesz się w katalogu kota. Katalog ala, jest w katalogu /tmp/ukos. 
 Jak przejść do katalogu ala za pomocą:
-ścieżki względnej (relatywnej): cd ../../
+ścieżki względnej (relatywnej): cd ../..
 ścieżki bezwzględnej (absolutnej): cd /tmp/ukos/ala
-
-
 
 
 Zadanie 2
@@ -46,8 +42,6 @@ komendy? Podaj rozwiązania używając ścieżek absolutnych i relatywnych.
 Odpowiedź:
 -> Relatywna: mkdir -p jan/kowalski
 -> Absolutna: mkdir -p /tmp/ukos/adla/ma/kota/jan/kowalski
-
-
 
 
 Zadanie 3
@@ -63,7 +57,9 @@ Jak przenieść katalog ale do katalogu i używając:
 
 Zadanie 4
 Jak zamknąć program, który nie reaguje na ctrl+c?
-Odpowiedź: Menadżerem zadań.
+Odpowiedź:
+-> ctrl + Z
+-> kill -9 [PID]
 
 
 
@@ -92,9 +88,9 @@ Przygotuj 3 wariacje rozwiązania tego zadania używając różnych notacji:
 Wszystkie wersje powinny być zapisane w jednym poleceniu
 (bez używania && czy | ):
 Odpowiedzi:
--> chmod 751 ala
+-> chmod 750 ala
 -> chmod u=rwx,g=rx,o= ala
--> chmod u+rwx,g+rx,o= ala
+-> chmod u+rwx,g+rx,o- ala
 
 
 
